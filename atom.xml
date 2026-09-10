@@ -1,0 +1,622 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Lockbook</title>
+    <subtitle>Lockbook is an open-source notebook for markdown notes and SVG drawings, encrypted on your device and shared only by invitation.</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://lockbook.net/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://lockbook.net"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2024-10-03T00:00:00+00:00</updated>
+    <id>https://lockbook.net/atom.xml</id>
+    <entry xml:lang="en">
+        <title>OpSec FAQ</title>
+        <published>2024-10-03T00:00:00+00:00</published>
+        <updated>2024-10-03T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://lockbook.net/blog/opsec-faq/"/>
+        <id>https://lockbook.net/blog/opsec-faq/</id>
+        
+        <content type="html" xml:base="https://lockbook.net/blog/opsec-faq/">&lt;h1 id=&quot;what-does-secure-mean&quot;&gt;What does secure mean?&lt;/h1&gt;
+&lt;p&gt;&lt;a rel=&quot;external&quot; href=&quot;https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F16b81878-96c9-4e65-bc75-e88c829a572a_1604x716.png&quot;&gt;&lt;img src=&quot;https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F16b81878-96c9-4e65-bc75-e88c829a572a_1604x716.png&quot; alt=&quot;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;We call &lt;a rel=&quot;external&quot; href=&quot;https://blog.lockbook.net/cp/136569024&quot;&gt;Lockbook&lt;/a&gt; a secure product. This isn&#39;t a unique claim to make as you can see below.&lt;/p&gt;
+&lt;p&gt;&lt;a rel=&quot;external&quot; href=&quot;https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc953a99c-81ef-4325-9690-687e0ac4e26b_1202x1042.png&quot;&gt;&lt;img src=&quot;https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc953a99c-81ef-4325-9690-687e0ac4e26b_1202x1042.png&quot; alt=&quot;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a rel=&quot;external&quot; href=&quot;https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3cb8991a-aedb-4244-b958-8a689882b9fc_872x444.png&quot;&gt;&lt;img src=&quot;https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3cb8991a-aedb-4244-b958-8a689882b9fc_872x444.png&quot; alt=&quot;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;So what&#39;s the difference between Notion&#39;s claim and ours? It&#39;s simple, we can&#39;t see your notes even if we wanted to, and Notion can. There may be policies, protections, and certifications to ensure they don&#39;t do anything &lt;em&gt;improper&lt;/em&gt; with your data, but they have the &lt;em&gt;ability&lt;/em&gt; to see your content. In contrast, we don&#39;t have that ability.&lt;/p&gt;
+&lt;p&gt;Before your content departs from your device it&#39;s &lt;em&gt;encrypted&lt;/em&gt; in such a way that only you or any collaborators you chose can &lt;em&gt;decrypt&lt;/em&gt; the data. Our server never receives the decryption keys so we can&#39;t spy on you, our hosting provider can&#39;t spy on you and the government can&#39;t spy on you. This is called &lt;a rel=&quot;external&quot; href=&quot;https://en.wikipedia.org/wiki/End-to-end_encryption&quot;&gt;end-to-end encryption&lt;/a&gt;. You can learn more about this &lt;a rel=&quot;external&quot; href=&quot;https://www.youtube.com/watch?v=jkV1KEJGKRA&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h1 id=&quot;how-do-i-know-i-can-trust-lockbook&quot;&gt;How do I know I can trust Lockbook?&lt;/h1&gt;
+&lt;p&gt;Because we don&#39;t believe in &lt;a rel=&quot;external&quot; href=&quot;https://en.wikipedia.org/wiki/Security_through_obscurity&quot;&gt;security through obscurity&lt;/a&gt;, all of our code is &lt;a rel=&quot;external&quot; href=&quot;https://github.com/lockbook/lockbook&quot;&gt;open source&lt;/a&gt;. We want to make it as easy as possible for someone to audit our code. All of the code that would be relevant to an audit is written in a single language and relies on well-established cryptographic primitives like &lt;a rel=&quot;external&quot; href=&quot;https://www.youtube.com/watch?v=NF1pwjL9-DE&quot;&gt;eliptic curve cryptography&lt;/a&gt; and &lt;a rel=&quot;external&quot; href=&quot;https://www.youtube.com/watch?v=O4xNJsjtN6E&quot;&gt;AES&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The keen-eyed among us ask: how do we know you&#39;re running and shipping the code that&#39;s on GitHub? You don&#39;t, but we engineered lockbook so that the app running on your phone (the client) doesn&#39;t trust our server either. It doesn&#39;t send any secrets and verifies (cryptographically) the information it receives.&lt;/p&gt;
+&lt;p&gt;To be frank -- we don&#39;t trust our server either! We consider our cloud infrastructure to be an adversarial environment and have engineered the whole product to be resilient to snooping and unexpected downtime. This is part of the reason we placed such a great emphasis on offline support. Long term we envision a decentralized future (much like the email protocol), but that&#39;s a daydream for the time being.&lt;/p&gt;
+&lt;p&gt;For your convenience, we build and publish our apps to a variety of marketplaces of varying trustworthiness (like Apple&#39;s App Store). But we&#39;ve also made it as easy as possible for you to build any of our apps directly from source to cut out all the middlemen -- allowing you to be absolutely certainty that you&#39;re running the code you expect.&lt;/p&gt;
+&lt;h1 id=&quot;why-should-i-care-if-google-can-see-my-content&quot;&gt;Why should I care if Google can see my content?&lt;/h1&gt;
+&lt;p&gt;Some people are shocked to find out that most companies can just see all your content.&lt;/p&gt;
+&lt;p&gt;Others don&#39;t really care if some select group of people have access to their documents. They don&#39;t fear the government because they don&#39;t think they are or ever will be a target (I hope they&#39;re right).&lt;/p&gt;
+&lt;p&gt;Despite this, they still don&#39;t want their friends, families, or enemies to see their content. It&#39;s private and they&#39;d like to keep it that way.&lt;/p&gt;
+&lt;p&gt;Companies, however, &lt;a rel=&quot;external&quot; href=&quot;https://en.wikipedia.org/wiki/List_of_data_breaches&quot;&gt;get &lt;/a&gt;&lt;strong&gt;&lt;a rel=&quot;external&quot; href=&quot;https://en.wikipedia.org/wiki/List_of_data_breaches&quot;&gt;hacked&lt;/a&gt;&lt;/strong&gt;&lt;a rel=&quot;external&quot; href=&quot;https://en.wikipedia.org/wiki/List_of_data_breaches&quot;&gt; all the time&lt;/a&gt;. They leak passwords emails, and content &lt;strong&gt;all the time&lt;/strong&gt;. The perpetrator could be anyone from a foreign government to a talented prepubescent basement dweller. It could be a disgruntled employee or a misconfigured database. When the data sitting on the server is compromised do you want it to be a garbled mess of encrypted data, or do you want it to be every photo you&#39;ve taken in the last 15 years?&lt;/p&gt;
+&lt;h1 id=&quot;so-is-my-lockbook-unhackable&quot;&gt;So is my Lockbook unhackable?&lt;/h1&gt;
+&lt;p&gt;A useful mental model for determining how secure you are is something like &quot;How much would it cost to compromise me?&quot;.&lt;/p&gt;
+&lt;p&gt;To compromise most traditional companies the exploit may be as simple as waiting for an employee to make a mistake and expose secrets. If that doesn&#39;t work an attacker could explore bribing an employee or even infiltrating the company.&lt;/p&gt;
+&lt;p&gt;Because the data sitting on our server is encrypted, for someone to gain access to your content they have to compromise your individual device. Hacking into an individual&#39;s device is several orders of magnitude more expensive. Apple is willing to pay up to &lt;a rel=&quot;external&quot; href=&quot;https://security.apple.com/bounty/categories/&quot;&gt;$2M bounties&lt;/a&gt; for certain types of device compromises. Widescale compromises of devices like the iPhone are far more rare than the compromises of online services.&lt;/p&gt;
+&lt;p&gt;Often with these types of compromise physical access is required. So if someone wants to get your content they may need to hire a thief to break into your home, and then use an exploit that may be worth millions of dollars.&lt;/p&gt;
+&lt;p&gt;Additionally, Lockbook goes to some lengths to make sure you don&#39;t compromise yourself. We generate a key for you with 256 bits of entropy (a very long unguessable password). This means you can&#39;t accidentally re-use a password and compromise yourself.&lt;/p&gt;
+&lt;p&gt;This is an irrecoverable key eliminating the chance of an &lt;a rel=&quot;external&quot; href=&quot;https://medium.com/@CodyBrown/how-to-lose-8k-worth-of-bitcoin-in-15-minutes-with-verizon-and-coinbase-com-ba75fb8d0bac&quot;&gt;email or phone compromise&lt;/a&gt; additionally compromising your Lockbook.&lt;/p&gt;
+&lt;p&gt;You&#39;re not, however uncompromisable. There is a strong element of personal responsibility when it comes to security. If you&#39;re out there downloading random &lt;code&gt;cracked-photoshop.exe&lt;/code&gt;s much of your protection goes out the window.&lt;/p&gt;
+&lt;p&gt;Security is a chain, and attackers will seek to exploit the weakest (cheapest) link in your setup.&lt;/p&gt;
+&lt;h1 id=&quot;how-do-i-use-lockbook-securely&quot;&gt;How do I use Lockbook Securely?&lt;/h1&gt;
+&lt;p&gt;The design of Lockbook makes your content as secure as your devices are. Here are some very broad general recommendations for how I think about security.&lt;/p&gt;
+&lt;h2 id=&quot;mobile-devices&quot;&gt;Mobile Devices&lt;/h2&gt;
+&lt;p&gt;Mobile devices are generally inherently secure devices. Apps are running in a very limited execution environment and can&#39;t access each other&#39;s data. Use popular devices, keep them fresher for ~4 years, update your software, and use the security features your phone ships with (1111 is not a good passcode). If you do all this, you&#39;re at a pretty strong starting point.&lt;/p&gt;
+&lt;p&gt;As I mentioned above it takes a fair amount of sophistication for someone to break into an iPhone that&#39;s up to date. Your local police department can&#39;t do it, and probably not all of the 3 letter federal agencies can (but a few probably can). I think it&#39;s probably best to consider big tech and government synonymous from an adversarial perspective.&lt;/p&gt;
+&lt;p&gt;Google has some incredibly strong incentives to spy on you. They don&#39;t make the slightest effort to implement end-to-end encryption in their messengers and often they send computations to a server that Apple performs locally. Apple is incentivized to sell devices not ads, Apple has formed a reputation for simplicity and security.&lt;/p&gt;
+&lt;p&gt;Apple rules the app store supply chain with an iron fist which introduces attack vectors for supply chain attacks and censorship.&lt;/p&gt;
+&lt;p&gt;Both iOS and Android have open-source roots but neither of these platforms are practically open source. Both platforms have huge amounts of unremovable infrastructure that is closed source.&lt;/p&gt;
+&lt;p&gt;There are, however, secure phone implementations like Graphene, Librem, Liberty, and the Pinephone. The theme is generally: reasonably secure hardware and fully open-source software. Configured by default to make it easier to use securely and privately.&lt;/p&gt;
+&lt;p&gt;There is a school of thought that says phones are unsecurable. It&#39;s just too hard to have a cell plan that isn&#39;t coarsely tracking you with cell tower metadata. This way of thinking also considers phones to be toxic machines of addiction and control and recommends using dumb phones or no phones at all.&lt;/p&gt;
+&lt;h2 id=&quot;computers&quot;&gt;Computers&lt;/h2&gt;
+&lt;p&gt;The surface area of attack on computers is far broader and we depend on computers for essential activities.&lt;/p&gt;
+&lt;p&gt;The security situation on Windows is a bit of a disaster, many Windows computers come pre-packaged with a &lt;a rel=&quot;external&quot; href=&quot;https://arstechnica.com/gaming/2015/05/humanity-weeps-as-candy-crush-saga-comes-pre-installed-with-windows-10/&quot;&gt;large amount of bloatware&lt;/a&gt;. This increases the surface area of attack for devices. Windows is a fragmented ecosystem so suggestions to &quot;only install &lt;em&gt;sandboxed&lt;/em&gt; apps from the Microsoft Store&quot; are effectively impractical. The normal way to install and update things is to &lt;em&gt;download an exe from a website&lt;/em&gt; , a pretty bad security default.&lt;/p&gt;
+&lt;p&gt;In my opinion, Macbooks are a step up in security from Windows. Things on macOS are closer to iPhones, by default, the installation comes with minimal bloat and the security defaults are reasonable. Apps have to ask permission to access various resources. Additionally, you can turn off some security features and download apps from arbitrary locations. However, both Windows and macOS are largely closed source leaving room for &quot;bugs&quot; and backdoors.&lt;/p&gt;
+&lt;p&gt;The next step up here would be to run an open-source Linux flavor on commonly available hardware (Thinkpads, Dell laptops, or a Desktop computer). &quot;Distributions&quot; like Ubuntu, Fedora, and Manjaro provide a gentle introduction to Linux. These days the transition may be easier than you&#39;d expect as most computing can happen in the browser.&lt;/p&gt;
+&lt;p&gt;This is a pretty solid place to arrive. Most of what you&#39;re running is open source and inherently more secure. You&#39;ll likely install and update all your software through your distro&#39;s package manager, either graphically or through the command line.&lt;/p&gt;
+&lt;p&gt;From here our next stop is minimal, hand-crafted Linux distros. On distros like Arch, and Gentoo you gain an understanding of what all the moving pieces of your computer are, and you play an active role in their assembly. Once you&#39;re setup you have a strong understanding of everything that&#39;s running on your system. What&#39;s running on your system is likely just what you need, and nothing you don&#39;t. This means your surface area for attack is as small as possible. At this step, you&#39;re probably already familiar with command line interfaces, and can likely use the &lt;em&gt;Lockbook CLI&lt;/em&gt; rather than the desktop version -- further reducing the surface area of attack.&lt;/p&gt;
+&lt;p&gt;At this stage you may also consider exploring the BSD variants (historically more secure kernel than Linux), and specialized operating systems like QubesOS / Tails. You may also consider specialized hardware that seeks to remove eyebrow-raising hardware components like the &lt;a rel=&quot;external&quot; href=&quot;https://www.youtube.com/watch?v=HNwWQ9zGT-8&quot;&gt;Intel Management Engine&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;physical-security&quot;&gt;Physical Security&lt;/h2&gt;
+&lt;p&gt;It&#39;s also worth noting that there are very few software solutions to the wrench attack:&lt;/p&gt;
+&lt;p&gt;&lt;a rel=&quot;external&quot; href=&quot;https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F50549fd7-8719-4ae1-a3fa-d4fd2bca53c8_448x274.png&quot;&gt;&lt;img src=&quot;https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F50549fd7-8719-4ae1-a3fa-d4fd2bca53c8_448x274.png&quot; alt=&quot;Security&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;If your secrets are &lt;a rel=&quot;external&quot; href=&quot;https://github.com/jlopp/physical-bitcoin-attacks/blob/master/README.md&quot;&gt;valuable enough&lt;/a&gt; to guard, consider investing in some &lt;a rel=&quot;external&quot; href=&quot;https://en.wikipedia.org/wiki/Second_Amendment_to_the_United_States_Constitution&quot;&gt;real&lt;/a&gt; &lt;a rel=&quot;external&quot; href=&quot;https://blog.casa.io/a-home-defense-primer/&quot;&gt;physical security&lt;/a&gt;. Understand that your adversaries may be immoral actors who will happily kidnap your family members to make you do what they want.&lt;/p&gt;
+&lt;h1 id=&quot;is-lockbook-secure-enough-for-me&quot;&gt;Is Lockbook secure enough for me?&lt;/h1&gt;
+&lt;p&gt;Lockbook is a young piece of software, and as such may contain bugs. We believe we&#39;re secure by design, we&#39;ve designed everything around making sure that you&#39;ll never leak information because of a bug. Rather our worst bugs should be crashes, missing documents, or the inability to communicate with our server. We do believe we&#39;re in a fundamentally different category of security than products that aren&#39;t end-to-end encrypted and open source and you are better off using us compared to those solutions.&lt;/p&gt;
+&lt;p&gt;But if your life literally depends on the security of your technology there&#39;s no avoiding dramatically investing a thorough knowledge of security and evaluating your chosen solution (lockbook, signal, PGP, local-only solutions, literally not using technology) at a very deep and fundamental level.&lt;/p&gt;
+&lt;h1 id=&quot;how-do-i-learn-more-about-security&quot;&gt;How do I learn more about security?&lt;/h1&gt;
+&lt;p&gt;Here are some resources I&#39;ve found valuable for better understanding the world of security:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a rel=&quot;external&quot; href=&quot;https://www.youtube.com/@MentalOutlaw&quot;&gt;YT: MentalOutlaw&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;OpSec news&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Analysis of how various people have been compromised&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Instruction for higher security setups&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a rel=&quot;external&quot; href=&quot;https://open.spotify.com/show/4XPl3uEEL9hvqMkoZrzbx5&quot;&gt;Podcast: Darknet Diaries&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Interviews of hackers, spies, and an exploration of hacking culture&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a rel=&quot;external&quot; href=&quot;https://www.lopp.net/articles.html&quot;&gt;Blog: Jameson Lopp&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Crypto-focused OpSec discussion&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a rel=&quot;external&quot; href=&quot;https://bigtech.fail/&quot;&gt;Blog: bigtech.fail&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&quot;Shining a light on the censorship, propaganda, and mass surveillance from today&#39;s tech corporations and governments.&quot;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a rel=&quot;external&quot; href=&quot;https://www.youtube.com/@LowLevelLearning&quot;&gt;YT: Low Level&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Technical analysis of high-profile security vulnerabilities&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Migrating Lockbook to a Better Key Format</title>
+        <published>2024-09-09T00:00:00+00:00</published>
+        <updated>2024-09-09T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://lockbook.net/blog/migrating-lockbook-to-a-better-key/"/>
+        <id>https://lockbook.net/blog/migrating-lockbook-to-a-better-key/</id>
+        
+        <content type="html" xml:base="https://lockbook.net/blog/migrating-lockbook-to-a-better-key/">&lt;p&gt;On Lockbook, creating an account is simple. You choose a username, and Lockbook will generate an account key. This is what it looks like:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;CwAAAAAAAABzbWFpbHRlc3RzMR0AAAAAAAAAaHR0cHM6Ly9hcGkucHJvZC5sb2NrYm9vay5uZXQgAAAAAAAAAJ/1ORmw56YptpNdQvJmGNsE1Lh4qpyYxRl6pp5dE7z0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This key is the only thing you need to access your files on your device. You don&#39;t even need to remember your username. And besides, creating your own password is always less secure. Most people reuse passwords from other accounts or use weak passwords. But with a generated account key, Lockbook keeps your notes safe and secure against attacks like &lt;a rel=&quot;external&quot; href=&quot;https://en.wikipedia.org/wiki/Credential_stuffing&quot;&gt;credential stuffing&lt;/a&gt; and &lt;a rel=&quot;external&quot; href=&quot;https://en.wikipedia.org/wiki/Dictionary_attack&quot;&gt;dictionary attacks&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The account key is a critical part of our &lt;a rel=&quot;external&quot; href=&quot;https://en.wikipedia.org/wiki/End-to-end_encryption&quot;&gt;end-to-end encryption scheme&lt;/a&gt;. This ensures that no one besides you can see your notes, not even us. This account key corresponds to a private key &lt;a rel=&quot;external&quot; href=&quot;https://en.bitcoin.it/wiki/Secp256k1&quot;&gt;from the &lt;/a&gt;&lt;code&gt;secp256k1&lt;/code&gt; encryption standard. A user&#39;s files are encrypted hierarchically &lt;a rel=&quot;external&quot; href=&quot;https://en.wikipedia.org/wiki/Advanced_Encryption_Standard&quot;&gt;using &lt;/a&gt;&lt;code&gt;AES&lt;/code&gt;, another encryption standard, and the uppermost key is encrypted using the public key corresponding to your private key. This is called hybrid encryption, and it combines the benefits of both symmetric and asymmetric encryption capabilities. You can read more about it &lt;a rel=&quot;external&quot; href=&quot;https://en.wikipedia.org/wiki/Hybrid_cryptosystem&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Our current account key has some issues though. It contains unnecessary information, like what server your Lockbook communicates to, and the username. All of which is &lt;a rel=&quot;external&quot; href=&quot;https://en.wikipedia.org/wiki/Base64&quot;&gt;Base64 encoded&lt;/a&gt;, resulting in a combination of random characters. This isn&#39;t necessarily bad, but for someone who might want to write their account key down, it is difficult and error prone. It reminds me of an xkcd comic:&lt;/p&gt;
+&lt;p&gt;&lt;a rel=&quot;external&quot; href=&quot;https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F50192293-c310-4ef7-9963-928b3b032e80_1480x1202.png&quot;&gt;&lt;img src=&quot;https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F50192293-c310-4ef7-9963-928b3b032e80_1480x1202.png&quot; alt=&quot;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;passphrases&quot;&gt;Passphrases&lt;/h2&gt;
+&lt;p&gt;To solve this issue we took some inspiration from Bitcoin since they use the same private keys. &lt;a rel=&quot;external&quot; href=&quot;https://en.bitcoin.it/wiki/BIP_0039&quot;&gt;BIP (Bitcoin Improvement Proposal) 39&lt;/a&gt; described a way to turn bytes into a mnemonic phrase. Every combination of 11 bits corresponded to a unique word. The motivation was that words are harder to input incorrectly than random characters, and this is exactly what we need. In addition, these words were specifically chosen to be simple. Here&#39;s what it looks like:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;turkey, era, velvet, detail, prison, income, dose, royal, fever, truly, unique, couple, party, example, piece, art, leaf, follow, rose, access, vacant, gather, wasp, audit
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Another aspect of this proposal was the inclusion of a checksum, which added a self-verifying mechanism to ensure that a phrase has been entered correctly. Since Lockbook uses 256-bit private keys with an additional 4 bits for the checksum, the total key length is 260 bits. This corresponds to a word count of 24 words. This is great and solves the writing issue we discussed before.&lt;/p&gt;
+&lt;p&gt;But sometimes users still want a compact key; like for a QR code or for a password manager. Our previous key had its advantages, and we can reduce its size by removing the username and server URL. This effectively halves the number of characters. It looks something like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;nvo7SItwXYmoxxzmOCUrNJiw85V8CwJ+SXb8cOHPIlo=
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;So, when you enter your settings, you have two choices. You can export your phrase or a compact version of your account key. Either will work across all your devices.&lt;/p&gt;
+&lt;h2 id=&quot;migration&quot;&gt;Migration&lt;/h2&gt;
+&lt;p&gt;Changing private keys is hard. If we just updated our code to use the new keys in the next release, people would have issues logging in. Additionally, some users may have the old account key saved in password managers, and it would be unacceptable if users couldn&#39;t sign in after returning to Lockbook.&lt;/p&gt;
+&lt;p&gt;As a result, because we take breaking changes very seriously, we decided to support the previous key format indefinitely. Once most users are on the new version, we will switch to using the new key format. Minimizing the risk of someone using a new key with an incompatible app. We&#39;ll also communicate this change across all our social media platforms.&lt;/p&gt;
+&lt;h2 id=&quot;coding&quot;&gt;Coding&lt;/h2&gt;
+&lt;p&gt;The majority of the business logic in our apps is written in Rust. This is thanks to &lt;code&gt;lb-rs&lt;/code&gt;, &lt;a rel=&quot;external&quot; href=&quot;https://blog.lockbook.net/cp/136569912&quot;&gt;a shared library we use&lt;/a&gt; to iterate quickly across our platforms. This is where I wrote the new key logic. I started by importing a &lt;a rel=&quot;external&quot; href=&quot;https://github.com/vincenthz/bip39-dict/&quot;&gt;library called &lt;/a&gt;&lt;code&gt;bip39-dict&lt;/code&gt;, which provided the binary-to-word translations. In BIP 39, every 11 bits corresponded to a word, so I had to split up the &lt;code&gt;Vec&amp;lt;u8&amp;gt;&lt;/code&gt; private key into 11-bit chunks. The implementation was simple. After implementing a method to convert the private key into a phrase, I made a method to turn the phrase into a private key. This simply involved turning each word it into a &lt;code&gt;u16&lt;/code&gt;, and converting chunks of &lt;code&gt;u16&lt;/code&gt;s (considering only the first 11 bits) into &lt;code&gt;u8&lt;/code&gt;s. I added some tests to verify the inverse properties of these two functions. More details on my efforts can be found &lt;a rel=&quot;external&quot; href=&quot;https://github.com/lockbook/lockbook/pull/2811&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;final-thoughts&quot;&gt;Final Thoughts&lt;/h2&gt;
+&lt;p&gt;With these updates in place, we&#39;re excited to continue improving Lockbook. As a unique open-source project, Lockbook has a myriad of interesting problems. If you&#39;re interested in contributing, feel free to check out the &lt;a rel=&quot;external&quot; href=&quot;https://github.com/lockbook/lockbook/&quot;&gt;GitHub&lt;/a&gt; and join our &lt;a rel=&quot;external&quot; href=&quot;https://discord.com/invite/lockbook&quot;&gt;Discord&lt;/a&gt;. We would love to have you.&lt;/p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Multimedia Updates!</title>
+        <published>2024-07-06T00:00:00+00:00</published>
+        <updated>2024-07-06T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://lockbook.net/blog/multimedia-updates/"/>
+        <id>https://lockbook.net/blog/multimedia-updates/</id>
+        
+        <content type="html" xml:base="https://lockbook.net/blog/multimedia-updates/">&lt;p&gt;In a few videos we&#39;ve expressed that we&#39;ve been focusing on building up our infrastructure to better support &lt;a rel=&quot;external&quot; href=&quot;https://www.youtube.com/watch?v=5w-kDNu5rz0&quot;&gt;multimedia&lt;/a&gt; and increase overall platform stability. Today I&#39;d like to share some exciting updates on the multimedia front!&lt;/p&gt;
+&lt;h2 id=&quot;lockbook-workspace&quot;&gt;Lockbook Workspace&lt;/h2&gt;
+&lt;p&gt;In a previous post, we shared details about our &lt;a rel=&quot;external&quot; href=&quot;https://blog.lockbook.net/cp/136569994&quot;&gt;cross-platform markdown editor&lt;/a&gt;, which allowed us to increase the complexity and interactivity of our editor. After working out the kinks with the initial implementation we&#39;ve doubled down on this strategy and expanded it to the entire tab strip and all content displayed within Lockbook. We call this component the &lt;em&gt;Lockbook Workspace&lt;/em&gt;. As a portion of the team brought workspace to all of the platforms, Adam redesigned our drawing experience from the ground up to use SVGs instead of a proprietary drawing format. &lt;strong&gt;Canvas&lt;/strong&gt; deserves its own post, so stay tuned for that. In addition to SVGs and Markdown, workspace brought image and PDF previews to all platforms.&lt;/p&gt;
+&lt;p&gt;&lt;a rel=&quot;external&quot; href=&quot;https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff16e346f-be0a-4731-bdcb-9ba4c3625654_2598x1754.png&quot;&gt;&lt;img src=&quot;https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff16e346f-be0a-4731-bdcb-9ba4c3625654_2598x1754.png&quot; alt=&quot;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Markdown and SVG have crystalized as the 2 main document formats that will be editable inside Lockbook. These open formats are a natural fit for our customer-centric values. They both offer broad compatibility across the internet and don&#39;t lock you into our platform. The freeform expression of SVGs complements the restricted feature set of Markdown nicely. SVGs are also trivially embedded inside markdown documents as images.&lt;/p&gt;
+&lt;p&gt;Supporting these two document types offers our platform access to two very diverse types of note-takers. On one hand, there&#39;s the sort of people who like apps like OneNote, Notability, and GoodNotes for their unstructured creative surface. On the other hand, some people like the structure of apps like Notion, Obsidian, and Google Docs for their searchable, linkable, and collaborative experience.&lt;/p&gt;
+&lt;p&gt;A key idea of our platform is to not split your life among different apps all fundamentally storing bytes for you and your team. My co-founder Travis and I are members of both of these modalities. Users like my Dad are heavy OneNote users, while there are plenty of users who are pretty firmly in the &quot;strongly typed&quot; category of markdown.&lt;/p&gt;
+&lt;h2 id=&quot;lockbook-filesystem&quot;&gt;Lockbook Filesystem&lt;/h2&gt;
+&lt;p&gt;When we were making early design decisions for Lockbook&#39;s system architecture, we considered the many ways we could allow our users to organize their thoughts. We considered a tag-like system similar to Bear that optimizes for flexibility (a note could live in two folders at once). We also considered a Google Keep-like single-note experience. But I strongly advocated for a &quot;Files and Folders&quot; hierarchy. I knew I wanted Lockbook to integrate deep into the traditional computing experience seamlessly. There are times when you want to edit Markdown using our fancy Markdown editor. And there are times when you want to edit spreadsheets and photos and have all the durability and security guarantees of Lockbook. Again the key idea here is to not split your life across various apps, we don&#39;t want you to have to use Google Drive / DropBox for one type of content and Lockbook for another.&lt;/p&gt;
+&lt;p&gt;As Lockbook emerges out of its state of running an ungodly amount of experiments, this was another area I wanted to de-risk and see how our platform and infrastructure performed. Tax season was also approaching and we had similarly flavored requests from people who wanted to use the types of apps we&#39;re never going to be in the business of creating.&lt;/p&gt;
+&lt;p&gt;We &lt;em&gt;somewhat supported&lt;/em&gt; the basic workflow of dropping files in and out of Lockbook. But this is clunky and our users expect more from our ragtag crew of part-time developers. So I took a long weekend and tried to determine if we could do better.&lt;/p&gt;
+&lt;p&gt;The first thing that came to mind was to use the &lt;a rel=&quot;external&quot; href=&quot;https://en.wikipedia.org/wiki/Filesystem_in_Userspace&quot;&gt;FUSE&lt;/a&gt; protocol. This would allow our users to seamlessly &lt;strong&gt;mount&lt;/strong&gt; their Lockbook as if it&#39;s a flash drive on their computer. Any requests for bytes would be fielded directly by the Lockbook instance running on your computer and we don&#39;t need to be in the business of watching directories for changes and trying to reconcile changes. This was our target UX but unfortunately, FUSE only works well on Linux, and on macOS users would have to install some pretty invasive 3rd party software.&lt;/p&gt;
+&lt;p&gt;A close second flavor of the same thing is the &lt;a rel=&quot;external&quot; href=&quot;https://en.wikipedia.org/wiki/Network_File_System&quot;&gt;NFS&lt;/a&gt; protocol. Offering a similar experience to FUSE, with some additional baggage associated with the network. Fortunately, this works pretty seamlessly on both macOS and Linux. I stumbled upon an &lt;a rel=&quot;external&quot; href=&quot;https://github.com/xetdata/nfsserve&quot;&gt;NFS-Server&lt;/a&gt; crate which made prototyping a very productive experience.&lt;/p&gt;
+&lt;p&gt;In a couple of days, I had a high-performance implementation ready. Mounting my whole Lockbook directory and seeing it work effortlessly with Lightroom, Keynote, and CAD software was a pretty magical moment for me as an engineer.&lt;/p&gt;
+&lt;p&gt;&lt;a rel=&quot;external&quot; href=&quot;https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb03f860f-f925-488d-bc35-f9ddc8883d0a_1908x1266.png&quot;&gt;&lt;img src=&quot;https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb03f860f-f925-488d-bc35-f9ddc8883d0a_1908x1266.png&quot; alt=&quot;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;We shipped an early preview of lb_fs in our &lt;code&gt;CLI&lt;/code&gt; in 0.9.0. So far we&#39;ve experienced some good feedback. We even had one of our users use the filesystem as part of an &lt;a rel=&quot;external&quot; href=&quot;https://coreycc.com/md/blog/backup-dotfiles-with-lockbook.md&quot;&gt;automation pipeline&lt;/a&gt; for their dotfiles!&lt;/p&gt;
+&lt;p&gt;We&#39;re excited about the future of lb-fs. We intend to integrate it directly into our desktop apps -- allowing you to click on any document not supported by Workspace and open it natively on your computer. We also want you to be able to click any folder and &quot;Open Externally&quot;. Allowing you to seamlessly backup the decrypted contents as easily as copying them to a different location on your computer.&lt;/p&gt;
+&lt;p&gt;But at the moment we&#39;re pausing for some reflection: should lbfs continue investing in NFS? On Windows, it requires Windows Pro (which most users don&#39;t have, and there is no 3rd party stopgap). Potentially, we could seek a higher quality platform-specific interface like &lt;a rel=&quot;external&quot; href=&quot;https://learn.microsoft.com/en-us/windows/win32/projfs/projected-file-system&quot;&gt;ProjFS&lt;/a&gt;. If we were to explore something like that on macOS we could add nice touches like showing the sync status or collaboration details within Finder itself.&lt;/p&gt;
+&lt;p&gt;This could also be a cool opportunity to create a state-of-the-art, cross-platform virtual file system abstraction for the Rust ecosystem. If you&#39;d be interested in pursuing something like that please &lt;a rel=&quot;external&quot; href=&quot;https://discord.gg/lockbook&quot;&gt;join our Discord&lt;/a&gt; and reach out! We&#39;d be happy to support you in any way we can.&lt;/p&gt;
+&lt;h2 id=&quot;other-infrastructural-updates&quot;&gt;Other Infrastructural updates&lt;/h2&gt;
+&lt;p&gt;Further investments in multimedia right now are bottlenecked by our current networking implementation. We expect it to be a small lift to unlock the potential of ws and fs by using a slightly more sophisticated approach to networking:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;don&#39;t sync all your files all the time -- don&#39;t sync large files to my iPhone, let me log in immediately and lazily fetch files as needed (still have a well-managed cache for great offline support).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;be able to more reliably sync large files -- presently, especially under adverse network circumstances, large files are particularly problematic.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;fetch and push files in parallel.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These features and a few others comprise our &lt;a rel=&quot;external&quot; href=&quot;https://github.com/lockbook/lockbook/issues/2214&quot;&gt;Sync 4.0 tracker&lt;/a&gt;, the product of which has significant implications for everything mentioned above. Sync 4.0 should also allow us to sync way more aggressively (where appropriate) -- a long-standing request from almost every type of user.&lt;/p&gt;
+&lt;p&gt;Once we have this situation under control we can start to look toward a future where we have a richer set of tools for collaboration:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;document revisions&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;document comments&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;author history (like git blame)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;dare I say -- Google Docs style real-time collaborative editing?&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These features will likely be presented in workspace itself, but will be present for all file types fundamentally.&lt;/p&gt;
+&lt;p&gt;You can track the broader multimedia efforts &lt;a rel=&quot;external&quot; href=&quot;https://github.com/lockbook/lockbook/issues/1947&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;If you have a specific use case that we didn&#39;t cover above we&#39;d love to hear from you! &lt;a rel=&quot;external&quot; href=&quot;https://discord.gg/lockbook&quot;&gt;Join our Discord&lt;/a&gt; and share your thoughts!&lt;/p&gt;
+&lt;h2 id=&quot;footnote-community-document-types&quot;&gt;Footnote: Community Document Types&lt;/h2&gt;
+&lt;p&gt;Another interesting opportunity that workspace presents our community is the ability to author custom new document types. If you can come up with a data format, and write an &lt;a rel=&quot;external&quot; href=&quot;https://github.com/emilk/egui&quot;&gt;egui&lt;/a&gt; widget then you can contribute a new file type to Lockbook workspace.&lt;/p&gt;
+&lt;p&gt;Presently we have some community members pursuing interesting visualizations of disk space and links within markdown documents inspired by &lt;em&gt;Disk Usage Analyzer&lt;/em&gt; on Linux and the &lt;em&gt;&lt;a rel=&quot;external&quot; href=&quot;https://help.obsidian.md/Plugins/Graph+view&quot;&gt;Obsidian Graph View&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a rel=&quot;external&quot; href=&quot;https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F11fb7816-0c6b-4f6f-9e73-6b8a258b5f36_957x625.png&quot;&gt;&lt;img src=&quot;https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F11fb7816-0c6b-4f6f-9e73-6b8a258b5f36_957x625.png&quot; alt=&quot;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a rel=&quot;external&quot; href=&quot;https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F678cce90-3b8d-44cf-97f6-be5050e36f03_1199x980.png&quot;&gt;&lt;img src=&quot;https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F678cce90-3b8d-44cf-97f6-be5050e36f03_1199x980.png&quot; alt=&quot;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;We&#39;ve also heard lots of interesting ideas about building habit trackers and to-do lists this way as well. If you&#39;re interested in whipping up something like this &lt;a rel=&quot;external&quot; href=&quot;https://discord.gg/lockbook&quot;&gt;join our Discord!&lt;/a&gt; For now, we will play an active role in what file types make it to all users, but one day this structure may grow into a formal plugin system!&lt;/p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Lockbook 0.9 🚀</title>
+        <published>2024-03-02T00:00:00+00:00</published>
+        <updated>2024-03-02T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://lockbook.net/blog/lockbook-09/"/>
+        <id>https://lockbook.net/blog/lockbook-09/</id>
+        
+        <content type="html" xml:base="https://lockbook.net/blog/lockbook-09/">&lt;p&gt;Lockbook 0.9 ships with progress on 4 fronts:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;Lockbook Workspace&lt;/em&gt; comes to iOS, bringing pdf, image and other multimedia to iPhones and iPads.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Lockbook’s CLI now ships with &lt;em&gt;lb-fs&lt;/em&gt; an experimental mounted file system which allows you edit files in your Lockbook using any applications on your computer.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Lockbook’s Drawing Experience: &lt;em&gt;Canvas&lt;/em&gt; now features support for images, expanding the type of unstructured notes you can take.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a rel=&quot;external&quot; href=&quot;https://github.com/lockbook/lockbook/releases/tag/0.9.0&quot;&gt;A long list of bug fixes and refinements.&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you’d like to hear more about this release from our team checkout our latest video:&lt;/p&gt;
+&lt;p&gt;As always we’d love to hear from you about what you like and what you don’t like. Don’t hesitate to join the conversation on Discord: &lt;a rel=&quot;external&quot; href=&quot;https://discord.gg/lockbook&quot;&gt;https://discord.gg/lockbook&lt;/a&gt;&lt;/p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Creating a sick CLI</title>
+        <published>2023-10-11T00:00:00+00:00</published>
+        <updated>2023-10-11T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://lockbook.net/blog/creating-a-sick-cli/"/>
+        <id>https://lockbook.net/blog/creating-a-sick-cli/</id>
+        
+        <content type="html" xml:base="https://lockbook.net/blog/creating-a-sick-cli/">&lt;p&gt;At &lt;a rel=&quot;external&quot; href=&quot;https://parth.cafe/p/introducing-lockbook&quot;&gt;Lockbook&lt;/a&gt; we strongly believe in &lt;a rel=&quot;external&quot; href=&quot;https://en.wikipedia.org/wiki/Eating_your_own_dog_food&quot;&gt;dogfooding&lt;/a&gt;. So we knew alongside a great, native, markdown editing experience we would want a &lt;em&gt;sick&lt;/em&gt; CLI. Having a &lt;em&gt;sick&lt;/em&gt; CLI creates interesting opportunities for a niche type of user who is familiar with a terminal environment:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;They can use the text editor they&#39;re deeply familiar with.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;They can write scripts against their Lockbook.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;They can vastly reduce the surface area of attack.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Can always maintain remote access to their Lockbook via SSH.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In this post I’m going to tackle 3 topics:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;What makes a CLI sick?&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;How do you go about realizing some of those “interesting opportunities” using our CLI?&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;What’s next for our CLI?&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&quot;what-makes-a-cli-sick&quot;&gt;What makes a CLI &lt;em&gt;sick&lt;/em&gt;?&lt;/h1&gt;
+&lt;p&gt;It’s tab completions. For me, tab completions are what I use to initially explore what a CLI can do. Later, if the CLI is &lt;em&gt;sick&lt;/em&gt; , I use tab completions to speed up my workflow. I don’t just want to tab complete the structure of the CLI (subcommands and flags). I want to tab complete dynamic values, in Lockbook&#39;s case, this means completing file paths and IDs.&lt;/p&gt;
+&lt;p&gt;&lt;a rel=&quot;external&quot; href=&quot;https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F520d4b31-50c4-4c07-8e35-38b1bcb2f3d6_946x374.png&quot;&gt;&lt;img src=&quot;https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F520d4b31-50c4-4c07-8e35-38b1bcb2f3d6_946x374.png&quot; alt=&quot;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a rel=&quot;external&quot; href=&quot;https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F77563e15-d3ac-4e85-84b1-27c341b598f0_1034x370.png&quot;&gt;&lt;img src=&quot;https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F77563e15-d3ac-4e85-84b1-27c341b598f0_1034x370.png&quot; alt=&quot;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;If you&#39;re creating a CLI most libraries make you choose between a few bad options:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Hand-craft completion files for each shell.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Sacrifice dynamic completions and just settle for automatically generated static completions.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Rust is no exception here, &lt;code&gt;clap&lt;/code&gt; has some support for static completions, but no way to invoke dynamic completions without writing a completion file for each shell.&lt;/p&gt;
+&lt;p&gt;And so we set out to solve this problem for the Rust ecosystem, and created &lt;code&gt;cli-rs&lt;/code&gt;. A parsing library, similar to &lt;code&gt;clap&lt;/code&gt; but with explicit design priorities around creating a great tab completion experience. As soon as &lt;code&gt;cli-rs&lt;/code&gt; was stable enough we re-wrote &lt;code&gt;lockbook&lt;/code&gt;&#39;s CLI using it so we could pass on these gains to our users&lt;/p&gt;
+&lt;p&gt;&lt;a rel=&quot;external&quot; href=&quot;https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7cebb737-4276-46df-a78f-316541b49aac_1266x952.png&quot;&gt;&lt;img src=&quot;https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7cebb737-4276-46df-a78f-316541b49aac_1266x952.png&quot; alt=&quot;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a rel=&quot;external&quot; href=&quot;https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd281cadb-328d-4495-ad53-727caef8bdd1_1022x320.png&quot;&gt;&lt;img src=&quot;https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd281cadb-328d-4495-ad53-727caef8bdd1_1022x320.png&quot; alt=&quot;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Cli-rs is simple, you describe your CLI like this:&lt;/p&gt;
+&lt;p&gt;&lt;a rel=&quot;external&quot; href=&quot;https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F17154cfe-9918-4f99-a460-20838e1bb009_1346x640.png&quot;&gt;&lt;img src=&quot;https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F17154cfe-9918-4f99-a460-20838e1bb009_1346x640.png&quot; alt=&quot;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This gives the parser all the information it needs to offer the best tab completion behavior. It handles all the static completions internally and then invokes your program when it’s time to dynamically populate a field with your user’s data.&lt;/p&gt;
+&lt;p&gt;We also invested a ton of effort in the infrastructure that deploys our CLI to our customer&#39;s machines so that tab completions would be set up for most people by default.&lt;/p&gt;
+&lt;h1 id=&quot;exciting-opportunities-for-power-users&quot;&gt;Exciting Opportunities for Power Users&lt;/h1&gt;
+&lt;h2 id=&quot;use-your-favorite-text-editor&quot;&gt;Use your favorite text editor&lt;/h2&gt;
+&lt;p&gt;You can &lt;code&gt;lockbook edit&lt;/code&gt; any path you have access to and our CLI will invoke &lt;code&gt;vim&lt;/code&gt;, utilizing any custom &lt;code&gt;.vimrc&lt;/code&gt; that may exist. You can override the selected editor by setting the &lt;code&gt;LOCKBOOK_EDITOR&lt;/code&gt; env var or using the &lt;code&gt;--editor&lt;/code&gt; flag. So far we support &lt;code&gt;vim&lt;/code&gt;, &lt;code&gt;nvim&lt;/code&gt;, &lt;code&gt;subl&lt;/code&gt;, &lt;code&gt;code&lt;/code&gt;, &lt;code&gt;emacs&lt;/code&gt; and &lt;code&gt;nano&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a rel=&quot;external&quot; href=&quot;https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fdf94e90e-2daa-4f44-ac88-69c71d50a4e3_1266x952.png&quot;&gt;&lt;img src=&quot;https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fdf94e90e-2daa-4f44-ac88-69c71d50a4e3_1266x952.png&quot; alt=&quot;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;If we don’t support your favorite editor, send us a PR or hop in our &lt;a rel=&quot;external&quot; href=&quot;https://markdowntohtml.com/TODO&quot;&gt;discord&lt;/a&gt; and tell us.&lt;/p&gt;
+&lt;h2 id=&quot;extending-lockbook&quot;&gt;Extending Lockbook&lt;/h2&gt;
+&lt;p&gt;We want Lockbook to be maximally extensible, this extensibility will take many forms, one of which is our CLI. Let&#39;s explore some of the interesting things you can accomplish with our CLI.&lt;/p&gt;
+&lt;p&gt;Let’s say you wanted a snapshot of everything in your second brain decrypted and without any proprietary format for tin-foil-hat backup reasons. You can easily set a &lt;code&gt;cron&lt;/code&gt; that will simply &lt;code&gt;lockbook sync&lt;/code&gt; and &lt;code&gt;lockbook backup&lt;/code&gt; however often you want. &lt;code&gt;lockbook export&lt;/code&gt; can be used to write any folder or document from Lockbook to your file system, paving the way for automated updates of a blog. Edit a note on your phone, and see the change live on your blog in seconds. &lt;code&gt;lockbook import&lt;/code&gt; lets you do the opposite. Want to continuously back up a folder from your computer to Lockbook? Setup a &lt;code&gt;cron&lt;/code&gt; that will simply &lt;code&gt;Lockbook import&lt;/code&gt; and then &lt;code&gt;lockbook sync&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a rel=&quot;external&quot; href=&quot;https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3227172c-f7b8-4412-a5eb-a7ebc742b224_924x416.png&quot;&gt;&lt;img src=&quot;https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3227172c-f7b8-4412-a5eb-a7ebc742b224_924x416.png&quot; alt=&quot;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;ultra-secure&quot;&gt;Ultra secure&lt;/h2&gt;
+&lt;p&gt;I like to think about security as the product of a few numbers. So if, for example, you’re product is closed source, one of those numbers in your multiplication chain is a big fat zero. And there’s nothing you can do to pretend it’s secure. Similarly, the age of a product is one of those numbers. Newer is worse, and this is one of Lockbook’s current weaknesses.&lt;/p&gt;
+&lt;p&gt;But one of Lockbook’s strengths is how much you can reduce the total amount of code it takes to interact with Lockbook. On one end of the spectrum, you have software that &lt;strong&gt;requires&lt;/strong&gt; a full browser installation to perform the most basic tasks. Slightly better than that is software that runs natively, and on the other end of the spectrum is software that doesn’t even rely on a UI library. This is where our CLI comes into play: if you wanted to run Lockbook on a libre-booted Thinkpad running an ultra-minimal operating system, Lockbook wouldn’t require you to add the Google Chrome dependency tree to your setup.&lt;/p&gt;
+&lt;h2 id=&quot;remote-lockbook&quot;&gt;Remote Lockbook&lt;/h2&gt;
+&lt;p&gt;Sometimes you find yourself employed by a financial institution that heavily restricts what you can do on their machines. Without thinking too much more about your situation you may want to simply add something to your grocery list without pulling out your phone. Unfortunately, IT has locked down your remote Windows 7 installation, and not only can you not install our Windows app (which does not require administrator privileges to install) but you cannot visit GitHub itself!&lt;/p&gt;
+&lt;p&gt;Maybe in this environment, it’s not worth it to update your grocery list, but you identify with the likes of Ron Swanson, and you will not be defeated by your IT department. How? Because you port forwarded your desktop and memorized a lengthy SSH password. So you ssh in, use your favorite text editor, and you update that grocery list. There’s no stopping you.&lt;/p&gt;
+&lt;h1 id=&quot;what-s-next-for-our-cli&quot;&gt;What’s next for our CLI&lt;/h1&gt;
+&lt;p&gt;Our CLI has come a long way, we&#39;ve experimented with various ways of allowing you to quickly find a note and edit it. In the past we experimented with piping output to programs like &lt;code&gt;fzf&lt;/code&gt;, we even tried implementing a custom full-screen search. This is the approach that feels the best to us and we think is going to stand the test of time. But work is never done, so here are some of the things we plan to tackle in our CLI:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Make cli-rs easier for others to use by adding documentation and examples.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Continue to invest in our release infrastructure to bring our CLI to more package managers. If you&#39;d like to become a maintainer for a particular distro &lt;a rel=&quot;external&quot; href=&quot;https://discord.gg/lockbook&quot;&gt;reach out!&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Support richer parser inputs including variable number of arguments, grouped command line flags, and logical de-duplication of tab completions (this flag or argument is already specified so don&#39;t suggest it again).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Deeper integrations with shells in &lt;code&gt;cli-rs&lt;/code&gt;: offer ways to express that this argument is a normal file with completions, or implement mechanisms to re-write the current prompt (&lt;code&gt;lockbook edit sick&amp;lt;tab&amp;gt;&lt;/code&gt; tab completes: &lt;code&gt;lockbook edit writing/parth.cafe/creating-a-sick-cli.md&lt;/code&gt; presently tab completion options must begin with the current prompt).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;A richer showcase of interesting things we can do with our CLI, we plan to set up our blog the way I described above and provide concrete examples of how to do many of the things I outlined. So if you haven&#39;t already subscribe to the &lt;a rel=&quot;external&quot; href=&quot;https://blog.lockbook.net/&quot;&gt;Lockbook Blog&lt;/a&gt;, and &lt;a rel=&quot;external&quot; href=&quot;https://www.youtube.com/@lockbook_net&quot;&gt;Lockbook Youtube Channel&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Defect Finder</title>
+        <published>2023-08-24T00:00:00+00:00</published>
+        <updated>2023-08-24T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://lockbook.net/blog/defect-finder/"/>
+        <id>https://lockbook.net/blog/defect-finder/</id>
+        
+        <content type="html" xml:base="https://lockbook.net/blog/defect-finder/">&lt;p&gt;When designing &lt;a rel=&quot;external&quot; href=&quot;https://parth.cafe/p/introducing-lockbook&quot;&gt;Lockbook&lt;/a&gt; we knew we wanted to support a great offline experience. To our surprise, this grew to become one of the largest areas of complexity. Forming consensus is an active area of research in computer science, but Lockbook has an additional constraint. Unlike our competition, large areas of complexity take place on &lt;a rel=&quot;external&quot; href=&quot;https://parth.cafe/p/why-lockbook-chose-rust&quot;&gt;our user’s devices&lt;/a&gt; that can&#39;t update remotely. Additionally, the administrative action we can take is limited: most data entered by users is encrypted, and their devices will reject changes that aren’t signed by people they trust. All this is to say that the cost of error is higher for our team and it’ll likely take longer for our software to mature and reach stability. Today I’d like to share a tester we created to help us find defects and accelerate the maturation process. We affectionately called this tester “the fuzzer”. We’ll explore whether this is a good name a bit later, but first, let’s talk about the sorts of problems we’re trying to detect.&lt;/p&gt;
+&lt;p&gt;Users should be able to do mostly anything offline, so what happens if, say Alice moves a document and Bob renames that document while they were both offline? What happens if they both move a folder? Both edit the same document? What if that document isn’t plain text? What if Alice moves folder B into C, and Bob moves folder C into B at the same time?&lt;/p&gt;
+&lt;p&gt;&lt;a rel=&quot;external&quot; href=&quot;https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9edec0f4-1955-4626-8c5e-80f3c2822c37_2048x2048.png&quot;&gt;&lt;img src=&quot;https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F9edec0f4-1955-4626-8c5e-80f3c2822c37_2048x2048.png&quot; alt=&quot;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Some of these things can be resolved seamlessly while others may require user intervention. Some of the resolution strategies are complicated and error-prone. The fuzzer ensures regardless of what steps a user (or their device) takes various components of our architecture always remain in a sensible state. Let me share some examples:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Regardless of who moved what files and when, we want to make sure that your file trees never have any cycles.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;No folder should have two files with the same name. Creating files, renaming files, and moving files could cause two files in a given location to share a name.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Actions that change a file&#39;s path or sharees could change how our cryptography algorithms search for a file&#39;s decryption key, we want to make sure for the total domain of actions your files are always decryptable by you.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;As we used our platform we&#39;ve collected many such &lt;em&gt;validations&lt;/em&gt; that we want to ensure never occur for the global set of actions on our platform, and the fuzzer&#39;s job is to spit out test cases that violate these constraints. It does this by enumerating all the (significant) actions a user can take on the platform across N devices and with M collaborators. It randomly selects from this space and at each step it asks all parts of our system to make sure everything is still as it should be. It does this process in parallel fully utilizing a given machine&#39;s parallel computational resources. It travels through the search space in a manner that limits the amount of recomputation of known good states, fully utilizing a given machine&#39;s memory.&lt;/p&gt;
+&lt;p&gt;&lt;a rel=&quot;external&quot; href=&quot;https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6ba1755a-e4ed-46b3-a12a-112f1d635b60_2048x2048.png&quot;&gt;&lt;img src=&quot;https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6ba1755a-e4ed-46b3-a12a-112f1d635b60_2048x2048.png&quot; alt=&quot;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Generally when people say they&#39;re &lt;em&gt;fuzzing&lt;/em&gt; , they mean handing a user input (like a form field) randomized input to try to produce a failure. Our &lt;em&gt;fuzzer&lt;/em&gt; captures that spirit of this but is different enough that plenty of people have raised an eyebrow when I told them we call this process &lt;em&gt;fuzzing&lt;/em&gt;. Unfortunately, &lt;strong&gt;Test Simulator&lt;/strong&gt; isn&#39;t as cool a name. Knowing what this process is now if you can think of a cool name, do tell us.&lt;/p&gt;
+&lt;p&gt;Today our highly optimized fuzzer executes close to 10,000 of these trials per second, however initially it was just a quick experiment I threw together to gain confidence in an early version of sync. This was written when we were still using an architecture that used &lt;code&gt;docker-compose&lt;/code&gt; to spin up &lt;code&gt;nginx&lt;/code&gt;, &lt;code&gt;postgres&lt;/code&gt;, and &lt;code&gt;pgbouncer&lt;/code&gt; locally. The fuzzer almost immediately found some bugs. We fixed these bugs, and the value of the fuzzer was made apparent to us. The time between defects started to grow and so did the intricacies of the bugs the fuzzer revealed. As a background task, we continued to invest in the implementation of the fuzzer, and the hardware it ran on. As our architecture became faster, so did the fuzzer alongside it. Today the fuzzer has been running continuously for months and has verified 10s of billions of user actions, a promising sign as we get ready to begin marketing our product.&lt;/p&gt;
+&lt;p&gt;Below are some of the fuzzer&#39;s key milestones. If you&#39;re interested in browsing the most recent implementation you can find it linked &lt;a rel=&quot;external&quot; href=&quot;https://github.com/lockbook/lockbook/tree/master/libs/core/tests/exhaustive_sync&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h1 id=&quot;15-trials-per-second&quot;&gt;15 Trials Per Second&lt;/h1&gt;
+&lt;p&gt;Initially, we were running the fuzzer on our development machines, kicking it off overnight after any large change. Our first big jump in performance came from deciding to run it on a dedicated machine and trying to fully utilize that machine&#39;s computational resources.&lt;/p&gt;
+&lt;h1 id=&quot;80-trials-per-second&quot;&gt;80 Trials Per Second&lt;/h1&gt;
+&lt;p&gt;We first tried running our fuzzer on a dedicated server which had 80 vcpus. We purchased &lt;a rel=&quot;external&quot; href=&quot;https://www.amazon.com/gp/product/B07QQD45Z4/ref=ppx_od_dt_b_asin_title_s00?ie=UTF8&amp;amp;psc=1&quot;&gt;this machine&lt;/a&gt; for $600 in 2020. Most of our early optimization efforts centered around tuning Postgres to perform better.&lt;/p&gt;
+&lt;h1 id=&quot;250-trials-per-second&quot;&gt;250 Trials Per Second&lt;/h1&gt;
+&lt;p&gt;Our next largest jump in performance was when we made the switch from Postgres to Redis, and upgraded the hardware that the fuzzer runs on. After 2 years of faithful service, our Poweredge experienced a hardware failure which we weren&#39;t motivated enough to diagnose. So in 2022 we pooled our resources for a 3990X Threadripper with 120 vCPUs.&lt;/p&gt;
+&lt;h1 id=&quot;900-trials-per-second&quot;&gt;900 Trials Per Second&lt;/h1&gt;
+&lt;p&gt;Before &lt;a rel=&quot;external&quot; href=&quot;https://parth.cafe/p/db-rs&quot;&gt;db-rs&lt;/a&gt; there was &lt;a rel=&quot;external&quot; href=&quot;https://github.com/parth/hmdb&quot;&gt;hmdb&lt;/a&gt; which was similar in values to db-rs, but worse in execution. It still served our needs better than Redis and performed better as it was embedded in the process rather than something that communicated over the network. It additionally used a vastly more performant serialization protocol across the whole stack, inside [core] and our server.&lt;/p&gt;
+&lt;h1 id=&quot;4000-trials-per-second&quot;&gt;4000 Trials Per Second&lt;/h1&gt;
+&lt;p&gt;In late 2022 I created a compile-time flag in [core] which allowed us to directly compile the entire server into core during test mode. This meant that instead of executing network calls for fetching documents and updates core was directly calling the corresponding server functions. At this point, no part of our test harness was using the network stack.&lt;/p&gt;
+&lt;h1 id=&quot;10-000-trials-per-second&quot;&gt;10,000 Trials per second&lt;/h1&gt;
+&lt;p&gt;Once db-rs was fully integrated into core and server, I added a feature to db-rs called &lt;code&gt;no-io&lt;/code&gt;, which allowed core and server to enter a &quot;volatile&quot; mode for testing. This also allowed instances of core, server, and their corresponding databases to be deep copied. So when a trial ran, if most of the trial had been executed by another worker, it would deep copy that trial&#39;s state and pick up where it left off.&lt;/p&gt;
+&lt;h1 id=&quot;future-of-the-fuzzer&quot;&gt;Future of the fuzzer&lt;/h1&gt;
+&lt;p&gt;Personally, the fuzzer has been one of the most interesting pieces of software I&#39;ve worked on. If, like me, this piques your interest and you&#39;re interested in researching ways to make it faster with us, &lt;a rel=&quot;external&quot; href=&quot;https://discord.gg/lockbook&quot;&gt;join our discord&lt;/a&gt;.&lt;/p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Lockbook&#39;s Editor</title>
+        <published>2023-06-12T00:00:00+00:00</published>
+        <updated>2023-06-12T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://lockbook.net/blog/lockbooks-editor/"/>
+        <id>https://lockbook.net/blog/lockbooks-editor/</id>
+        
+        <content type="html" xml:base="https://lockbook.net/blog/lockbooks-editor/">&lt;p&gt;&lt;a rel=&quot;external&quot; href=&quot;https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa916acc9-8271-495e-b20c-ae853d06a34f_2000x1500.png&quot;&gt;&lt;img src=&quot;https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa916acc9-8271-495e-b20c-ae853d06a34f_2000x1500.png&quot; alt=&quot;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;As &lt;a rel=&quot;external&quot; href=&quot;https://parth.cafe/p/introducing-lockbook&quot;&gt;Lockbook&lt;/a&gt;&#39;s infrastructure stabilized, we began to focus on our markdown editing experience. Across our various platforms, we&#39;ve experimented with a few approaches for providing our users with an ergonomic way to edit their files. On Android, we use &lt;a rel=&quot;external&quot; href=&quot;https://github.com/noties/Markwon&quot;&gt;Markwon&lt;/a&gt;, a community-built markdown editor. On Apple, we initially did the same thing but found that the community components didn&#39;t have many of the features our users were asking for. So as a next step, we dove into Apple&#39;s &lt;a rel=&quot;external&quot; href=&quot;https://developer.apple.com/documentation/appkit/textkit&quot;&gt;TextKit&lt;/a&gt; API to begin work on a more ambitious editor.&lt;/p&gt;
+&lt;p&gt;Initially, this was fine, but as we worked through our backlog of requests, I found things that were going to be very time-expensive to implement using this API. We were having performance problems when editing large documents. The API was difficult to work with, especially because there were no open existing bodies of work that implemented features like automatic insertion of text (when adding to a list), support for non-text-characters (bullets, checkboxes, inline images), or multiple cursors (real-time collaboration or power user text editing). Even if we did invest the effort to pioneer these features using TextKit, we would have to replicate our efforts on our other platforms. And lastly, none of my other teammates knew the TextKit API intimately, so I wouldn&#39;t be able to easily call on their help for one of the most important aspects of our product. We needed a different approach.&lt;/p&gt;
+&lt;p&gt;In the past, I&#39;ve discussed our &lt;a rel=&quot;external&quot; href=&quot;https://parth.cafe/p/why-lockbook-chose-rust&quot;&gt;core library&lt;/a&gt; -- a place we&#39;ve been able to solve some of our hardest &quot;backend&quot; problems and bring them to foreign programming environments. We needed something like this for a UI component we needed a place where we could invest the time, build an editor from the ground up, and embed it in any UI library.&lt;/p&gt;
+&lt;p&gt;&lt;a rel=&quot;external&quot; href=&quot;https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F31cca6aa-cf31-4f08-9a9e-f440fb533048_3000x2000.png&quot;&gt;&lt;img src=&quot;https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F31cca6aa-cf31-4f08-9a9e-f440fb533048_3000x2000.png&quot; alt=&quot;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;We considered creating a web component. Perhaps we could mitigate some of the downsides of web apps if we were only presenting a web-based view when a document was loaded. Maybe we could leverage Rust&#39;s great support for web assembly for the complicated internals. Ultimately I felt like we could do better, so I continued thinking about the problem. On Linux, we&#39;d begun experimenting with &lt;a rel=&quot;external&quot; href=&quot;https://github.com/emilk/egui&quot;&gt;egui&lt;/a&gt;: a lightweight, Rust, UI library. Their README had a long list of places you could embed egui, and I wondered if I could add SwiftUI or Android to that list.&lt;/p&gt;
+&lt;p&gt;And so began my journey of gaining a deeper understanding of &lt;a rel=&quot;external&quot; href=&quot;https://wgpu.rs/&quot;&gt;wgpu&lt;/a&gt;, &lt;a rel=&quot;external&quot; href=&quot;https://eliasnaur.com/blog/immediate-mode-gui-programming&quot;&gt;immediate mode UIs&lt;/a&gt;, and how this editor might work on mobile devices.&lt;/p&gt;
+&lt;p&gt;Most UI frameworks have an API for directly interfacing with a lower-level graphics API. In SwiftUI, for instance, you can create an &lt;code&gt;MTKView&lt;/code&gt; which gives you access to &lt;a rel=&quot;external&quot; href=&quot;https://developer.apple.com/documentation/metalkit&quot;&gt;MetalKit&lt;/a&gt; (Apple&#39;s hardware accelerated graphics API). Using this view, you can effectively pass a reference to the GPU into Rust code and initialize an egui component. In the host UI framework you can capture whichever events you need (keyboard &amp;amp; mouse events for instance) and pass them to the embedded UI framework. It&#39;s the simplicity of immediate mode programming which enables this to be achievable in a short period, and it&#39;s the flexibility of immediate mode programming which makes it a great choice for complex and ambitious UI components. The approach seemed like it held promise so we gave it a go.&lt;/p&gt;
+&lt;p&gt;After a month of prototyping and pair programming with my co-founder Travis, we had done it. We shipped a version of our Text Editor on macOS, Windows, and Linux which supported many of the features our team and users had been craving. The editor was incredibly high-performance, easily achieving 120fps on massive documents. Most importantly we have a clear picture of how we would go about implementing our most ambitious features over the next couple of years.&lt;/p&gt;
+&lt;p&gt;After we released the editor on the desktop, we began the process of bringing it to mobile devices. This was a new frontier for this approach. On macOS, we just had to pass through keyboard and mouse events. On a mobile device, there are many subtle ways people can edit documents. There are auto-correct, speech-to-text, and clever ways to navigate documents. After some research, we found a neatly documented protocol -- &lt;code&gt;UITextInput&lt;/code&gt; -- which outlines the various ways in which you can interact with a software keyboard on iOS. We also found a &lt;a rel=&quot;external&quot; href=&quot;https://developer.android.com/reference/android/view/inputmethod/InputMethodManager&quot;&gt;corresponding document&lt;/a&gt; in Android&#39;s documentation.&lt;/p&gt;
+&lt;p&gt;&lt;a rel=&quot;external&quot; href=&quot;https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5308aaf8-09b9-440e-802b-209b32204490_600x1300.gif&quot;&gt;&lt;img src=&quot;https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5308aaf8-09b9-440e-802b-209b32204490_600x1300.gif&quot; alt=&quot;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;(on iOS you can quickly move the cursor by long-pressing the spacebar)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;So back to work we went. We expanded on our SwiftUI &amp;lt;--&amp;gt; egui integration giving it the ability to handle events that egui doesn&#39;t recognize. We piped through these new events, refined the way we handle mouse/touch inputs, and a couple of weeks ago, we merged our iOS editor bringing many of our gains to a new form factor.&lt;/p&gt;
+&lt;p&gt;We&#39;re very excited about the possibilities this technique opens up for us. It allows us to maintain the look &amp;amp; feel that users crave while giving us an escape hatch down into our preferred programming environment when we need it. Once our editor is more mature and the kinks of our integration are worked out, we plan to apply this strategy to more document types. Long term we&#39;re interested in making it easy for people to quickly spin up their own SwiftUI component backed by Rust (as presently this still requires a lot of boilerplate code).&lt;/p&gt;
+&lt;p&gt;On net, the editor has been a big step forward for us. It&#39;s already live on desktops and will be shipping on iOS as part of our upcoming 0.7.5 release. It&#39;s a large and fresh body of work, so we anticipate some bugs. If you encounter any, please report them to our &lt;a rel=&quot;external&quot; href=&quot;https://github.com/lockbook/lockbook/issues&quot;&gt;Github issues&lt;/a&gt;. And, as always, if you&#39;d like to join our community, we&#39;d love to have you on our &lt;a rel=&quot;external&quot; href=&quot;https://discord.gg/lockbook&quot;&gt;Discord server&lt;/a&gt;.&lt;/p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>The story of how Lockbook created its own database for speed and productivity</title>
+        <published>2023-04-19T00:00:00+00:00</published>
+        <updated>2023-04-19T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://lockbook.net/blog/db-rs/"/>
+        <id>https://lockbook.net/blog/db-rs/</id>
+        
+        <content type="html" xml:base="https://lockbook.net/blog/db-rs/">&lt;p&gt;&lt;a rel=&quot;external&quot; href=&quot;https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5fa91464-5596-4743-a17d-a324b4f43e8c_1018x994.png&quot;&gt;&lt;img src=&quot;https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5fa91464-5596-4743-a17d-a324b4f43e8c_1018x994.png&quot; alt=&quot;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;As a backend engineer, the architecture I see used most commonly is a loadbalancer distributing requests to several horizontally scaled API servers. Those API servers are generally talking to one or more stores of state. &lt;a rel=&quot;external&quot; href=&quot;https://parth.cafe/p/introducing-lockbook&quot;&gt;Lockbook&lt;/a&gt; also started this way, we load balanced requests using HAProxy, had a handful of &lt;a rel=&quot;external&quot; href=&quot;https://parth.cafe/p/why-lockbook-chose-rust&quot;&gt;Rust API nodes&lt;/a&gt;, and stored our data in Postgres and S3.&lt;/p&gt;
+&lt;p&gt;A year into the project, we had developed enough of the product that we understood our needs more clearly, but we were still early enough into our journey where we could make breaking changes and run experiments. I had some reservations about this &lt;em&gt;default&lt;/em&gt; architecture, and before the team stabilized our API, I wanted to see if we could do better.&lt;/p&gt;
+&lt;p&gt;My first complaint was about our interactions with SQL. It was annoying to shuffle data back and forth from the fields of our structs into columns of our tables. Over time our SQL queries grew more complicated, and it was hard to express and maintain ideas like &lt;em&gt;a user&#39;s file tree cannot have cycles&lt;/em&gt; or &lt;em&gt;a file cannot have the same name as a non-deleted sibling&lt;/em&gt;. We were constantly trying to determine whether we should express something in SQL, or read a user&#39;s data into our API server, perform and validate the operation in Rust, and then save the new state of their file tree. Concerns around transaction isolation, consistency, and performance were always hard to reason about. We were growing frustrated because we knew how we want this data to be stored and processed and were burning cycles fighting our declarative environment.&lt;/p&gt;
+&lt;p&gt;My second complaint was about how much infrastructure we had to manage. While on the topic of Postgres itself, running Postgres at a production scale is not trivial. There&#39;s a great deal of trivia you have to understand to make Postgres work properly with your API servers and your hardware. First we had to understand what features of Postgres our database libraries supported. In our case, that meant evaluating whether we needed to additionally run PGBouncer, Postgres&#39; connection pooling server, and potentially another piece of infrastructure to manage. Regardless of PGBouncer, configuring Postgres itself requires an understanding of how Postgres interacts with your hardware. From Postgres&#39; &lt;a rel=&quot;external&quot; href=&quot;https://wiki.postgresql.org/wiki/Tuning_Your_PostgreSQL_Server&quot;&gt;configuration guide&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;PostgreSQL ships with a basic configuration tuned for wide compatibility rather than performance. Odds are good the default parameters are very undersized for your system....&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;That&#39;s just Postgres. Similar complexities existed for S3, HAProxy, and the networking and monitoring considerations of all the nodes mentioned thus far. This was quickly becoming overwhelming, and we hadn&#39;t broken ground on &lt;em&gt;user collaboration&lt;/em&gt; , one of our most ambitious features. For a team sufficiently large this may be no big deal. Just hire some ops people to stand up the servers so the software engineers can engineer the software. For our resource-constrained team of 5, this wasn&#39;t going to work. Additionally, when we surveyed the useful work our servers were performing, we knew this level of complexity was unnecessary.&lt;/p&gt;
+&lt;p&gt;For example, when a user signs up for Lockbook or makes an edit to a file, the actual useful work that our server did to record that information should have taken no more than 2ms. But from our load balancer&#39;s reporting, those requests were taking 50-200 ms. We were using all these heavy-weight tools to be able to field lots of concurrent requests without paying any attention to how long those requests were taking. Would we need all this if the requests were fast?&lt;/p&gt;
+&lt;p&gt;We ran some experiments with Redis and stored files in EBS instead of S3, and the initial results were promising. We expressed all our logic in Rust and vastly increased the amount of code we were able to share with our clients (core). We dramatically reduced our latency, and our app felt noticeably faster. However, most of that request time was spent waiting for Redis to respond over the network (even if we hosted our application and database on the same server). And we were still spending time ferrying information in and out of Redis. I knew something was interesting to explore here.&lt;/p&gt;
+&lt;p&gt;So after a week of prototyping, I created &lt;a rel=&quot;external&quot; href=&quot;https://github.com/parth/db-rs&quot;&gt;db-rs&lt;/a&gt;. The idea was to make a stupid-simple database that could be embedded as a Rust library directly into our application. No network hops, no context switches, and huge performance gains. Have it be easy for someone to specify a schema in Rust, and allow them to pick what the performance characteristics of these simple key-value style tables would be. This is Core&#39;s schema, for instance:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#[derive(Schema, Debug)]
+pub struct CoreV3 {
+    pub account: Single&amp;lt;Account&amp;gt;,
+    pub last_synced: Single&amp;lt;i64&amp;gt;,
+    pub root: Single&amp;lt;Uuid&amp;gt;,
+    pub local_metadata: LookupTable&amp;lt;Uuid, SignedFile&amp;gt;,
+    pub base_metadata: LookupTable&amp;lt;Uuid, SignedFile&amp;gt;,
+    pub pub_key_lookup: LookupTable&amp;lt;Owner, String&amp;gt;,
+    pub doc_events: List&amp;lt;DocEvent&amp;gt;,
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The types &lt;code&gt;Single&lt;/code&gt;, &lt;code&gt;LookupTable&lt;/code&gt;, and &lt;code&gt;List&lt;/code&gt; are db-rs table types. They are backed by Rust &lt;code&gt;Option&lt;/code&gt;, &lt;code&gt;HashMap&lt;/code&gt;, or &lt;code&gt;Vec&lt;/code&gt; respectively. They capture changes to their data structures, &lt;code&gt;Serialize&lt;/code&gt; those changes and append them to the end of a log -- one of the fastest ways to persist an event.&lt;/p&gt;
+&lt;p&gt;The types &lt;code&gt;Account&lt;/code&gt;, &lt;code&gt;SignedFile&lt;/code&gt;, &lt;code&gt;Uuid&lt;/code&gt;, etc are types Lookbook is using. They all implement the ubiquitous &lt;code&gt;Serialize&lt;/code&gt; &lt;code&gt;Deserialize&lt;/code&gt; traits, so we never again need to think about converting between our types and their on-disk format. Internally db-rs uses &lt;code&gt;bincode&lt;/code&gt; format, an incredibly &lt;a rel=&quot;external&quot; href=&quot;https://github.com/djkoloski/rust_serialization_benchmark&quot;&gt;performant&lt;/a&gt; and compact representation of your data.&lt;/p&gt;
+&lt;p&gt;What&#39;s cool here is that when you query out of a table, you&#39;re handed pointers to &lt;em&gt;your data&lt;/em&gt;. The database isn&#39;t fetching bytes, serializing them, or sending them over the wire for your program to then shuffle into its fields. A read from one of these tables is a direct memory access, and because of Rust&#39;s memory guarantees, you can be sure that reference will be valid for the duration of your access to it.&lt;/p&gt;
+&lt;p&gt;What&#39;s exciting from an ergonomics standpoint is that your schema is statically known by your editor. It&#39;s not defined and running on a server somewhere else. So if you type &lt;code&gt;db.&lt;/code&gt; you get a list of your tables. If you select one, then that table-type&#39;s contract is shown to you, with &lt;em&gt;your&lt;/em&gt; keys and values. Additionally for us, now our backend stack doesn&#39;t require any container orchestration whatsoever: you just need &lt;code&gt;cargo&lt;/code&gt; to run our server. This has been massive boon for quickly setting up environments whether locally or in production.&lt;/p&gt;
+&lt;p&gt;The core ideas of the database are less than 800 lines of code and are fairly easy to reason about. This is a database that&#39;s working well for us not because of what it does, but because of all the things it &lt;em&gt;doesn&#39;t do&lt;/em&gt;. And what we&#39;ve gained from db-rs is a tremendous amount of performance and productivity.&lt;/p&gt;
+&lt;p&gt;Ultimately this is a different way to think about scaling a backend. When you string together 2-4 pieces of infrastructure over the network, you&#39;re incurring a big latency cost, and hopefully what you&#39;re gaining as a result is availability. But are you? If you&#39;re using something like Postgres, you&#39;re also in a situation where your database is your single point of failure. You&#39;ve just surrounded that database with a lot of ceremonies, and I&#39;m skeptical that the ceremony helps Postgres respond to queries faster or that it helps engineers deliver value more quickly.&lt;/p&gt;
+&lt;p&gt;db-rs has been running in production for half a year at this point. Most requests are replied to in less than 1 ms. We anticipate that on a modest EC2 node, we should be able to scale to hundreds of thousands of users and field hundreds of requests per second. Should we need to, we can scale vertically 1-2 orders of magnitude beyond this point. Ultimately our backend plans to follow a scaling strategy similar to email where users have a home server. And our long-term vision is one of a network of decentralized server operators. But that&#39;s a dream that&#39;s still quite far away.&lt;/p&gt;
+&lt;p&gt;As a result, what Lockbook ultimately converged on, is probably my new &lt;em&gt;default&lt;/em&gt; approach for building simple backend systems. If this intrigues you, check out the &lt;a rel=&quot;external&quot; href=&quot;https://github.com/parth/db-rs&quot;&gt;source code&lt;/a&gt; of db-rs or take it for a &lt;a rel=&quot;external&quot; href=&quot;https://crates.io/crates/db-rs&quot;&gt;spin&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Currently db-rs exactly models the needs of Lockbook. There are key weaknesses around areas of concurrency and offloading seldom accessed data to disk. Whenever Lockbook or one of db-rs&#39; users needs these things, they&#39;ll be added. Feel free to open an issue or pull request!&lt;/p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Why Lockbook chose Rust</title>
+        <published>2023-01-02T00:00:00+00:00</published>
+        <updated>2023-01-02T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://lockbook.net/blog/why-lockbook-chose-rust/"/>
+        <id>https://lockbook.net/blog/why-lockbook-chose-rust/</id>
+        
+        <content type="html" xml:base="https://lockbook.net/blog/why-lockbook-chose-rust/">&lt;p&gt;&lt;a rel=&quot;external&quot; href=&quot;https://lockbook.net/&quot;&gt;Lockbook&lt;/a&gt; began it’s &lt;a rel=&quot;external&quot; href=&quot;https://parth.cafe/p/introducing-lockbook&quot;&gt;journey&lt;/a&gt; as a bash script. As it started to evolve into something more serious, one of our earliest challenges was identifying a UI framework we were willing to bet on. As we explored, we were weighing things like UI quality, developer experience, language selections, and so on.&lt;/p&gt;
+&lt;p&gt;Our choice of UI framework had implications for our server as well. If we chose JavaFX and native Android, we would likely want to choose a JVM-based language for our server to share as much code as possible.&lt;/p&gt;
+&lt;p&gt;As we wrote and re-wrote our application, we discovered that most of our effort, even on our clients, was not front-end code. When we were implementing user management, billing, file operations, collaboration, compression, and encryption, the lion’s share of the work was around traditional backend-oriented tasks. Things like data modeling, error propagation, managing complex logic, handling database interactions, and writing tests were where we were spending most of our time. Many of these things had to take place on our clients because all our user data is &lt;a rel=&quot;external&quot; href=&quot;https://en.wikipedia.org/wiki/End-to-end_encryption&quot;&gt;end-to-end-encrypted&lt;/a&gt;. Additionally, some of these operations were sensitive to slight differences in implementation. If your encryption and decryption are subtly different across two different clients, your file may be unreadable.&lt;/p&gt;
+&lt;p&gt;It was also becoming clear to us that the applications that looked and felt the best to us were created in that platform’s native UI framework. So our initial investigation around UI frameworks morphed into an inquiry into what the best repository for business logic was. Ideally, this repository would give us great tools for writing complex business logic and would be ultimately portable.&lt;/p&gt;
+&lt;p&gt;&lt;a rel=&quot;external&quot; href=&quot;https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F8e8f9520-2b63-4f2c-ac05-20a12f699a82_612x408.jpeg&quot;&gt;&lt;img src=&quot;https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F8e8f9520-2b63-4f2c-ac05-20a12f699a82_612x408.jpeg&quot; alt=&quot;Screenshot for &quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;tools-for-managing-complexity&quot;&gt;Tools for managing complexity&lt;/h2&gt;
+&lt;p&gt;Our collective experience made us gravitate towards a particular spirit. At &lt;a rel=&quot;external&quot; href=&quot;https://www.gemini.com/&quot;&gt;Gemini&lt;/a&gt;, &lt;a rel=&quot;external&quot; href=&quot;https://raayan.net/&quot;&gt;Raayan&lt;/a&gt; and I saw how productive we were within a foreign, large-scale, Scala codebase. Informed by the experience we were looking for a language with an expressive, robust type system.&lt;/p&gt;
+&lt;p&gt;A “robust type system” goes beyond what you’d find in languages like Java, Python, or Go. We were looking for type systems where &lt;code&gt;null&lt;/code&gt; or &lt;code&gt;nil&lt;/code&gt; were the exception, rather than the norm. We want it to be apparent when a function could return an error, or an empty value, and have ergonomic ways to handle those scenarios.&lt;/p&gt;
+&lt;p&gt;We wanted to have sophisticated interactions with things like &lt;code&gt;enums&lt;/code&gt;, specifically, we wanted to be able to model the idea of exhaustivity. When an idea we were working with evolved to have more &lt;em&gt;cases&lt;/em&gt; we wanted our compiler to guide us to all the locations that need to be updated.&lt;/p&gt;
+&lt;p&gt;There were a handful of other features we were looking for which can broadly be categorized into two similar ideas:&lt;/p&gt;
+&lt;p&gt;We wanted to express as much as we could in our primary programming language. Things that would traditionally be documented ( &lt;em&gt;this fn will return null in this situation&lt;/em&gt; ) or things that would be expressed in configuration (TLS configuration handled by a different program in YAML) would ideally be expressed in a language that contributors understood intimately. Ideally in a language where the compiler was providing strong guarantees against mistakes and misuse.&lt;/p&gt;
+&lt;p&gt;We wanted our language and tools to help us detect defects as &lt;a rel=&quot;external&quot; href=&quot;https://en.wikipedia.org/wiki/Shift-left_testing&quot;&gt;early as possible&lt;/a&gt; in the development lifecycle. Most software developers are used to trying to capture defects at test time, but we found that trying to capture defects even earlier, at compile time, allowed us to drop into &lt;a rel=&quot;external&quot; href=&quot;https://en.wikipedia.org/wiki/Flow_(psychology)&quot;&gt;flow&lt;/a&gt; more easily. The following is our preference for when we’d like to catch defects:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;at compile time&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;test time&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;startup time&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;pr time&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;internal test time&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;by a customer&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Our strongest contenders for languages here were Rust, Haskell, and Scala.&lt;/p&gt;
+&lt;h2 id=&quot;ultra-portability&quot;&gt;Ultra-portability&lt;/h2&gt;
+&lt;p&gt;Ideally, this repository would not place constraints on where it could be used. If our repository was in Scala, for instance, we’d be able to use it on Desktop, our Server, and Android, but we’d run into problems on Apple devices.&lt;/p&gt;
+&lt;p&gt;We could use something like JS, virtually every platform has a way to invoke some sort of WebView which allows you to execute JS. But we’d had plenty of &lt;a rel=&quot;external&quot; href=&quot;https://www.destroyallsoftware.com/talks/wat&quot;&gt;bad experiences&lt;/a&gt; with vanilla javascript. We found that evolutions on JS like Typescript were also on a &lt;a rel=&quot;external&quot; href=&quot;https://www.youtube.com/watch?v=jjMbPt_H3RQ&quot;&gt;shaky foundation&lt;/a&gt;. Despite the JS ecosystem being popular and old, it didn’t feel very mature. Finally, we didn’t like the way most JS-based applications, whether &lt;a rel=&quot;external&quot; href=&quot;https://medium.com/commitlog/why-i-still-use-vim-67afd76b4db6&quot;&gt;Electron&lt;/a&gt; or React Native &lt;a rel=&quot;external&quot; href=&quot;https://parth.cafe/i/87442376/what-is-ideal&quot;&gt;felt&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Both JS and Scala would require tremendous overhead due to the default environments in which they run. We needed something lighter weight than invoking a little browser every time we wanted to call into our &lt;em&gt;core&lt;/em&gt;. Our team members were pretty experienced in Golang, and &lt;a rel=&quot;external&quot; href=&quot;https://go.dev/blog/cgo&quot;&gt;Cgo&lt;/a&gt; was an ideal fit for what we were looking for. It would allow us to ship our &lt;em&gt;core&lt;/em&gt; as a C library accessible from any programing language we were interested in inter-operating with. There were some concerns we had about the long-term overhead of &lt;a rel=&quot;external&quot; href=&quot;https://github.com/dyu/ffi-overhead&quot;&gt;cgo&lt;/a&gt; and garbage collection generally, but those wouldn’t be immediate concerns.&lt;/p&gt;
+&lt;p&gt;Similarly, Rust had a pretty rich collection of tools for generating C bindings for Rust programs and a pretty mature conceptualization of &lt;a rel=&quot;external&quot; href=&quot;https://en.wikipedia.org/wiki/Foreign_function_interface&quot;&gt;FFI&lt;/a&gt;. Though it wasn’t an immediate criterion we were inspired by the fact that most everything in Rust was a &lt;a rel=&quot;external&quot; href=&quot;https://stackoverflow.com/questions/69178380/what-does-zero-cost-abstraction-mean&quot;&gt;zero-cost abstraction&lt;/a&gt;. In that spirit, FFI in Rust would have virtually no additional overhead when compared to a C program. We were also drawn to &lt;a rel=&quot;external&quot; href=&quot;https://doc.rust-lang.org/cargo/&quot;&gt;Cargo&lt;/a&gt; which felt like the package manager for a language we were waiting for, particularly useful for our complicated build process.&lt;/p&gt;
+&lt;p&gt;Our strongest contenders for languages here were Rust, Go, and C.&lt;/p&gt;
+&lt;h2 id=&quot;taking-the-plunge&quot;&gt;Taking the plunge&lt;/h2&gt;
+&lt;p&gt;Learning Rust wasn’t a smooth process, but solid documentation helped us overcome the steep learning curve. Every language I’ve learned so far has shaped the way I view programming, it was refreshing to see the interaction of high-level concepts like Iterators, Dynamic Dispatch, and pattern matching discussed alongside their performance implications.&lt;/p&gt;
+&lt;p&gt;Rust has an interesting approach to memory management: it heavily restricts what you can do with references. In return, it will guarantee all your references are always valid and free of race conditions. It will do this at compile time, without the need for any costly runtime abstraction like Garbage Collection.&lt;/p&gt;
+&lt;p&gt;Once we were over the learning curve we prototyped the &lt;a rel=&quot;external&quot; href=&quot;https://github.com/lockbook/lockbook/tree/master/core&quot;&gt;core library&lt;/a&gt; we’d been planning, a CLI, and a Server that used it. During a period when many of us were rapidly prototyping many different solutions, this was the one that stood the test of time. Soon after the CLI, a C binding followed, then an &lt;a rel=&quot;external&quot; href=&quot;https://apps.apple.com/us/app/lockbook/id1526775001&quot;&gt;iOS and macOS application&lt;/a&gt;. Today we have a &lt;a rel=&quot;external&quot; href=&quot;https://en.wikipedia.org/wiki/Java_Native_Interface&quot;&gt;JNI bindings&lt;/a&gt; and an &lt;a rel=&quot;external&quot; href=&quot;https://play.google.com/store/apps/details?id=app.lockbook&amp;amp;pli=1&quot;&gt;Android app&lt;/a&gt; as well. This core library will one day be packaged and documented as the &lt;em&gt;Lockbook SDK&lt;/em&gt; allowing you to extend Lockbook from any language (more on this later).&lt;/p&gt;
+&lt;h2 id=&quot;further-personal-reflections&quot;&gt;Further personal reflections&lt;/h2&gt;
+&lt;p&gt;You can probably predict what your experience with Rust is going to be based on how you felt about the above two priorities. Rust is an experiment in the highest-level features implemented at no runtime cost. If you feel like the &lt;code&gt;Option&amp;lt;T&amp;gt;&lt;/code&gt; is not a useful construct, you’re not likely to appreciate waiting for the compiler. If you don’t mind the latency introduced by garbage collection you’re not going to enjoy wrestling the &lt;a rel=&quot;external&quot; href=&quot;https://doc.rust-lang.org/book/ch04-00-understanding-ownership.html&quot;&gt;borrow checker&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I wasn’t specifically seeking out performance, but before Rust, while programming there was always a slight uncertainty about whether I would have to re-write a given component in C, or spend time tuning a garbage collector. In Rust I don’t write everything optimally initially, when I need to, I’ll &lt;code&gt;clone()&lt;/code&gt; things or stick them in an &lt;code&gt;Arc&amp;lt;Mutex&amp;lt;T&amp;gt;&amp;gt;&lt;/code&gt; to revisit at a later time, but I appreciate that all these artifacts of the productivity vs. performance trade-offs are explicitly present for me to review, rather than implicitly constrained by my development environment.&lt;/p&gt;
+&lt;p&gt;For our team, learning Rust has certainly been a dynamic in onboarding new contributors. Certainly, we’ve lost contributors who didn’t buy into the ideas and were turned away because of Rust. But we’ve also encountered people who are specifically seeking out Rust projects because they share our excitement. It’s hard to tell what the net impact here is, but as is the case every year: Rust is a &lt;a rel=&quot;external&quot; href=&quot;https://survey.stackoverflow.co/2022/&quot;&gt;a language a lot of people love&lt;/a&gt;. Significant Open Source and Commercial entities from Linux to AWS are making permanent investments in Rust.&lt;/p&gt;
+&lt;p&gt;This excitement does however bring a lot of Junior talent to the ecosystem, subsequently, even though it’s roughly as old as Go, many of Rust’s packages feel like they’re not ready for production. By my estimation, this is because in addition to understanding the subject matter of the package they’re creating a maintainer of a library needs to understand Rust pretty deeply. Additionally, within the Rust ecosystem, some people are optimizing for different things. Some people are optimizing for compile times and binary size, while others are optimizing for static inference and performance, in many cases these are mutually exclusive values.&lt;/p&gt;
+&lt;p&gt;In some cases, this is a short-term problem as features are stabilized, and best practices are identified. In other cases, this is an irreconcilable aspect of the ecosystem that will simply result in lots of packages that are solving the same problem in slightly different ways.&lt;/p&gt;
+&lt;p&gt;This is something we should expect, as Rust is a language that’s trying to serve all programmers from UI developers to OS designers. And though it may cost me some productivity in the short term while I’m forced to contend with this nuance, in the long term it massively broadens my horizons as a software engineer.&lt;/p&gt;
+&lt;p&gt;Personally what got me over the steep learning curve is a rare feeling that the knowledge I’m building while learning Rust is a permanent investment in my future, not a trivial detail about a flaw of the tool I’m using. I’m very excited to see where Rust takes us all in the future.&lt;/p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Introducing Lockbook</title>
+        <published>2022-11-29T00:00:00+00:00</published>
+        <updated>2022-11-29T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://lockbook.net/blog/introducing-lockbook/"/>
+        <id>https://lockbook.net/blog/introducing-lockbook/</id>
+        
+        <content type="html" xml:base="https://lockbook.net/blog/introducing-lockbook/">&lt;h1 id=&quot;a-new-note-taking-app&quot;&gt;A new note-taking app&lt;/h1&gt;
+&lt;p&gt;Many moons ago my friends and I found ourselves frustrated with our computing experience. Our most important tools: our messengers, our note-taking apps, and our file storage all seemed to leave us with the same bitter taste in our mouths. Most of the mainstream solutions were trapped inside a browser, the epitome of sacrificing quality for the lowest common denominator. They didn’t pass muster for basic security and privacy concerns. Building on top of these systems was a painful experience. We were also growing concerned that we did not share the same ethics and values as the &lt;a rel=&quot;external&quot; href=&quot;https://bigtech.fail/&quot;&gt;large companies&lt;/a&gt; running these platforms.&lt;/p&gt;
+&lt;p&gt;So we ventured out into the land of FOSS. We built our systems from the ground up and experimented with self-hosted solutions. While we learned a lot from this experience, these solutions didn’t stand the test of time. As we brought our friends into this world, we found ourselves constantly apologizing for the sub-par experience. It felt like we solved some of our problems, but made other ones (UX) worse.&lt;/p&gt;
+&lt;p&gt;At this point, we took a step back. I knew we could do better. The apps we were being critical of weren’t some of the fresher ideas in computing. They are things that we’ve been doing for decades. Why don’t these products feel more mature? What should software that’s been around this long feel like?&lt;/p&gt;
+&lt;h2 id=&quot;what-is-ideal&quot;&gt;What is ideal?&lt;/h2&gt;
+&lt;p&gt;Software that’s been around this long shouldn’t be trapped in the browser. A browser is a convenient place for the discovery of new information, it’s not the place I want to visit for heavily used, critical, applications. When I look at my devices, whether on my iPhone or my Linux laptop, the apps I can use with the least friction are simple, native applications. They have the largest context about the device I’m using encoded into the application. This friction-free experience is why people reach for Apple Notes on their iPhones. And when they open those same notes on their iPad they find rich support for their Apple Pencil. For me, a minimal, friction-free context-aware experience is more valuable than feature richness.&lt;/p&gt;
+&lt;p&gt;Whatever experience I have on one device should carry over seamlessly to any device I may end up owning in the future. My notes shouldn’t be trapped on Apple Devices should I want to transition to Linux. Very few actions should require a network connection, and any network interactions should be deferrable so people outside of metropolitan areas don’t have a poor experience.&lt;/p&gt;
+&lt;p&gt;For now, likely most of these services will have to interact with some sort of backend. Everything that backend receives should be encrypted by the customer themselves, in a manner that nobody besides them and the people they give access to can see that content. We shouldn’t ask the customer for any information the service doesn’t require. There is very little reason that a user &lt;em&gt;must&lt;/em&gt; provide an email address or a &lt;em&gt;phone number&lt;/em&gt; to use a note-taking app. This level of security and privacy shouldn’t &lt;em&gt;cost&lt;/em&gt; the user anything in terms of quality. Our customers may be whistle-blowers, journalists, or citizens living under oppressive regimes. They simply cannot afford to trust and they shouldn’t have to.&lt;/p&gt;
+&lt;p&gt;This software is too important to not open source. Any software claiming to be secure needs to be open source to prove that claim. Sensitive customers need the ability to build minimal clients with small dependency trees from sources on secure systems. Open-sourcing components like your server signal to the world that they can host critical infrastructure themselves, even if the people behind the product lose the will to keep the lights on. Open source doesn’t end in making the source code available, this software should be built out in the open with help from an enthusiastic community. People should be able to extend the tools for fun or profit with minimal friction.&lt;/p&gt;
+&lt;h2 id=&quot;reaching-for-an-ideal&quot;&gt;Reaching for an ideal&lt;/h2&gt;
+&lt;p&gt;&lt;a rel=&quot;external&quot; href=&quot;https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fb958cf3d-c608-4398-8d56-ca3429d86e26_1920x1216.jpeg&quot;&gt;&lt;img src=&quot;https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fb958cf3d-c608-4398-8d56-ca3429d86e26_1920x1216.jpeg&quot; alt=&quot;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;After much discussion, we decided that the best place to start was a note-taking app. We felt it was the product category with the largest room for growth. Architecturally it also paves the way for us to tackle storing files. And so began the three-year-long journey to create &lt;a rel=&quot;external&quot; href=&quot;https://lockbook.net/&quot;&gt;Lockbook&lt;/a&gt; a body of work I’m proud to say has stayed true to the vision outlined above. At the moment, Lockbook is not quite ready for adoption as it’s in the early stages of alpha testing. But I’d like to use this space to share updates on our progress as well as document how we overcame some interesting engineering challenges like:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Productively maintaining several native apps with a small team&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;How we create rich non-web cross-platform UI elements.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;How we leverage a powerful computer to find bugs.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you’d like to learn more about Lockbook you can:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a rel=&quot;external&quot; href=&quot;https://lockbook.net/&quot;&gt;Checkout our website&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a rel=&quot;external&quot; href=&quot;https://github.com/lockbook/lockbook&quot;&gt;Browse our source code&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a rel=&quot;external&quot; href=&quot;https://discord.gg/lockbook&quot;&gt;Join our discord&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you’d like to take an early look at Lockbook, &lt;a rel=&quot;external&quot; href=&quot;https://github.com/lockbook/lockbook/tree/master/docs/guides/install&quot;&gt;we’re available on all platforms&lt;/a&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a rel=&quot;external&quot; href=&quot;https://github.com/lockbook/lockbook/releases&quot;&gt;Github Releases&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Apple App Store&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Google Play&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Brew&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;AUR&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Snap&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Parth’s Corner is a reader-supported publication. To receive new posts and support my work, consider becoming a free or paid subscriber.&lt;/p&gt;
+&lt;p&gt;Subscribe&lt;/p&gt;
+</content>
+        
+    </entry>
+</feed>

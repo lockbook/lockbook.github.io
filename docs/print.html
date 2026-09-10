@@ -1,0 +1,2081 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Lockbook</title>
+        <meta name="robots" content="noindex">
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="favicon-8114d1fc.png">
+        <link rel="stylesheet" href="css/variables-8adf115d.css">
+        <link rel="stylesheet" href="css/general-2459343d.css">
+        <link rel="stylesheet" href="css/chrome-ae938929.css">
+        <link rel="stylesheet" href="css/print-9e4910d8.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="fonts/fonts-9644e21d.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="mdbook-highlight-css" href="highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="ayu-highlight-3fdfc3ac.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "searchindex-60562781.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc-ce34e684.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="mdbook-body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="mdbook-page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="mdbook-menu-bar-hover-placeholder"></div>
+                <div id="mdbook-menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                        </label>
+                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
+                        </button>
+                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
+                        </ul>
+                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Lockbook</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="mdbook-search-wrapper" class="hidden">
+                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
+                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
+                        <ul id="mdbook-searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="mdbook-content" class="content">
+                    <main>
+                        <h1 id="welcome"><a class="header" href="#welcome">Welcome!</a></h1>
+<p>This is <a href="https://lockbook.net">Lockbook’s</a> documentation site. Lockbook is an open source note taking app. This website is dedicated to documenting our product for our users, as well as documenting how to contribute to Lockbook.</p>
+<p>To get started here are some places of significance:</p>
+<ul>
+<li><a href="https://github.com/lockbook/lockbook">Github</a> is where you can find the source code for everything we work on.</li>
+<li><a href="https://github.com/lockbook/lockbook/issues">Github Issues</a> is where you can see a list of all known defects, and be notified when they’re resolved. See <a href="#you-found-a-bug">Bug Reporting</a> for more info.</li>
+<li><a href="https://discord.gg/lockbook">Discord</a> is where all our team communication takes place.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="values"><a class="header" href="#values">Values</a></h1>
+<p>Understanding our values is the best way to learn our product deeply and form
+an intuition for decisions we’ve made or will make in the future.</p>
+<h2 id="security"><a class="header" href="#security">Security</a></h2>
+<p>We build Lockbook to be secure and private. We use high security defaults, for
+example users generate a private key, rather than a password which can be
+guessed or re-used. This private key is the only thing which lets a user access
+their content. There is no way to recover a key, implying the user is the
+highest authority for access control, not Lockbook staff.</p>
+<h2 id="privacy"><a class="header" href="#privacy">Privacy</a></h2>
+<p>Similarly, we end-to-end encrypt all possible data, making its content only
+accessible to the customer and the people they choose to collaborate with.
+This even applies to the names of files. The only data that Lockbook staff can
+access is the data that is technically required for the existence of our server.</p>
+<p>Lockbook staff can access, for-instance: how many files you have, how large
+your documents are, and the overall structure of your file-tree.</p>
+<h2 id="transparency"><a class="header" href="#transparency">Transparency</a></h2>
+<p>Many products claim they’re secure and private, fewer still will use strategies
+like end to end encryption to limit their own staff’s access, even fewer will
+open source all the code they write so you don’t have to trust that the product
+actually works the way it claims to.</p>
+<p>We believe that real security and closed source implementations are
+contradictory ideas.</p>
+<p>Apart from our source code, most of our communication also happens publicly, in
+a discord server that <a href="https://discord.gg/lockbook">anyone can join</a>. All of
+product planning, defect triage, and overall prioritization also happens in
+public through <a href="https://github.com/lockbook/lockbook/issues">github issues</a>.</p>
+<h2 id="low-time-preference"><a class="header" href="#low-time-preference">Low time preference</a></h2>
+<p>We enjoy working on Lockbook and take our time to build it right. Having a
+native client for each platform, building editing experiences from the ground
+up are the types of things that indicate our long term view of building Lockbook.</p>
+<p>Since 2020 our staff has been working out of pocket to bootstrap Lockbook with a
+sustainable business model (rather than going the traditional VC route). This
+decision, while difficult, we hope will pay dividends and allow us to build
+in accordance with the values specified in this document indefinitely.</p>
+<h2 id="customer-centric"><a class="header" href="#customer-centric">Customer Centric</a></h2>
+<p>With most decisions we’re thinking about what the healthiest outcome is for our
+customers. We chose open formats for editing text (markdown) and drawings (svgs)
+because it’s in your best interest to be able to take the content you generate
+to any other platform in the future.</p>
+<p>As a team we strongly believe in <a href="https://en.wikipedia.org/wiki/Eating_your_own_dog_food">dog-fooding</a>
+our product. Being customers ourselves is the best way to understand where our
+product is weak and requires further investments.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="installing-lockbook"><a class="header" href="#installing-lockbook">Installing Lockbook</a></h1>
+<p>For convenience, we try to make Lockbook as widely available as possible.</p>
+<p>Being open source, you can always build Lockbook <a href="#building">yourself</a>.</p>
+<h2 id="mobile"><a class="header" href="#mobile">Mobile</a></h2>
+<ul>
+<li><a href="https://apps.apple.com/us/app/lockbook/id1526775001">App Store</a></li>
+<li><a href="https://play.google.com/store/apps/details?id=app.lockbook">Play Store</a></li>
+<li><a href="https://github.com/lockbook/lockbook/releases">Github Releases (Android)</a></li>
+</ul>
+<h2 id="macos"><a class="header" href="#macos">macOS</a></h2>
+<ul>
+<li><a href="https://apps.apple.com/us/app/lockbook/id1526775001">App Store</a></li>
+<li><a href="https://github.com/lockbook/lockbook/releases">Github Releases</a></li>
+</ul>
+<h2 id="linux"><a class="header" href="#linux">Linux</a></h2>
+<ul>
+<li><a href="https://search.nixos.org/packages?channel=25.05&amp;show=lockbook-desktop&amp;from=0&amp;size=50&amp;sort=relevance&amp;type=packages&amp;query=lockbook-desktop">Nix</a>: <code>nix-shell -p lockbook-desktop</code></li>
+<li><a href="https://aur.archlinux.org/packages/lockbook-desktop">AUR</a>: <code>yay -S lockbook-desktop</code></li>
+<li><a href="https://github.com/lockbook/lockbook/releases">x86 Binary</a></li>
+<li><a href="https://github.com/lockbook/lockbook/releases">.deb</a></li>
+<li><a href="https://snapcraft.io/lockbook-desktop">Snap</a>: <code>snap install lockbook-desktop</code></li>
+<li><a href="https://flathub.org/en/apps/net.lockbook.Lockbook">Flatpak</a>: <code>flatpak install flathub net.lockbook.Lockbook</code></li>
+</ul>
+<h2 id="cli"><a class="header" href="#cli">CLI</a></h2>
+<ul>
+<li><a href="https://crates.io/crates/lockbook">Cargo</a>: <code>cargo install lockbook</code></li>
+<li><a href="https://search.nixos.org/packages?channel=25.05&amp;show=lockbook&amp;from=0&amp;size=50&amp;sort=relevance&amp;type=packages&amp;query=lockbook">Nix</a>: <code>nix-shell -p lockbook</code></li>
+<li><a href="https://aur.archlinux.org/packages/lockbook">AUR</a>: <code>yay -S lockbook</code></li>
+<li><code>brew</code>: <code>brew tap lockbook/lockbook &amp;&amp; brew install lockbook</code></li>
+<li><a href="https://github.com/lockbook/lockbook/releases">Binaries for macOS, Windows &amp; Linux</a></li>
+<li><a href="https://snapcraft.io/lockbook">Snap</a>: <code>snap install lockbook</code></li>
+</ul>
+<h2 id="windows"><a class="header" href="#windows">Windows</a></h2>
+<ul>
+<li><a href="https://github.com/lockbook/lockbook/releases">Github Releases</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<p>Organize your thoughts in Lockbook using <strong>Folders</strong> and <strong>Documents</strong>.</p>
+<p><img src="imports/pasted_image_2026-07-23_18-11-09.png" alt="pasted_image_2026-07-23_18-11-09.png"></p>
+<p>Lockbook doesn’t impose a lockbook-specific organizational scheme onto. Your content is yours, and Lockbook helps you to structure it in a way that is universally understood.</p>
+<h1 id="documents"><a class="header" href="#documents">Documents</a></h1>
+<p>Lockbook supports an ever-growing list of file types.</p>
+<ul>
+<li>Tier 1 support: editable in platform
+<ul>
+<li><a href="https://www.markdownguide.org/">Markdown</a>, and many other forms of plain text: See more about <a href="#markdown-syntax">our editor</a></li>
+<li><a href="#drawing">SVGs as our Drawing format</a></li>
+</ul>
+</li>
+<li>Teir 2: viewable in platform
+<ul>
+<li>many types of images</li>
+<li>PDFs (these will soon be convertible to SVGs for in platform editing)</li>
+<li>soon: audio then video</li>
+</ul>
+</li>
+<li>Tier 3: storable
+<ul>
+<li>anything smaller than 2gb</li>
+<li>soon: larger files</li>
+<li>soon: automatic virtual file system implementation for seamless editing of professional document types (photoshop, docx, etc)</li>
+<li>soon: automated file-system syncing strategies</li>
+</ul>
+</li>
+</ul>
+<p>All documents within Lockbook are encrypted and backed up to our server. Anything compressible is also compressed. You are charged for usage after any possible compression has been applied. Compression ratios of 3-10x are not uncommon.</p>
+<p>In accordance with our <a href="#values">values (privacy)</a> almost everything a user inputs into our platform is encrypted and unreadable to us. This includes the names of files. See <a href="https://github.com/lockbook/lockbook/blob/master/libs/lb/lb-rs/src/model/secret_filename.rs">secret_filename.rs</a> for implementation details.</p>
+<p>On many platforms (soon: all) you can pin documents for fast navigation:</p>
+<p><img src="imports/pasted_image_2026-07-23_18-48-03.png" alt="pasted_image_2026-07-23_18-48-03.png"></p>
+<p>On many platforms (soon: all) you can access a “recents view” which let’s you quickly reference a file that was changed recently. On Apple, these selections are sticky, so if you’d prefer an apple notes style experience where you don’t really think about folders, you can do that.</p>
+<p><img src="imports/pasted_image_2026-07-23_18-49-05.png" alt="pasted_image_2026-07-23_18-49-05.png"></p>
+<h1 id="offline-access"><a class="header" href="#offline-access">Offline Access</a></h1>
+<p>Lockbook has made significant investment in supporting offline access. You can access, edit, and organize your files while you’re offline. Your client will store the changes you made and reconcile them with our server when you come back online. Textual and SVG content will be merged. Non-conflicting file operations will also be persisted. Some conflicting organization operations (two people renamed the same file) may be lost.</p>
+<h1 id="ingress--egress"><a class="header" href="#ingress--egress">Ingress &amp; Egress</a></h1>
+<p>We strive to support a multitude of ways to get data in and out of Lockbook. Here is a rough breakdown of what’s possible on each platform.</p>
+<ul>
+<li>Desktop
+<ul>
+<li>drag files in &amp; out</li>
+<li>right click import / export (or import button on macOS)</li>
+<li>paste images directly into documents</li>
+<li>soon: virtual file system support for seamless tier 3 files (see above)</li>
+</ul>
+</li>
+<li>iOS (iPhone and iPad)
+<ul>
+<li>paste images directly into documents</li>
+<li>from another app (like photos) <em>share</em> directly into Lockbook</li>
+<li>take a photo directly from a document</li>
+<li>soon: Files API support</li>
+</ul>
+</li>
+<li>Android
+<ul>
+<li>paste images directly into documents</li>
+<li>from another app (like photos) <em>share</em> directly into Lockbook</li>
+</ul>
+</li>
+<li>CLI
+<ul>
+<li>standard streams</li>
+<li>invoking native text editors</li>
+<li>copy from filesystem, or to filesystem</li>
+<li>experimental: virtual file system</li>
+</ul>
+</li>
+</ul>
+<h1 id="active-areas-of-investment"><a class="header" href="#active-areas-of-investment">Active areas of investment</a></h1>
+<ul>
+<li>Version history is a highly requested area of ongoing investment. It involves an evolution to many of our core data structures and therefore must be done carefully. For more information see here:  https://github.com/lockbook/lockbook/issues/190</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="collaboration"><a class="header" href="#collaboration">Collaboration</a></h1>
+<p>You can share a file or a folder by giving someone read or write access to that file</p>
+<p><img src="imports/pasted_image_2026-07-23_18-51-37.png" alt="pasted_image_2026-07-23_18-51-37.png"></p>
+<p>This file or folder will then show up in <em>shared with me</em>, allowing them to preview or edit the file.</p>
+<p><img src="imports/pasted_image_2026-07-23_18-51-21.png" alt="pasted_image_2026-07-23_18-51-21.png"></p>
+<p>They can also <em>accept</em> the share and place it anywhere within their file tree. This provides organizational flexibility to both parties.</p>
+<p>Collaborating in this way also allows you to manage access for various parties. For the Lockbook team, we have a single <code>lockbook</code> folder that leadership has read &amp; write access to. Inside this folder we have an <code>lb-maintainers</code> folder which maintainers many maintainers have read &amp; write access to. Next to the <code>lb-maintainers</code> folder there’s <code>lb-docs</code> which is powering this documentation site, which many people have read-only access to. When we were designing our logo, we shared the <code>logo</code> folder with the graphic designers we were working with.</p>
+<p><img src="imports/pasted_image_2026-07-23_18-53-26.png" alt="pasted_image_2026-07-23_18-53-26.png"></p>
+<p>Only the owner of a shared directory will be billed for the space taken up by that directory, enabling low-cost and frictionless team usage.</p>
+<p>You can also copy an <em>external</em> link that takes the form of <code>https://app.lockbook.net/uuid</code>. So far these links only work on Apple, but we are working towards bringing support of these links to more places. These links let you reference lockbook documents freely in chat apps like <em>Slack</em> or <em>Discord</em>.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="markdown-syntax"><a class="header" href="#markdown-syntax">Markdown Syntax</a></h1>
+<p>Markdown is a language for easily formatting your documents. This document can help you get started.</p>
+<h2 id="styled-text"><a class="header" href="#styled-text">Styled Text</a></h2>
+<p>To style text, wrap your text in the corresponding characters.</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Style</th><th>Syntax</th><th>Example</th></tr>
+</thead>
+<tbody>
+<tr><td>emphasis</td><td><code>*emphasis*</code></td><td><em>emphasis</em></td></tr>
+<tr><td>strong</td><td><code>**strong**</code></td><td><strong>strong</strong></td></tr>
+<tr><td>strikethrough</td><td><code>~~strikethrough~~</code></td><td><del>strikethrough</del></td></tr>
+<tr><td>underline</td><td><code>__underline__</code></td><td><strong>underline</strong></td></tr>
+<tr><td>code</td><td><code>code</code></td><td><code>code</code></td></tr>
+<tr><td>spoiler</td><td>`</td><td></td></tr>
+<tr><td>superscript</td><td><code>^superscript^</code></td><td>^superscript^</td></tr>
+<tr><td>subscript</td><td><code>~subscript~</code></td><td><del>subscript</del></td></tr>
+</tbody>
+</table>
+</div>
+<h2 id="links"><a class="header" href="#links">Links</a></h2>
+<p>To make text into a link, wrap it with <code>[</code> <code>]</code>, add a link destination to the end , and wrap the destination with <code>(</code> <code>)</code>. The link destination can be a web URL or a relative path to another Lockbook file.</p>
+<pre><code class="language-md">[Lockbook's website](https://lockbook.net)
+</code></pre>
+<blockquote>
+<p><a href="https://lockbook.net">Lockbook’s website</a></p>
+</blockquote>
+<h2 id="images"><a class="header" href="#images">Images</a></h2>
+<p>To embed an image, add a <code>!</code> to the beginning of the link syntax.</p>
+<pre><code class="language-md">![Lockbook's favicon](https://lockbook.net/favicon/favicon-96x96.png)
+</code></pre>
+<blockquote>
+<p><img src="https://lockbook.net/favicon/favicon-96x96.png" alt="Lockbook’s favicon"></p>
+</blockquote>
+<h2 id="headings"><a class="header" href="#headings">Headings</a></h2>
+<p>To create a heading, add up to six <code>#</code>’s plus a space before your text. More <code>#</code>’s create a smaller heading.</p>
+<pre><code class="language-md"># Heading 1
+## Heading 2
+### Heading 3
+#### Heading 4
+##### Heading 5
+###### Heading 6
+</code></pre>
+<blockquote>
+<h1 id="heading-1"><a class="header" href="#heading-1">Heading 1</a></h1>
+<h2 id="heading-2"><a class="header" href="#heading-2">Heading 2</a></h2>
+<h3 id="heading-3"><a class="header" href="#heading-3">Heading 3</a></h3>
+<h4 id="heading-4"><a class="header" href="#heading-4">Heading 4</a></h4>
+<h5 id="heading-5"><a class="header" href="#heading-5">Heading 5</a></h5>
+<h6 id="heading-6"><a class="header" href="#heading-6">Heading 6</a></h6>
+</blockquote>
+<p>You can also create a heading using an underline composed of <code>=</code>’s (Heading 1) or <code>-</code>’s (Heading 2) on the following line.</p>
+<pre><code class="language-md">Heading 1
+===
+Heading 2
+---
+</code></pre>
+<blockquote>
+<h1 id="heading-1-1"><a class="header" href="#heading-1-1">Heading 1</a></h1>
+<h2 id="heading-2-1"><a class="header" href="#heading-2-1">Heading 2</a></h2>
+</blockquote>
+<h2 id="lists"><a class="header" href="#lists">Lists</a></h2>
+<p>Create a list item by adding <code>- </code>, <code>+ </code>, or <code>* </code> for a bulleted list, <code>1. </code> for a numbered list, or <code>- [ ] </code>, <code>+ [ ] </code>, or <code>* [ ] </code> for a task list at the start of the line. The added characters are called the <em>list marker</em>.</p>
+<pre><code class="language-md">* bulleted list item
+- bulleted list item
++ bulleted list item
+
+1. numbered list item
+1. numbered list item
+1. numbered list item
+
+- [ ] task list item
+- [x] task list item
+</code></pre>
+<blockquote>
+<ul>
+<li>bulleted list item</li>
+</ul>
+<ul>
+<li>bulleted list item</li>
+</ul>
+<ul>
+<li>bulleted list item</li>
+</ul>
+<ol>
+<li>numbered list item</li>
+<li>numbered list item</li>
+<li>numbered list item</li>
+</ol>
+<ul>
+<li><input disabled="" type="checkbox"> task list item</li>
+<li><input disabled="" type="checkbox" checked=""> task list item</li>
+</ul>
+</blockquote>
+<p>List items can be nested. To nest an inner item in an outer one, the inner item’s line must start with at least one space for each character in the outer item’s list marker: usually 2 for bulleted lists, 3 for numbered lists, or 2 for tasks lists (the trailing <code>[ ] </code> is excluded).</p>
+<pre><code class="language-md">* This is a bulleted list
+  * An inner item needs at least 2 spaces
+1. This is a numbered list
+   1. An inner item needs at least 3 spaces
+* [ ] This is a task list
+  * [ ] An inner item needs at least 2 spaces
+</code></pre>
+<blockquote>
+<ul>
+<li>This is a bulleted list
+<ul>
+<li>An inner item needs at least 2 spaces</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>This is a numbered list
+<ol>
+<li>An inner item needs at least 3 spaces</li>
+</ol>
+</li>
+</ol>
+<ul>
+<li><input disabled="" type="checkbox"> This is a task list
+<ul>
+<li><input disabled="" type="checkbox"> An inner item needs at least 2 spaces</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<p>List items can contain formatted content. For non-text content, each line must start with the same number of spaces as an inner list item would.</p>
+<pre><code class="language-md">* This item contains text,
+  &gt; a quote
+  ### and a heading.
+* This item contains two lines of text.
+The second line doesn't need spaces.
+</code></pre>
+<blockquote>
+<ul>
+<li>This item contains text,
+<blockquote>
+<p>a quote</p>
+</blockquote>
+<h3 id="and-a-heading"><a class="header" href="#and-a-heading">and a heading.</a></h3>
+</li>
+<li>This item contains two lines of text.
+The second line doesn’t need spaces.</li>
+</ul>
+</blockquote>
+<h2 id="quotes"><a class="header" href="#quotes">Quotes</a></h2>
+<p>To create a block quote, add <code>&gt; </code> to each line.</p>
+<pre><code class="language-md">&gt; This is a quote
+</code></pre>
+<blockquote>
+<p>This is a quote</p>
+</blockquote>
+<p>Like list items, block quotes can contain formatted content.</p>
+<pre><code class="language-md">&gt; This quote contains some text,
+&gt; ```rust
+&gt; // some code
+&gt; fn main() { println!("Hello, world!"); }
+&gt; ```
+&gt; ### and a heading.
+
+&gt; This quote contains two lines of text.
+The second line doesn't need added characters.
+</code></pre>
+<blockquote>
+<p>This quote contains some text,</p>
+<pre class="playground"><code class="language-rust">// some code
+fn main() { println!("Hello, world!"); }</code></pre>
+<h3 id="and-a-heading-1"><a class="header" href="#and-a-heading-1">and a heading.</a></h3>
+</blockquote>
+<blockquote>
+<p>This quote contains two lines of text.
+The second line doesn’t need added characters.</p>
+</blockquote>
+<h2 id="alerts"><a class="header" href="#alerts">Alerts</a></h2>
+<p>To create an alert, add one of 5 tags to the first line of a quote: <code>[!NOTE]</code>, <code>[!TIP]</code>, <code>[!IMPORTANT]</code>, <code>[!WARNING]</code>, or <code>[!CAUTION]</code>. An alternate title can be added after the tag.</p>
+<pre><code class="language-md">&gt; [!NOTE]
+&gt; This is a note.
+
+&gt; [!TIP]
+&gt; This is a tip.
+
+&gt; [!IMPORTANT]
+&gt; This is important.
+
+&gt; [!WARNING]
+&gt; This is a warning.
+
+&gt; [!CAUTION] Caution!!!!!
+&gt; This is a caution.
+</code></pre>
+<blockquote class="blockquote-tag blockquote-tag-note">
+<p class="blockquote-tag-title"><svg viewbox="0 0 16 16" width="18" height="18"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>Note</p>
+<p>This is a note.</p>
+</blockquote>
+<blockquote class="blockquote-tag blockquote-tag-tip">
+<p class="blockquote-tag-title"><svg viewbox="0 0 16 16" width="18" height="18"><path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z"></path></svg>Tip</p>
+<p>This is a tip.</p>
+</blockquote>
+<blockquote class="blockquote-tag blockquote-tag-important">
+<p class="blockquote-tag-title"><svg viewbox="0 0 16 16" width="18" height="18"><path d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v9.5A1.75 1.75 0 0 1 14.25 13H8.06l-2.573 2.573A1.458 1.458 0 0 1 3 14.543V13H1.75A1.75 1.75 0 0 1 0 11.25Zm1.75-.25a.25.25 0 0 0-.25.25v9.5c0 .138.112.25.25.25h2a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h6.5a.25.25 0 0 0 .25-.25v-9.5a.25.25 0 0 0-.25-.25Zm7 2.25v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>Important</p>
+<p>This is important.</p>
+</blockquote>
+<blockquote class="blockquote-tag blockquote-tag-warning">
+<p class="blockquote-tag-title"><svg viewbox="0 0 16 16" width="18" height="18"><path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>Warning</p>
+<p>This is a warning.</p>
+</blockquote>
+<blockquote>
+<p>[!CAUTION] Caution!!!!!
+This is a caution.</p>
+</blockquote>
+<h2 id="tables"><a class="header" href="#tables">Tables</a></h2>
+<p>A table is written with <code>|</code>’s between columns and a row after the header row whose cell’s contents are <code>-</code>’s.</p>
+<pre><code class="language-md">| Style         | Syntax              | Example           |
+|---------------|---------------------|-------------------|
+| emphasis      | `*emphasis*`        | *emphasis*        |
+| strong        | `**strong**`        | **strong**        |
+</code></pre>
+<blockquote>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Style</th><th>Syntax</th><th>Example</th></tr>
+</thead>
+<tbody>
+<tr><td>emphasis</td><td><code>*emphasis*</code></td><td><em>emphasis</em></td></tr>
+<tr><td>strong</td><td><code>**strong**</code></td><td><strong>strong</strong></td></tr>
+</tbody>
+</table>
+</div>
+</blockquote>
+<h2 id="code"><a class="header" href="#code">Code</a></h2>
+<p>A code block is wrapped by two lines containing three backticks. A language can be added after the opening backticks.</p>
+<pre><code class="language-md">    ```rust
+    // some code
+    fn main() { println!("Hello, world!"); }
+    ```
+</code></pre>
+<blockquote>
+<pre class="playground"><code class="language-rust">// some code
+fn main() { println!("Hello, world!"); }</code></pre>
+</blockquote>
+<p>You can also create a code block by indenting each line with four spaces. Indented code blocks cannot have a language.</p>
+<pre><code class="language-md">    // some code
+    fn main() { println!("Hello, world!"); }
+</code></pre>
+<blockquote>
+<pre><code>// some code
+fn main() { println!("Hello, world!"); }
+</code></pre>
+</blockquote>
+<h2 id="thematic-breaks"><a class="header" href="#thematic-breaks">Thematic Breaks</a></h2>
+<p>A thematic break is written with <code>***</code>, <code>---</code>, or <code>___</code> and shows a horizontal line across the page.</p>
+<pre><code class="language-md">***
+---
+___
+</code></pre>
+<blockquote>
+<hr>
+<hr>
+<hr></blockquote>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="drawing"><a href="#drawing" class="header">Drawing</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="cli-1"><a class="header" href="#cli-1">CLI</a></h1>
+<p>The Lockbook CLI is a terminal client for your encrypted files: edit notes, list and search the tree, sync with the server, and copy files between Lockbook and ordinary OS paths when you need plain files outside the app.</p>
+<p>Install via a <a href="#installing-lockbook">package manager</a> or <a href="#building">build from source</a>. Flags and arguments for any command are authoritative in the binary:</p>
+<pre><code class="language-sh">lockbook --help
+lockbook &lt;command&gt; --help
+</code></pre>
+<p>This page is a tour and task guide. Prefer <code>--help</code> when you need every option.</p>
+<p>Tab completion is a core part of the CLI: it completes subcommands and expands paths and IDs from your Lockbook tree. Spending a minute to <a href="#completions">set completions up</a> for your shell is worth it – without them, the CLI is much harder to navigate.</p>
+<h2 id="quick-start"><a class="header" href="#quick-start">Quick start</a></h2>
+<p><strong>New account</strong></p>
+<pre><code class="language-sh">lockbook account new &lt;username&gt;
+lockbook sync
+lockbook list
+</code></pre>
+<p><strong>Existing account</strong> (account key or phrase on stdin, clipboard, or interactive prompt):</p>
+<pre><code class="language-sh">lockbook account import
+lockbook sync
+</code></pre>
+<p><strong>Edit a note</strong></p>
+<pre><code class="language-sh">lockbook edit work/todo.md
+</code></pre>
+<p>If the path does not exist yet, create it first with <code>lockbook new work/todo.md</code>, or pipe content with <code>lockbook write</code> (see below).</p>
+<p><strong>Who am I / status</strong></p>
+<pre><code class="language-sh">lockbook debug whoami
+lockbook account status
+</code></pre>
+<h2 id="concepts"><a class="header" href="#concepts">Concepts</a></h2>
+<p>Files live in a rooted tree (<code>/…</code>). Most commands take a <strong>path</strong> or a <strong>file ID</strong> (full UUID or a unique prefix as shown by <code>lockbook list -l</code>). Completions expand paths from your local Lockbook data.</p>
+<p>Trailing <code>/</code> on a path usually means “folder” when creating (<code>lockbook new notes/</code> makes a folder).</p>
+<p>The CLI keeps an encrypted local store. Edits apply locally first; <code>lockbook sync</code> pushes and pulls with the server. <code>lockbook account status</code> shows last sync time, unsynced file count, plan, and storage usage.</p>
+<p>Point at a non-default server when creating or importing an account with <code>API_URL</code> or <code>--api_url</code> (see <a href="#configuration">Configuration</a>).</p>
+<h2 id="common-tasks"><a class="header" href="#common-tasks">Common tasks</a></h2>
+<p>List, edit, and sync notes. Tab completions expand paths as you type:</p>
+<pre><code class="language-sh">lockbook list
+lockbook list -l /work
+lockbook edit /work/todo.md
+lockbook cat /work/todo.md
+echo "take notes" | lockbook write /work/todo.md
+lockbook sync
+</code></pre>
+<p>Print a document to stdout, or write stdin into Lockbook. <code>lockbook write</code> creates the path if it does not exist. Chain with familiar tools—search notes with <code>grep</code>/<code>rg</code>, fuzzy-pick a path with <code>fzf</code>, or grab local logs into a note:</p>
+<pre><code class="language-sh">lockbook cat /work/todo.md | rg "TODO"
+lockbook list -p -R / | fzf | xargs lockbook edit
+cat /var/log/my-app-server.log | lockbook write /ops/myapp-recent.log
+echo "hi" | lockbook write /work/todo.md
+echo "more" | lockbook write --append /work/todo.md
+</code></pre>
+<p>Copy between Lockbook and ordinary OS paths. <code>--contents</code> puts a folder’s children in dest (not <code>dest/&lt;folder&gt;/</code>):</p>
+<pre><code class="language-sh">lockbook import ./photo.png /media/
+lockbook export /media/photo.png ./photo.png
+lockbook export /notes ./backup --contents
+</code></pre>
+<p>Accept a share into your tree (same idea as Shared with me → Files in the apps):</p>
+<pre><code class="language-sh">lockbook share pending
+lockbook share accept &lt;id&gt; /work/
+</code></pre>
+<p>Automation examples: <a href="https://github.com/lockbook/lockbook/blob/master/docs/update.sh">this site’s update script</a>, <a href="https://github.com/Parth/parth.cafe/tree/master/.github/workflows">another blog</a>.</p>
+<h2 id="virtual-filesystem-experimental"><a class="header" href="#virtual-filesystem-experimental">Virtual filesystem (experimental)</a></h2>
+<p><code>lockbook fs</code> mounts your Lockbook over NFS at <code>/tmp/lockbook</code> so ordinary tools can read and write notes as normal files. Experimental—expect rough edges; prefer the CLI commands above when you can.</p>
+<pre><code class="language-sh">lockbook fs
+# then: ls /tmp/lockbook, edit files there, etc.
+</code></pre>
+<h2 id="configuration"><a class="header" href="#configuration">Configuration</a></h2>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Variable / setting</th><th>Purpose</th></tr>
+</thead>
+<tbody>
+<tr><td><code>LOCKBOOK_PATH</code></td><td>Directory for local state (default under <code>~/.lockbook/…</code>)</td></tr>
+<tr><td><code>API_URL</code></td><td>Server URL when creating or importing an account (also <code>--api_url</code> on those commands)</td></tr>
+<tr><td><code>LOCKBOOK_EDITOR</code></td><td>Editor for <code>lockbook edit</code> (else <code>$EDITOR</code> / <code>$VISUAL</code>, then a platform default)</td></tr>
+<tr><td><code>--editor</code> on <code>lockbook edit</code></td><td>One-shot editor override</td></tr>
+</tbody>
+</table>
+</div>
+<p>Supported editors for <code>lockbook edit</code> include vim, nvim, emacs, helix, nano, sublime, and code; others fall back to the platform default. Inspect the active server and data path with <code>lockbook debug whereami</code>.</p>
+<h2 id="completions"><a class="header" href="#completions">Completions</a></h2>
+<p>Tab completion is how you should drive the CLI day to day: static completions for every subcommand and flag, plus <strong>dynamic</strong> completions that pull file paths and IDs from your Lockbook. If something feels hard to type, completions are probably not installed correctly—fix them after install.</p>
+<p>Install via your <a href="#installing-lockbook">package manager</a> when possible (preferred). Design notes: <a href="https://lockbook.net/blog/creating-a-sick-cli/">Creating a sick CLI</a>. If shell completion is broken system-wide, see <a href="https://docs.brew.sh/Shell-Completion">Homebrew’s completion guide</a>.</p>
+<p>Generate scripts manually when your package manager does not ship them:</p>
+<pre><code class="language-sh"># bash (lazy-loaded)
+lockbook completions bash &gt; ${XDG_DATA_HOME:-~/.local/share}/bash-completion/completions/lockbook
+
+# fish
+lockbook completions fish &gt; ~/.config/fish/completions/lockbook.fish
+
+# zsh (ensure this directory is on $fpath before compinit; with oh-my-zsh, adjust $FPATH before sourcing oh-my-zsh)
+lockbook completions zsh &gt; /usr/local/share/zsh/site-functions/_lockbook
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="extending-lockbook"><a class="header" href="#extending-lockbook">Extending Lockbook</a></h1>
+<p>Lockbook is built to be extensible at every level.</p>
+<h2 id="cli-2"><a class="header" href="#cli-2">CLI</a></h2>
+<p>See <a href="#cli-1">cli</a> for information on:</p>
+<ul>
+<li>invoking your own text editor</li>
+<li>building on top of standard streams</li>
+<li>building on top of filesystem replication</li>
+<li>building on top of a virtual filesystem</li>
+</ul>
+<h1 id="lb-rs"><a class="header" href="#lb-rs">lb-rs</a></h1>
+<p>All of our core functionality is packaged in a rust crate: <a href="https://crates.io/crates/lb-rs">lb-rs</a>. See api docs <a href="https://docs.rs/lb-rs/">here</a>. Use this library to perform any operation you can do with a lockbook client. View, edit and organize your content.</p>
+<h1 id="lb-sdk"><a class="header" href="#lb-sdk">lb-sdk</a></h1>
+<ul>
+<li>lb-rs has C bindings which can be found <a href="https://github.com/lockbook/lockbook/tree/master/libs/lb/lb-c">here</a>
+<ul>
+<li><a href="https://github.com/lockbook/lockbook/blob/master/libs/content/workspace-ffi/SwiftWorkspace/Sources/Workspace/Lb/Lb.swift">Swift Bindings are built from the C bindings</a></li>
+<li><a href="https://github.com/steverusso/lockbook-x/tree/master/go-lockbook">WIP Go Bindings from the C bindings</a></li>
+</ul>
+</li>
+<li>lb-rs also has JVM bindings which can be found <a href="https://github.com/lockbook/lockbook/tree/master/libs/lb/lb-java">here</a></li>
+</ul>
+<p>Many languages will make it easy to consume C bindings. If you’d like specific support for your programming language reach out to us.</p>
+<h1 id="lb-fs"><a class="header" href="#lb-fs">lb-fs</a></h1>
+<p>lb-fs is an experimental virtual file system implementation backed by lockbook. Presently the implementation uses nfs, though platform specific implementations may be explored later to deliver a better user experience. We also intend to include this functionality directly in our desktop apps when it’s more stable.</p>
+<p>Currently <code>lb-fs</code> can be invoked from within our CLI on Linux &amp; macOS, see <code>lockbook fs</code> for more information. Using <code>lockbook fs</code> like this can enable you to experiment directly with file types that don’t have dedicated experiences associated with them (think CAD, music scores, or other obscure third party formats and workflows).</p>
+<p>lb-fs may also be the best way to use your own text editor as markdown link resolution works as expected there.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="themes"><a class="header" href="#themes">Themes</a></h1>
+<p>Currently our windows and linux clients are themable. The clients themselves will report where they are reading their themes from in <strong>settings -&gt; appearance</strong>.</p>
+<p>You can add your own theme simply by placing it in the themes directory, the name of the json file will correspond to the theme name. Creating a theme involves selecting 18 colors that our app can draw from based on context.</p>
+<p>Themes are new to Lockbook, and they may change schema in the future.</p>
+<p>This is our default theme:</p>
+<pre><code class="language-json">{
+  "dim": {
+    "black": "#101010",
+    "grey": "#1D1D1D",
+    "red": "#DF2040",
+    "green": "#00B371",
+    "yellow": "#E6AC00",
+    "blue": "#207FDF",
+    "magenta": "#7855AA",
+    "cyan": "#00BBCC",
+    "white": "#FFFFFF"
+  },
+  "light_prefs": {
+    "primary": "blue",
+    "secondary": "green",
+    "tertiary": "magenta",
+    "quaternary": "cyan"
+  },
+  "bright": {
+    "black": "#101010",
+    "grey": "#F6F6F6",
+    "red": "#FF6680",
+    "green": "#67E4B6",
+    "yellow": "#FFDB70",
+    "blue": "#66B2FF",
+    "magenta": "#AC8CD9",
+    "cyan": "#6EECF7",
+    "white": "#FFFFFF"
+  },
+  "dark_prefs": {
+    "primary": "blue",
+    "secondary": "green",
+    "tertiary": "magenta",
+    "quaternary": "cyan"
+  }
+}
+</code></pre>
+<p>For reference this is the color palette visualized:</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Color</th><th>Dim</th><th>Bright</th></tr>
+</thead>
+<tbody>
+<tr><td>black</td><td><img src="https://placehold.co/20x20/101010/101010.png" alt="#101010"> <code>#101010</code></td><td><img src="https://placehold.co/20x20/101010/101010.png" alt="#101010"> <code>#101010</code></td></tr>
+<tr><td>grey</td><td><img src="https://placehold.co/20x20/1D1D1D/1D1D1D.png" alt="#1D1D1D"> <code>#1D1D1D</code></td><td><img src="https://placehold.co/20x20/F6F6F6/F6F6F6.png" alt="#F6F6F6"> <code>#F6F6F6</code></td></tr>
+<tr><td>red</td><td><img src="https://placehold.co/20x20/DF2040/DF2040.png" alt="#DF2040"> <code>#DF2040</code></td><td><img src="https://placehold.co/20x20/FF6680/FF6680.png" alt="#FF6680"> <code>#FF6680</code></td></tr>
+<tr><td>green</td><td><img src="https://placehold.co/20x20/00B371/00B371.png" alt="#00B371"> <code>#00B371</code></td><td><img src="https://placehold.co/20x20/67E4B6/67E4B6.png" alt="#67E4B6"> <code>#67E4B6</code></td></tr>
+<tr><td>yellow</td><td><img src="https://placehold.co/20x20/E6AC00/E6AC00.png" alt="#E6AC00"> <code>#E6AC00</code></td><td><img src="https://placehold.co/20x20/FFDB70/FFDB70.png" alt="#FFDB70"> <code>#FFDB70</code></td></tr>
+<tr><td>blue</td><td><img src="https://placehold.co/20x20/207FDF/207FDF.png" alt="#207FDF"> <code>#207FDF</code></td><td><img src="https://placehold.co/20x20/66B2FF/66B2FF.png" alt="#66B2FF"> <code>#66B2FF</code></td></tr>
+<tr><td>magenta</td><td><img src="https://placehold.co/20x20/7855AA/7855AA.png" alt="#7855AA"> <code>#7855AA</code></td><td><img src="https://placehold.co/20x20/AC8CD9/AC8CD9.png" alt="#AC8CD9"> <code>#AC8CD9</code></td></tr>
+<tr><td>cyan</td><td><img src="https://placehold.co/20x20/00BBCC/00BBCC.png" alt="#00BBCC"> <code>#00BBCC</code></td><td><img src="https://placehold.co/20x20/6EECF7/6EECF7.png" alt="#6EECF7"> <code>#6EECF7</code></td></tr>
+<tr><td>white</td><td><img src="https://placehold.co/20x20/FFFFFF/FFFFFF.png" alt="#FFFFFF"> <code>#FFFFFF</code></td><td><img src="https://placehold.co/20x20/FFFFFF/FFFFFF.png" alt="#FFFFFF"> <code>#FFFFFF</code></td></tr>
+</tbody>
+</table>
+</div>
+<p>Some hints for designing good themes:</p>
+<ul>
+<li>In dark mode we draw from the dim palettes for backgrounds, and bright for foregrounds.</li>
+<li>In light mode we do the opposite (brights for backgrounds, dim for foreground).</li>
+<li>In dark mode we use black as the tab background, and white for the text.</li>
+<li>In light mode we use white for the tab background and white for the text.</li>
+<li>We always use grey for the sidebar color (but which grey depends on light/dark).</li>
+<li>We interpolate between grey and white or grey and black (depending on light/dark) to extract a handful more neutral colors.</li>
+<li>Some ideas are hardcoded to colors, for instance errors generally show up red, and warnings yellow. Other ideas we allow the user to express a preference. For example: the file tree, text selection, and syntax highlighting select colors based on what the user defines as their accent color preferences.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="self-hosting-lockbook"><a class="header" href="#self-hosting-lockbook">Self Hosting Lockbook</a></h1>
+<p>Lockbook is designed to be maximally user centric. Part of that goal involves the ability to host our server on your own infrastructure. This document explores benefits, drawbacks, and provides operational instructions.</p>
+<h2 id="benefits"><a class="header" href="#benefits">Benefits</a></h2>
+<ul>
+<li>Greater control over hardware and costs</li>
+<li>Potentially more privacy</li>
+</ul>
+<h2 id="drawbacks"><a class="header" href="#drawbacks">Drawbacks</a></h2>
+<ul>
+<li>Not being able to collaborate with users on the main Lockbook server (or any other server). See more below.</li>
+<li>Greater operational responsibility. Obviously, now you’re responsible for backing up data, reading through our changelog, and applying any manual steps that an upgrade may require.</li>
+<li>Not supporting the development team working towards improving your experience. Consider donating:
+<ul>
+<li>BTC: <code>bc1qxewa56jvp59lg7vd3u8f23trvyjemjcc5npte9</code></li>
+<li>XMR: <code>47BqNSL4WdQAcff68wHALo5Ui6Ve8oZXYV1w16VZ7ZDV8EW1rGraok5d3jZiwz9SyYiyXDoGdGymCGNRCC1nLFDVFBSSvK1</code></li>
+</ul>
+</li>
+</ul>
+<h1 id="running-the-server"><a class="header" href="#running-the-server">Running the Server</a></h1>
+<ul>
+<li>Dependencies: the rust toolchain. See <code>rustup.rs</code>.</li>
+<li><code>lbdev</code> has a <code>server</code> subcommand which lets you hit the ground running. If you don’t have <code>lbdev</code> installed you can run <code>cargo r -p lbdev server</code> from the root of our project.</li>
+<li>The server will log where it’s reachable.</li>
+</ul>
+<h2 id="configuring-the-server"><a class="header" href="#configuring-the-server">Configuring the server</a></h2>
+<p>Our server is configurable via environment variables. The <a href="https://github.com/lockbook/lockbook/blob/master/server/src/config.rs"><code>config.rs</code></a> file is optimized to document the env vars we use. Some notable variables are:</p>
+<ul>
+<li><code>ENVIRONMENT</code> allows you to put the server in <code>PROD</code> mode, binding to <code>0.0.0.0</code> instead of <code>127.0.0.1</code> to allow external traffic to reach the server, but also requiring you to provide <code>SSL_CERT_LOCATION</code> and <code>SSL_PRIVATE_KEY_LOCATION</code>.</li>
+<li>You can update the <code>local.env</code> that <code>lbdev</code> launches the server with. Once you have a configuration that meets your goals you can move away from <code>lbdev</code>. In production we use this <code>systemd</code> service specification: https://github.com/lockbook/lockbook/blob/master/server/etc/systemd/system/lockbook-server.service.</li>
+</ul>
+<h2 id="configuring-a-client"><a class="header" href="#configuring-a-client">Configuring a client</a></h2>
+<ul>
+<li>Clients with env vars easily accessible can be pointed at a different server during account creation / login by setting the <code>API_URL</code> environment variable. Server logs will indicate whether the account was created in the right place. All lockbook clients expose the concept of <code>debug_info</code>, generally in settings which displays the current <code>server_url</code> as another mechanism of debugging.</li>
+<li>Clients that are difficult to work with (Android / iOS) have <em>Advanced</em> sections of onboarding that allow you to specify an <code>API_URL</code>.</li>
+</ul>
+<h1 id="long-term-vision"><a class="header" href="#long-term-vision">Long term vision</a></h1>
+<p>It’s always been part of our vision for Lockbook to support federation, allowing people to interact seamlessly with people on other servers.</p>
+<p>However, the design of our product treats our own server as a hostile entity because even we do not trust our cloud provider. As such we have done everything we can in our control to minimize the information that is sent to our server, and clients are designed to be resilient against server downtime (we call this offline support).</p>
+<p>Most people self host as a mitigation for problems that we’ve solved fundamentally for the whole platform. So therefore we’ve found that it’s mostly something people ask us out-of-instinct.</p>
+<p>If your situation demands self-hosting Lockbook at scale and you’d like an enhanced level of support, don’t hesitate to reach out to us!</p>
+<ul>
+<li>Discord: https://discord.gg/lockbook</li>
+<li>Email: parth@lockbook.net</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="contributing"><a class="header" href="#contributing">Contributing</a></h1>
+<p>Lockbook is grass-roots open-source project that began in 2020. We’re on a mission to create a sustainable business guided by <a href="#values">values</a> we believe will create better software.</p>
+<p>If these values resonate with you and you’d like to join us, we’d be honored to have you be a part of this journey.</p>
+<p>You can contribute to lockbook simply by using it, thinking deeply about the product and giving us feedback. If you enjoy using Lockbook, sharing it with like-minded people is also immensely helpful. See more <a href="#as-a-user">here</a>.</p>
+<p>Lockbook is built to be <a href="#extending-lockbook">extensible</a>. We welcome traditional forms of open source contributions. Things like building bindings to the lb-rs library in new languages, packaging lockbook for new platforms, or just building interesting workflows on top of Lockbook using our CLI and writing about your experiences in a blogpost are all great ways to help grow the project. See more <a href="#as-a-hobbyist">here</a>.</p>
+<p>Finally if you’re a software engineer with expertise in Rust, Kotlin or Swift (the primary languages that Lockbook is written in) and you’re interested in contributing to any of our research-grade problems checkout <a href="#contributing-to-lockbook-as-a-programmer">this</a>.</p>
+<h1 id="contrib-basics"><a class="header" href="#contrib-basics">Contrib basics</a></h1>
+<p>If you have a bug, our priority is to make it as easy to receive that bug as possible. You can join our <a href="https://discord.gg/lockbook">discord</a> and report it there, or you can create a <a href="https://github.com/lockbook/lockbook/issues">github issue</a>, and from there a maintainer will triage it further.</p>
+<p>Similarly most discussions / questions happen on discord. Don’t be shy, hop in and start a conversation!</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="as-a-user"><a class="header" href="#as-a-user">As a user</a></h1>
+<p>Once you have Lockbook <a href="#installing-lockbook">installed</a>, you can contribute to Lockbook by using it and sharing with like minded people who share our <a href="#values">values</a>.</p>
+<p>Finding bugs and <a href="#you-found-a-bug">reporting them to us</a> is a great way to help make Lockbook better.</p>
+<p>As you use our product if you have insight that you think would help you use Lockbook in more ways, or allow you to use Lockbook with more people we’d love to hear from you on our <a href="https://discord.gg/lockbook">Discord</a>.</p>
+<p>At the moment we’re a completely out-of-pocket funded operation and your financial support goes a long way. Use the app and convert to premium if you’re sold on our product.</p>
+<p>If you’d like to make a more substantial contribution reach out to us on Discord.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="you-found-a-bug"><a class="header" href="#you-found-a-bug">You found a bug!</a></h1>
+<p>First of all, we’re sorry.</p>
+<p>Please tell us about this bug! As the person encountering this bug your only obligation is to persist the information about this bug somewhere.</p>
+<p>If you have a Github account you can create a <a href="https://github.com/lockbook/lockbook/issues/new">Github Issue</a> and someone on our team will be in touch. Here are some ways you can help us:</p>
+<ul>
+<li>Search to see if the issue exists already. Feel free to add more information to the original issue, even if it’s just a reaction to tell us that this is something you’d like fixed.</li>
+<li>If possible (or relevant) try to capture a video of you encountering the problem. Try to provide us with steps to reproduce the problem.</li>
+<li>Go into settings, and copy the “debug info”. It will contain no secrets, should be short enough for you to review. If possible, please attach this to your bug report. This contains the answer to a number of the questions we’d like to ask you (like what platform you’re on, or what was the nature of the last crash Lockbook encountered).</li>
+</ul>
+<p>If you don’t have a Github, you can also make us aware of bugs using <a href="https://discord.gg/lockbook">Our Discord</a> using the <a href="https://discord.com/channels/1014184997751619664/1368631136145903736">Support</a> channel.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="as-a-hobbyist"><a class="header" href="#as-a-hobbyist">As a hobbyist</a></h1>
+<p>Lockbook is very <a href="#extending-lockbook">extensible</a>. Backing up, syncing and collaborating bytes in different places is at the heart of most projects. See how far you can get by keeping all your bytes under the same (trustworthy) roof. Reach out to us if any of our APIs are falling short. Show off what you built in our discord! Here are some of our favorite contributions:</p>
+<ul>
+<li><a href="https://github.com/steverusso/lockbook-x">Custom Clients written in GoLang by Steve</a></li>
+<li><a href="https://coreycc.com/md/blog/backup-dotfiles-with-lockbook.md">Backing up dotfiles by Corey</a></li>
+</ul>
+<p>Experiments that were ultimately added to Lockbook itself:</p>
+<ul>
+<li><a href="https://github.com/lockbook/lockbook/pull/3187">Mind Map by Krish</a></li>
+<li><a href="https://github.com/lockbook/lockbook/pull/3474">Space Analyzer by Arav</a></li>
+</ul>
+<ul>
+<li><a href="https://github.com/lockbook/lockbook/pull/3643">WIP: Voice Memos with Transcription by Arav</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="contributing-to-lockbook-as-a-programmer"><a class="header" href="#contributing-to-lockbook-as-a-programmer">Contributing To Lockbook as a Programmer!</a></h1>
+<p>We’re excited you want to contribute. Before you dive into code you should understand our <a href="#values">values</a> and you should <a href="#as-a-user">be a user</a>. You should also be in our <a href="https://discord.gg/lockbook">discord</a>. This page aims to be a live document you can use as a source of inspiration, in addition to browsing all our <a href="https://github.com/lockbook/lockbook/issues">github issues</a>, especially the ones tagged <a href="https://github.com/lockbook/lockbook/issues?q=is%3Aissue%20state%3Aopen%20label%3A%22good%20first%20issue%22">good first issues</a>.</p>
+<p>Lockbook is a project with massive surface area with the need for all types of contributors. Most of the codebase is in Rust, but there is critical code in Swift, Kotlin and other languages as well. Our workload includes:</p>
+<ul>
+<li>UX thinking</li>
+<li>UI development (Native &amp; Cross Platform Rust)</li>
+<li>Data Structures and Algo work (we model a lot of trees)</li>
+<li>Scaling our libraries and backend</li>
+<li>Devops and Internal tooling</li>
+</ul>
+<h1 id="rust-contributions"><a class="header" href="#rust-contributions">Rust Contributions</a></h1>
+<p><code>lb-rs</code> is the heart of our Rust operation. It’s a library that’s responsible for our cryptography, offline operations, networking, storage, and more. All lockbook clients, regardless of what language they’re written in use this library (with the power of foreign function interfaces). See the <a href="https://github.com/lockbook/lockbook/issues?q=is%3Aissue%20state%3Aopen%20label%3Alb-rs">lb-rs label</a> for more info.</p>
+<p>Similarly <code>workspace</code> is the cross platform UI implementation of our tab strip, editing experience and more. It’s presently written using <a href="https://github.com/emilk/egui">egui</a>, an <a href="https://en.wikipedia.org/wiki/Immediate_mode_(computer_graphics)">immediate mode ui framework</a> (similar to game dev methodology). See the <a href="https://github.com/lockbook/lockbook/issues?q=is%3Aissue%20state%3Aopen%20label%3Aworkspace">workspace label</a> for more info. Workspace houses our <a href="#markdown-syntax">markdown editor</a> as well as our <a href="#drawing">canvas</a>, some of our core editing experiences.</p>
+<p>Our egui implementations are wrapped in <em>integrations</em> written by our team to provide our app with a rich user experience and populate events missing from <code>winit</code>. We send custom events through to <code>egui</code> for things like image paste, and we’d like to invest deeper in these integrations to provide a richer stylus integration on Windows. The windows &amp; linux labels refer to these integrations.</p>
+<p><code>lb-rs</code>, <code>server</code>, and <code>cli</code> make use of some more exciting technologies documented in our blog:</p>
+<ul>
+<li><a href="https://lockbook.net/blog/db-rs/">db-rs</a></li>
+<li><a href="https://lockbook.net/blog/lockbooks-editor/">lb-editor</a></li>
+<li><a href="https://lockbook.net/blog/defect-finder/">defect finder</a></li>
+<li><a href="https://lockbook.net/blog/creating-a-sick-cli/">cli-rs</a></li>
+</ul>
+<p>Much of our infrastructure operations are described in <a href="#lbdev"><code>lbdev</code></a> powering most of our developer operations. We’d like to automate the process of shipping our code more often and to more places.</p>
+<h1 id="native-ui-expertise-swift--kotlin"><a class="header" href="#native-ui-expertise-swift--kotlin">Native UI Expertise (Swift / Kotlin)</a></h1>
+<p>Our apps on Android, and on Apple Platforms have a significant amount of <em>native</em> code to power a better user experience. When trying to decide whether we’re going to implement something in Rust or in a Native framework we just ask the question which will lead to a better user experience. On most platforms we’ve implemented the file tree, search, settings and much more in the native platform.</p>
+<p>There are plenty of bugs to fix, and deeper connections to the host device to make. We’d like to have widgets, assistant integrations, and more on these host platforms.</p>
+<h1 id="reach-out"><a class="header" href="#reach-out">Reach Out!</a></h1>
+<p>All of these resources help you understand the various ways you could contribute, but if you’re serious about joining our team, start a conversation with us! In that conversation we can understand your experience level, your interests and your goals and get you pointed in the right direction.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="lbdev"><a class="header" href="#lbdev">lbdev</a></h1>
+<p>lbdev is the lockbook team’s place to store commonly run operations. Think of it like a <code>scripts</code> folder, but we’d prefer to write these things in <code>Rust</code>, our team’s primary language. You can use <code>lbdev</code> to do some of the following:</p>
+<ul>
+<li>run our server</li>
+<li>build workspace as a C library to include in native apps</li>
+<li>run lockbook on annoying platforms</li>
+<li>release operations</li>
+</ul>
+<p>install: <code>cargo install --path utils/lbdev</code>
+update: <code>lbdev update</code>
+completions for fish: <code>lbdev fish-completions</code>.</p>
+<h1 id="release-ops"><a class="header" href="#release-ops">Release Ops</a></h1>
+<ul>
+<li>We release often, every release generally we release everything, and everything has the same version.</li>
+<li>Our version encodes the date of the batch of changes in <code>yy.mm.dd</code> format.</li>
+<li>We update this often enough so our server can accurately estimate how much usage a particular batch of code is receving.</li>
+<li>During the development cycle (like on days of release) we may have to increment this more than once in a day, and on these dates we’ll just increment the patch field (to effectively the following day’s date). Incrementing this often enough also allows us to more clearly distinguish between the code engineers are running on <code>master</code> vs. the code that’s released to consumers.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<ul>
+<li>We want to release often
+<ul>
+<li>We want to reward people for reporting bugs to us. The best way to do this is to get the bugfix in their hands as quickly as possible.</li>
+<li>Our release infrastructure is non-trivial and fequently exersizing it let’s us catch issues early and be selective about when we fix problems.</li>
+<li>Users cannot rollback, so we want to be confident in the increments we’re shipping. The following schedule is crafted to balance QA workload and risk of changes</li>
+</ul>
+</li>
+<li>Release Schedule
+<ul>
+<li>Monday 11am EST – release coordination
+<ul>
+<li><strong>Release Coordinator</strong> is selected based on who is shipping the most this release. They’re going to gather any QA resources (internal or external) fan out work and evaluate release suitability. QA people have 24 hours to perform QA. 11am is the deadline for sending the message to testers.</li>
+</ul>
+</li>
+<li>Tuesday 11am EST – Decision time
+<ul>
+<li>Plan A: no bugs found and release can proceed as planned.</li>
+<li>Plan B: bugs were found and the release is cancelled. Responsible party has until Friday to reconcile the situation.</li>
+<li>Plan C: work can be cleanly reverted, or minor bugfixes exist. Another 24 hours of QA is scheduled, and <strong>Decision time</strong> is repeated on Wednesday.</li>
+</ul>
+</li>
+<li>Tuesday Afternoon – Post Release
+<ul>
+<li><strong>Release Coordinator</strong> goes through and crafts a message containing gifs / videos and updates the github release. This message should be compatible with discord, and general is notified. Do not wait for app store acceptance or any other external events. If a github release exists, make discord and github satisfying spaces to consume what happened.</li>
+<li><strong>Merge Window Opens</strong>:
+<ul>
+<li>If your change is graphical in nature, at a minimum your PR should contain a screenshot. A gif is preferred, and a video is acceptable. This makes it easy for a release coordinator to make a post on your behalf.</li>
+<li>Merging risky things: Take all the steps you can to de-risk your merge. Before the merge window opened you should have invited people to try your PR (if relevant). Leave an audit trail in your PR of what QA was done. Your obligation ends at the invitation, whether the person shows up or not is not your problem. If you want a larger window of testing and don’t want to release the following monday, set expectations accordingly.</li>
+<li>After the merge window opens, merge riskiest things first, communicate what you’re merging to <code>#development</code>, what the nature of the risk is and who should be dogfooding it. Ask people to rebase their branches so they can passively experience the changes while they work on their own stuff.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Friday 7pm <strong>Merge Window Closes</strong> / <strong>Passive Dogfood Begins</strong>:
+<ul>
+<li>External testers notified, they can give any feedback during the weekend at their leisure</li>
+<li>Any merging during this point should be overwhelmbly obviously low in risk, or a specific bugfix in service of the release.</li>
+<li>A release coordinator is determined for Monday.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="stacked-prs"><a class="header" href="#stacked-prs">Stacked PRs</a></h1>
+<p>If you’re concerned about juggling the git history while merging is not an option ChatGPT got you:</p>
+<p>You can open a PR that depends on another unmerged PR.</p>
+<p>Assume:</p>
+<pre><code class="language-text">master
+  \
+   A   PR 1
+    \
+     B   PR 2
+</code></pre>
+<p>There are three practical workflows.</p>
+<h3 id="1-squash-before-branching"><a class="header" href="#1-squash-before-branching">1. Squash before branching</a></h3>
+<p>Make PR 1 a single commit before creating PR 2:</p>
+<pre><code class="language-text">master
+  \
+   A   PR 1
+    \
+     B   PR 2
+</code></pre>
+<p>When PR 1 is squash-merged, commit <code>A</code> lands unchanged. Git then understands that PR 2 contains only <code>B</code>.</p>
+<h3 id="2-rebase-only-the-dependent-commits"><a class="header" href="#2-rebase-only-the-dependent-commits">2. Rebase only the dependent commits</a></h3>
+<p>Let PR 1 contain multiple commits:</p>
+<pre><code class="language-text">master
+  \
+   A---B   PR 1
+        \
+         C---D   PR 2
+</code></pre>
+<p>After PR 1 is squash-merged, replay only <code>C</code> and <code>D</code>:</p>
+<pre><code class="language-bash">git rebase --onto master PR_1_BRANCH PR_2_BRANCH
+</code></pre>
+<p>Result:</p>
+<pre><code class="language-text">master---S
+          \
+           C'---D'   PR 2
+</code></pre>
+<p><code>S</code> is the squashed version of <code>A---B</code>.</p>
+<h3 id="3-ignore-commit-structure-and-merge-master"><a class="header" href="#3-ignore-commit-structure-and-merge-master">3. Ignore commit structure and merge <code>master</code></a></h3>
+<p>Create PR 2 from <code>master</code>, then bring PR 1’s changes into it:</p>
+<pre><code class="language-bash">git switch -c pr-2 master
+git reset --soft PR_1_BRANCH
+git commit
+</code></pre>
+<p>The branches remain independent:</p>
+<pre><code class="language-text">master
+  ├── A     PR 1
+  └── A+B   PR 2
+</code></pre>
+<p>After PR 1 is merged:</p>
+<pre><code class="language-bash">git switch pr-2
+git pull --no-rebase origin master
+</code></pre>
+<p>The merge removes PR 1’s changes from PR 2’s diff, leaving only the additional work.</p>
+<p>This creates messier branch history, but squash-merging keeps <code>master</code> clean.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="p0---usability-bug"><a class="header" href="#p0---usability-bug">P0 - Usability Bug</a></h1>
+<blockquote>
+<p>Issue affecting usability of core experience</p>
+</blockquote>
+<p>Examples:</p>
+<ul>
+<li>Data loss</li>
+<li>Crash loop</li>
+<li>Privacy Compromise</li>
+</ul>
+<h1 id="p1---quality-bug"><a class="header" href="#p1---quality-bug">P1 - Quality Bug</a></h1>
+<blockquote>
+<p>Degraded core experience or unusable secondary experience</p>
+</blockquote>
+<p>Examples:</p>
+<ul>
+<li>Poor experience copying a read-only document</li>
+<li>Gradual memory leak</li>
+<li>Search result ordering</li>
+</ul>
+<h1 id="p2---missing-feature"><a class="header" href="#p2---missing-feature">P2 - Missing Feature</a></h1>
+<blockquote>
+<p>Reasonable user expectation we’re missing</p>
+</blockquote>
+<p>Examples:</p>
+<ul>
+<li>Markdown frontmatter support</li>
+<li>Version history</li>
+<li>Spell Check</li>
+</ul>
+<h1 id="p3---improvement"><a class="header" href="#p3---improvement">P3 - Improvement</a></h1>
+<blockquote>
+<p>Un-contraversial improvement that’s low priority</p>
+</blockquote>
+<p>Examples:</p>
+<ul>
+<li>Grammar checking</li>
+<li>Graph visualizations</li>
+<li>Support for more document types</li>
+</ul>
+<h1 id="p4---idea"><a class="header" href="#p4---idea">P4 - Idea</a></h1>
+<blockquote>
+<p>Something we can discuss, but don’t have any specific plan to do</p>
+</blockquote>
+<p>Examples:</p>
+<ul>
+<li>Integrate with Siri</li>
+<li>Better self hosting experience</li>
+<li>Comments on documents</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="building"><a class="header" href="#building">Building</a></h1>
+<p>Being a <em>Rust</em> project, the rust toolchain is the dependency that all clients will require. For many of our pure-rust clients and libraries in our monorepo, this is all that’s required! Jump into <code>clients/cli</code> and <code>cargo run -r</code>.</p>
+<p>For our project, you just need <code>rustup</code>, our <code>rust-toolchain.toml</code> in the root of our project will ensure that you’re using the right version of the toolchain. Checkout https://rustup.rs/ for more information.</p>
+<p>We generally don’t depend on cross-compilation with the rust-toolchain, although in a pinch <code>cargo-zigbuild</code> (zig toolchain) and <code>cargo-cross</code> (docker) have worked well for us.</p>
+<p>Below you’ll find the documentation associated with more complicated workflows.</p>
+<h1 id="cli-3"><a class="header" href="#cli-3">CLI</a></h1>
+<pre><code class="language-bash">cd clients/cli &amp;&amp; cargo install --path .
+</code></pre>
+<p>See <a href="#cli-1">cli</a> for information about setting up completions.</p>
+<h1 id="desktop-windows--linux--macos-host"><a class="header" href="#desktop-windows--linux--macos-host">Desktop (Windows / Linux / macOS host)</a></h1>
+<p>Product GUI is <code>clients/desktop</code> (custom winit/wgpu host + shell). Packaging renames platform bins to <code>lockbook-desktop</code>.</p>
+<pre><code class="language-bash">cargo run -p lockbook-desktop
+# release / install:
+cargo install --path clients/desktop
+# packaging builds (same host code):
+#   cargo build -p lockbook-linux --release
+#   cargo build -p lockbook-windows --release
+</code></pre>
+<h1 id="linux-1"><a class="header" href="#linux-1">Linux</a></h1>
+<p>Commonly required dependencies:</p>
+<ul>
+<li><code>build-essential</code></li>
+</ul>
+<ul>
+<li><code>libssl-devel</code></li>
+<li><code>pkg-config</code></li>
+<li><code>libxkbcommon-x11-dev</code></li>
+<li><code>libgtk-3-dev</code> (for rfd)</li>
+</ul>
+<p>See <code>clients/linux/default.nix</code> for the formal specification. Nix-users can just <code>nix-shell</code> in this directory to fulfill the dependency requirements.</p>
+<h1 id="android"><a class="header" href="#android">Android</a></h1>
+<p>Dependencies:</p>
+<ul>
+<li>Android SDK. The version mentioned in <a href="/clients/android/app/build.gradle">this build.gradle</a> (<a href="https://github.com/lockbook/lockbook/blob/master/clients/android/app/build.gradle">gh</a>), at the <code>targetSdkVersion</code> field.</li>
+<li>Android NDK. Set the environment variable <code>ANDROID_NDK_HOME</code> to the NDK’s location.</li>
+<li>Native development support for cargo:</li>
+</ul>
+<pre><code class="language-shell script">cargo install cargo-ndk
+</code></pre>
+<ul>
+<li>Android targets for cargo:</li>
+</ul>
+<pre><code class="language-shell script">rustup target add aarch64-linux-android armv7-linux-androideabi i686-linux-android x86_64-linux-android
+</code></pre>
+<p>Steps:</p>
+<ul>
+<li>Run <code>cargo run -p lbdev -- android ws</code> which will build workspace for android.</li>
+<li>Choose one:
+<ol>
+<li>Command Line
+<ul>
+<li>In <code>clients/android</code> run <code>./gradlew assemble</code>.</li>
+<li>The APK will be located at <code>clients/android/app/build/outputs/apk/debug</code>.</li>
+</ul>
+</li>
+<li>Android Studio
+<ul>
+<li>Download and install Android Studio.</li>
+<li>In Android Studio open Lockbook Android at the <code>/clients/android</code>.</li>
+<li>Configure Android Studio to use the SDK installed.</li>
+<li>Build the APK using the hammer button on the toolbar. Once built, the bottom information
+bar will give you the option to locate the APK (<code>clients/android/app/build/outputs/apk/debug/</code>).</li>
+<li>You can also run the APK directly on your device:
+<ul>
+<li>Enable USB debugging on your Android device.</li>
+<li>Connect it to the machine running Android Studio.</li>
+<li>On the toolbar, you will be given the option to directly run the APK on your device.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h1 id="apple"><a class="header" href="#apple">Apple</a></h1>
+<p>Dependencies:</p>
+<ul>
+<li>Xcode</li>
+<li><code>cbindgen</code> for generating <code>.h</code> files for Swift &lt;–&gt; Rust interop</li>
+</ul>
+<pre><code class="language-bash">    cargo install cbindgen
+</code></pre>
+<ul>
+<li>Apple Specific rust toolchains:</li>
+</ul>
+<pre><code class="language-bash">rustup target add aarch64-apple-ios x86_64-apple-ios aarch64-apple-darwin x86_64-apple-darwin aarch64-apple-ios-sim
+</code></pre>
+<h2 id="lbdev-1"><a class="header" href="#lbdev-1">lbdev</a></h2>
+<p>See <a href="#lbdev">lbdev</a> for more information about our rust build utility. As an Apple dev you’ll want to install <code>lbdev</code> for easy access. <code>lbdev apple ws all</code> will produce the libraries Xcode expects to perform lockbook operations.</p>
+<pre><code class="language-bash">cd utils/lbdev &amp;&amp; cargo install --path . &amp;&amp; lbdev apple ws all
+</code></pre>
+<h2 id="configuring-xcode"><a class="header" href="#configuring-xcode">Configuring Xcode</a></h2>
+<p>After building the native libs:</p>
+<ol>
+<li>Open <code>clients/apple</code> in Xcode</li>
+<li>In Xcode, open the “Signing &amp; Capabilities” tab and set the team to your personal developer email.</li>
+<li>Make sure the target is <code>Lockbook</code>, then select a device (macOS, iOS device, or iOS simulator).</li>
+<li>Hit the run button. If you see an App, great. If you can edit a document you have everything wired up correctly.</li>
+</ol>
+<h2 id="troubleshooting"><a class="header" href="#troubleshooting">Troubleshooting</a></h2>
+<ol>
+<li>Restart Xcode. Xcode isn’t that robust, and often times if you re-build the Rust libs or do git operations you’ll encounter false build errors often resolved by restarting Xcode.</li>
+<li><strong>Signing</strong> – Xcode → Signing &amp; Capabilities → set Team to your Apple ID. The project uses team <code>39ZS78S25U</code>; if you’re not on that team, change it to yours or use “Sign to Run Locally” for simulators.</li>
+<li><strong>macOS code signing</strong> – If macOS fails with “No signing certificate”, either add your “Mac Development” cert in Keychain, or build with: <code>xcodebuild ... CODE_SIGN_IDENTITY="-" build</code>.</li>
+<li>Reach out for help on discord: https://discord.gg/lockbook</li>
+</ol>
+<h2 id="tips"><a class="header" href="#tips">Tips</a></h2>
+<ul>
+<li>If you have your <code>Swift</code> hat on, you’ll want to execute <code>lbdev apple ws all</code> anytime lb-rs changes</li>
+<li>If you have your <code>Rust</code> hat on, and just want to quickly check something on Apple you can use <code>lbdev apple run</code> variants. <code>lbdev</code> has tab completions that will enumerate devices (<code>lbdev apple run ios &lt;tab&gt;</code>). Similarly you can just do <code>lbdev apple run macos</code> to run on your current device.</li>
+</ul>
+<h1 id="lb-rs--server"><a class="header" href="#lb-rs--server">lb-rs &amp; server</a></h1>
+<p>lb-rs &amp; server have no system dependencies.</p>
+<p>lb-rs can be pointed to a server via the <code>API_URL</code> env var, by default clients are engineered to connect to our production server: <code>https://api.prod.lockbook.net</code>. See <a href="#self-hosting-lockbook">self-hosting</a> for more information.</p>
+<p>Tests are configured to connect to <code>https://localhost:8000</code>.</p>
+<p>You can run the server locally by executing <code>lbdev server</code> for local dev.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="sync-v3"><a class="header" href="#sync-v3">Sync v3</a></h1>
+<p><em>this document is slightly out of date, it doesn’t contain documentation on work
+like <code>safe_write</code> which enables near-real-time collaboration. It will be updated
+soon. In the meantime it does provide a good foundation of the initial design
+constraints which are largely unchanged.</em></p>
+<h2 id="overview"><a class="header" href="#overview">Overview</a></h2>
+<p>Sync v3 is the latest iteration of our logic that syncs users’ file trees across
+devices. It is designed under the following key constraints:</p>
+<ul>
+<li>The state of a user’s file tree must satisfy certain invariants at all times,
+on all devices (including the server), even in the event of process
+interruptions and failures.</li>
+<li>Users’ file contents and names must not be readable by the server, but users
+can share files and folders with other users.</li>
+<li>Users must be able to view and edit files offline, then sync frictionlessly,
+even with intervening edits made to files on other devices.</li>
+<li>The performance of the system must not suffer as a result of typical usage,
+which presents a number of challenges worth discussion</li>
+</ul>
+<p>These design constraints motivate the following high-level design, which will be
+flushed out in more detail after a further discussion of the constraints:</p>
+<ul>
+<li>The client maintains two versions of the file tree: one for the current local
+version (<code>local</code>), and one for the last version known to be agreed upon by the
+client and server (<code>base</code>).</li>
+<li>The server maintains one version of each user’s file tree (<code>remote</code>)</li>
+<li>To perform a sync, the client pulls <code>remote</code> from the server, 3-way merges the
+changes with <code>local</code> and <code>base</code>, and pushes those updates to the server.</li>
+</ul>
+<h2 id="constraints"><a class="header" href="#constraints">Constraints</a></h2>
+<h3 id="file-tree-invariants"><a class="header" href="#file-tree-invariants">File Tree Invariants</a></h3>
+<p>Before discussing the invariants, it is helpful to understand the data model.
+For the purposes of Sync v3, each file has:</p>
+<ul>
+<li><code>id</code>: an immutable unique identifier</li>
+<li><code>file_type</code>: an immutable flag that indicates if the file is a folder or
+document. A <em>file</em> is either a <em>document</em>, which has contents, or a <em>folder</em>,
+which can have files as children.</li>
+<li><code>name</code>: the file’s name. Clients encrypt and HMAC names before sending them to
+the server, so while the server cannot read file names, it can test them for
+equality.</li>
+<li><code>parent</code>: the file’s parent folder (specified by the parent’s <code>id</code>). The
+<code>root</code> folder is the folder which has itself as a parent (its name is by
+convention its owner’s username and it cannot be deleted).</li>
+<li><code>deleted</code>: a boolean flag which indicates whether the file is <em>explicitly</em>
+deleted. A file whose ancestor is deleted need not be explicitly deleted; if
+not, it is considered <em>implicitly</em> deleted (all implicitly deleted files are
+eventually explicitly deleted). A file that is no longer known to a client at
+all is considered <em>pruned</em> on that client.</li>
+</ul>
+<p>This data model lends itself to four operations, which (aside from <code>create</code>)
+correspond to modifications to the three mutable fields of a file:</p>
+<ul>
+<li><code>create</code>: create a file</li>
+<li><code>rename</code>: change the file’s name</li>
+<li><code>move</code>: change the file’s parent</li>
+<li><code>delete</code>: delete the file (cannot be undone)</li>
+</ul>
+<p>With that data model in mind, these are the four main invariants that must be
+true of a user’s file tree on all devices at all times:</p>
+<ul>
+<li>Root Invariant: there must always be exactly one <code>root</code> and all modifications
+to <code>root</code>s are invalid. This is straightforward to enforce.</li>
+<li>Path Conflict Invariant: no two files may have the same name and parent. An
+example challenge is when a user creates a new file on each of two clients
+with the same name and parent, then syncs them both.</li>
+<li>Cycle Invariant: every non-root file must not have itself as an ancestor. An
+example challenge is when on one client the user moves folder A into folder B
+and on the other client moves folder B into folder A, then syncs them both.</li>
+<li>Orphan Invariant: every non-root file must have its parent in the file tree.
+To keep client storage from growing unboundedly, clients eventually prune
+deleted files (remove all mentions of them from durable storage). If the
+design does not pay careful attention to the distinctions between explicitly
+deleted, implicitly deleted, and pruned files, a client may prune a file
+without pruning one of its children.</li>
+</ul>
+<h3 id="privacy-1"><a class="header" href="#privacy-1">Privacy</a></h3>
+<p>Files, file names, and encryption keys never leave the client unencrypted. In
+order to support <a href="sharing.html">sharing</a>, we give every document a symmetric key
+(used to encrypt its contents) and every folder a symmetric key (used to encrypt
+the keys of child folders and documents). This allows users to recursively share
+folder contents performantly and consistently. It also creates an encryption
+chain for each document: the document is encrypted with the document’s key,
+which is encrypted with its parent folder’s key, which is encrypted with its
+parent folder’s key, all the way up to the root folder whose key is encrypted
+with the user’s account key which is stored on the user’s devices and transferred
+directly between them as a string or QR code.</p>
+<p>This encryption chain, and its interaction with the invariants, creates
+programming challenges. Our general pattern is to decrypt keys, names, and files
+as we read them from disk or receive them as responses from the server so that
+we can write all the remaining logic without worrying about encryption. However,
+most invariant violations (e.g. orphans and cycles) will cause us to fail to be
+able to decrypt files, which in turn makes it difficult to detect and
+appropriately resolve invariant violations.</p>
+<h3 id="offline-editing"><a class="header" href="#offline-editing">Offline Editing</a></h3>
+<p>The key challenge in offline editing is what to do when concurrent updates are
+made to files. As previously mentioned, the client maintains two versions of the
+file tree: one for the current local version (<code>local</code>), and one for the last
+version known to be agreed upon by the client and server (<code>base</code>). Our ambition
+is to define a 3-way merge operation for file trees which we can use after
+pulling the server’s version of the file tree (<code>remote</code>) which never results in
+an invariant violation and which otherwise produces satisfying behavior to users.
+This operation needs to take place on clients because the server does not have
+access to decrypted files. Once a client uses the 3-way merge operation to
+resolve conflicts, they can write their updates back to the server.</p>
+<p>For file contents, we can use a standard 3-way file merge operation like the one
+used by Git. If there are edit conflicts, we resolve them by leaving in both
+versions along with Git-style annotations of which change came from <code>local</code> vs
+<code>remote</code>. When a 3-way merge operation doesn’t make sense (e.g. for binary
+files), we can resolve edit conflicts by saving both copies of the file, with
+one of the files renamed.</p>
+<p>For file metadata, we prefer the remote version of a file’s <code>name</code> and <code>parent</code>
+because we think it makes the most sense for the client whose updates reached
+the server first to have its changes preferred. If either the server or the
+client deleted a file and the other did not, we resolve the conflict by deleting
+the file so that file deletions are permanent. File metadata also contain other
+fields (discussed in the next section) which require careful consideration
+during a merge.</p>
+<p>As mentioned, some invariant violations arise from concurrent multi-device
+edits, even if the individual devices maintain those invariants locally.
+Therefore the 3-way merge operation requires additional logic to resolve these
+constraints in a user-friendly way.</p>
+<h3 id="performance"><a class="header" href="#performance">Performance</a></h3>
+<p>There are a handful of performance pitfalls which we need to avoid. We pay
+attention to the time it takes to perform certain operations and the storage
+space used on users’ devices.</p>
+<p>When pulling the state of a user’s file tree from the server, we need to avoid
+pulling the whole file tree. We intend for the system to scale to thousands or
+millions of files per user - the user might have access to a shared folder
+containing files for their entire company. To this end we track a version for the
+file in its metadata (<code>metadata_version</code>). The <code>metadata_version</code> for a file
+is simply the server-assigned timestamp of the file’s most recent update,
+represented as a Unix epoch. When a client fetches updates from the server, it
+passes the most recent version it knowns of, and the server replies with the new
+metadata for all files that have been updated since that point. This way, the
+volume of data pulled scales with the velocity of updates to the user’s file
+tree rather than the size of the file tree.</p>
+<p>Pulling the metadata for a file and pulling the content for a file are, in terms
+of performance, categorically different. A file’s contents are generally many
+orders of magnitude larger than file metadata. When we pull an update for a
+file, we need to avoid re-pulling the content for the file if it hasn’t changed
+(e.g. if the file was only renamed or moved since the client last checked with
+the server). To this end, alongside <code>metadata_version</code>, we store a
+<code>content_version</code> in each metadata which is a server-assigned timestamp of the
+file’s most recent content update. When a client pulls a metadata update, it
+also pulls the file content if and only if the <code>content_version</code> has changed
+since it last pulled.</p>
+<p>Clients store two versions of the file tree, <code>base</code> and <code>local</code>. In order to
+save space, we use semantics similar to copy-on-write where the version of a
+file on <code>local</code> is not saved if it is identical to the version on <code>base</code>.
+Clients interpret the absence of a <code>local</code> version to mean that <code>local</code> and
+<code>base</code> are identical. Additionally, we compress files, both before saving to
+disk and before pushing to the server.</p>
+<p>The metadata for deleted files must be eventually pruned on clients so that the
+amount of space taken on users’ devices scales with the number of not-deleted
+files rather than the total number of files ever created. Deleted files cannot
+be immediately pruned because the client needs to remember to push the deletion
+to the server on the next sync. The server keeps track of all file metadata
+forever (though it deletes contents of deleted files) so that clients can sync
+after being offline indefinitely and still receive deletion events without the
+complexity of the server needing to know which clients exist and which updates
+they have each received.</p>
+<h2 id="design-by-concern"><a class="header" href="#design-by-concern">Design By Concern</a></h2>
+<p>Sync v3 operates in the context of many concerns. We’ll discuss the design first
+in terms of how the concerns are addressed one concern at a time, then in terms
+of the client and server routines that address all these concerns all together.
+These are the concerns we’ll discuss:</p>
+<ul>
+<li>file deletion</li>
+<li>invariant violation resolution</li>
+<li>consistency</li>
+</ul>
+<h3 id="file-deletion"><a class="header" href="#file-deletion">File Deletion</a></h3>
+<p>As mentioned, files have various states of deletion:</p>
+<ul>
+<li>not deleted (the file has <code>false</code> value for <code>deleted</code> and no deleted
+ancestors)</li>
+<li>explicitly deleted (the file has <code>true</code> value for <code>deleted</code>)</li>
+<li>implicitly deleted (the file has <code>false</code> value for <code>deleted</code> but has an
+explicitly deleted ancestor)</li>
+<li>pruned (there is no mention of file on disk, although it once existed)</li>
+</ul>
+<p>First we’ll justify the distinction between deleted and pruned. If the file
+deletion system is working properly, then after a user deletes a file on a
+device and syncs that device, that device will prune the file and any other
+devices that sync will prune that file. What’s required to make that happen is
+that <strong>the client which deletes the file remembers that the file exists (and is
+deleted) until that client syncs its changes.</strong> Once the changes are synced, the
+client can prune the file knowing that the server will remember the deletion
+forever and will inform the other clients of the deletion. Note that deleted
+documents can have their contents pruned immediately - it is only important to
+remember the metadata until the deletion is pushed.</p>
+<p>Next we’ll justify the the distinction between implicit and explicit deletions.
+What it would mean to not have this distinction is that a file would only be
+deleted if it is marked explicitly deleted, so in order to delete a folder
+either the user would have to delete all its children first or the client would
+have to automatically delete all its children first e.g. recursively delete
+folders (otherwise those children would become orphans, violating the Orphan
+Invariant). This would be undesirable because of the behavior of folder
+deletions in the presence of multiple clients. Consider the case when one client
+moves a document out of a folder and syncs, then another client deletes the
+folder and syncs. If a client applied explicit deletions recursively, the second
+client would delete both the folder and the document, then the next time the
+other client synced, the document would be deleted even though it was not in the
+deleted folder. We decided this was unacceptable behavior.</p>
+<p>In order to prune a file, we need it to be explicitly deleted (and have no
+descendants that are not explicitly deleted and would therefore become orphans),
+and for its explicit deletion to be synced to the server. If it’s only
+implicitly deleted, then it potentially could have been moved out of its deleted
+ancestor in an update that we have not yet pulled, so a client cannot yet prune
+it. This will perpetually be the case for implicitly deleted files unless they
+are at some point explicitly deleted. This means the server is the entity which
+must ultimately explicitly delete implicitly deleted files. <strong>Anytime a set of
+file updates is pushed to the server, the server explicitly deletes all
+implicitly deleted files. The next time they pull, clients receive these
+deletions as updates, which indicates that it is safe for them to prune the
+files.</strong></p>
+<p>Revisiting the earlier example, when a client moves a document out of a folder
+and syncs, the server becomes aware of that move. Then when another client
+deletes the folder and syncs, the server marks all implicitly deleted files as
+explicitly deleted. This does not include the document because the server is
+already aware that it has been moved. If the first client hadn’t synced until
+after the second client, then the document would have been deleted. This is one
+of the ways in which we resolve conflicts in favor of the first client to sync.</p>
+<p><em>Note: when a document is implicitly deleted on a device, the device can prune
+the documents’ contents and just keep the metadata which is much smaller. If,
+after syncing, the document is no longer implicitly deleted, the device can
+re-pull the contents from the server.</em></p>
+<h3 id="invariant-violation-resolution"><a class="header" href="#invariant-violation-resolution">Invariant Violation Resolution</a></h3>
+<p>Even if clients individually enfoce invariants, violations can still occur in
+the presence of concurrent updates. This is a complicated matter.</p>
+<p>First, we have to be concerned about the Cycle Invariant. A cycle can occur if a
+user has two folders, moves the first folder into the second on one client and
+moves the second folder into the first on another, then syncs them both. A cycle
+can also involve more folders, if a first folder is moved into a subfolder of a
+third folder and the third folder is moved into the first folder concurrently.</p>
+<p>We also have to be concerned about the Path Conflict Invariant. A path conflict
+can occur if two clients create files with the same name in the same folder and
+then sync. Occurrences can also involve a client renaming an existing file in
+that folder, moving a file into a folder, or after a file edit conflict is
+resolved by saving a copy of the local version with a new name. Additionally, it
+must be valid for two files to share a name and parent if one or both of them
+are deleted.</p>
+<p>Finally, we have to be concerned about the Orphan Invariant. An orphan can occur
+if a client deletes a folder and syncs, then another client moves a file into
+that folder and syncs, then the initial client syncs again. The initial client
+will prune the folder after pushing its deletion, then the second client will
+push the move and the server will mark it as deleted, then the initial client
+will receive an update to a file for which it does not have the parent. In this
+situation the client needs to resolve the invariant violation without decrypting
+the update because the encryption key to decrypt that update lives in the
+folder’s metadata which was already pruned.</p>
+<p>There are enough corner cases here to drown in. To handle them, we implement a
+design where, <strong>rather than prevent invariant violations from occurring, the
+system repairs invariant violations that result from certain combinations of
+edits from different devices.</strong> It does this as part of the sync routine. We
+found that there’s generally a satisfactory way to do this.</p>
+<p>To resolve cycles, we rely on the fact that <code>base</code>, <code>local</code>, and <code>remote</code> all
+individually do not contain any cycles and design the resolution to preserve
+that. If the result of merging the file trees has a cycle, it must involve an
+unsynced local move and a remote move the client just pulled from the server. In
+particular, one of the files in the cycle must have been the subject of an
+unsynced local move. Our policy to resolve this is, <strong>if we discover locally
+moved files which create a cycle with other files, we unmove all the locally
+moved files</strong> (by setting the parents to their values in <code>base</code>).</p>
+<p>To resolve path conflicts, we rely on the fact that <code>base</code>, <code>local</code>, and
+<code>remote</code> all individually do not contain path conflicts, and therefore that one
+of the files involved in the conflict was somehow modified locally. Our policy
+to resolve this is, <strong>if we discover a locally modified file whose new name
+conflicts with another file in the same folder, we rename the locally modified
+file by appending a number to the pre-extention file name.</strong> For example, if a
+folder contains a new file called <code>notes.txt</code> from the server and a new local
+file called <code>notes.txt</code>, we rename the local file <code>notes-1.txt</code>. If there is
+already a <code>notes-1.txt</code>, we instead rename it <code>notes-2.txt</code>.</p>
+<p>To resolve orphaned files, we rely on the fact that an update for a file will
+never be pulled without the parent folder being pulled first. If the parent
+folder no longer exists locally, it’s because the parent folder has been pruned,
+which only happens if the deletion of that folder has been synced. If the folder
+deletion has been synced, then the server has explicitly deleted all descendants
+of the folder, including the orphans. Because deletions can never be undone,
+<strong>any updates to orphaned files can be safely ignored.</strong></p>
+<p>I know what you’re wondering - does the order of these conflict resolutions
+matter? Yes it does. Any content conflicts need to be resolved before path
+conflicts because resolving content conflicts can create new files which can
+cause path conflicts. Any cycles need to be resolved before path conflicts
+because resolving cycles can move files which can cause path conflicts. Updates
+to orphaned files can be ignored at any time because no resolution policy
+depends on or modifies orphaned files.</p>
+<h3 id="consistency"><a class="header" href="#consistency">Consistency</a></h3>
+<p>A great amount of care needs to go into making sure that the invariants are
+satisfied at all times. The system needs to recover from process interruptions
+and failures gracefully. We’ll inspect the following consistency-related
+concerns:</p>
+<ul>
+<li>batch operations</li>
+<li>concurrent syncs</li>
+<li>open editors during a sync</li>
+<li>client crash/interrupt recovery</li>
+<li>server crash/interrupt recovery</li>
+</ul>
+<h4 id="batch-operations"><a class="header" href="#batch-operations">Batch Operations</a></h4>
+<p>A key element of the design is that **metadata operations are processed in
+batches. What this means is that all the changes that are applied to a file tree</p>
+<ul>
+<li>moves, renames, and deletes - are applied with all the invariants evaluated at
+the end, rather than evaluated after each operation.** For instance, the server
+has a single endpoint for uploading a set of changes which are applied
+atomically, with invariants checked after applying all of them rather than being
+checked in-between each one. In clients, all new updates from the server are
+applied before checking invariants and resolving conflicts. To see why this
+helps, let’s consider what our design would look like otherwise.</li>
+</ul>
+<p>Consider the case where a user moves a file out of a folder, then creates a new
+file with the same name in that folder. If these changes are not processed
+together, then they need to be processed in the order in which they happened,
+otherwise the new file could be created first which would violate the Path
+Conflict invariant. Therefore, clients would need to be deliberate about the
+order in which changes are uploaded to the server. Rather than track the <code>base</code>
+and <code>local</code> states of the file tree, clients would need to track either <code>base</code>
+or <code>local</code> and an ordered collection of the changes made (henceforth the
+<em>changeset</em>) that turned <code>base</code> into <code>local</code>. This would allow the client to
+reproduce <code>base</code> and <code>local</code> for the sake of 3-way merging; the client could
+produce <code>local</code> from <code>base</code> and the changeset or could produce <code>base</code> from
+<code>local</code> and the changeset. The client could also still explicitly store <code>base</code>
+and <code>local</code> but care would need to be taken to keep them consistent with the
+changeset.</p>
+<p>The changeset cannot be append-only. If a user renames a file, then renames it
+back to the original name without syncing, the changeset should be empty. This
+is because the app should not incur the performance cost of syncing an
+unnecessary pair of changes, as well as because the app should not inidicate to
+the user that they have outstanding changes to be synced when they do not. In
+this situation, the combination of renames should cancel out, with both
+operations being removed from the changeset. However, this can cause problems.
+Consider the case when the user renames file A, creates a file B in the same
+folder with the original name, moves file B to a different folder, then renames
+file A back to its original name. If the client simply removes both renames,
+then the changeset includes just creating and moving file B. In-between creating
+and moving file B, file B is still in the same folder as file A with the same
+name, which violates the Path Conflict invariant. While we could develop a
+system which cleverly maintains the changeset so that the file tree upholds the
+invariants in-between each change, it’s easier to process operations in batches.</p>
+<h4 id="concurrent-syncs"><a class="header" href="#concurrent-syncs">Concurrent Syncs</a></h4>
+<p>Sync is not an atomic operation; it consists of multiple steps. For the purposes
+of this section, it consists of the following 5 steps (the sync routine is
+discussed in more detail later):</p>
+<ul>
+<li><em>pull all updates 1</em>: The client pulls the latest updates to metadata and
+document content. This is generally when metadata and documents are 3-way
+merged as clients pull updates made by other clients.</li>
+<li><em>push metadata updates</em>: The client pushes metadata updates, which are the
+local changes that have been made on this client since the last sync. They
+have been merged with the latest server changes during the previous pull.</li>
+<li><em>pull all updates 2</em>: The client pulls the latest updates again. Generally
+there have been no updates made by other clients and this step just pulls the
+latest server-assigned <code>metadata_version</code> as well as the deletions that the
+server made after finding non-deleted files in deleted folders in the previous
+push.</li>
+<li><em>push content updates</em>: The client pushes content updates, which generally
+resulted from the merge during the initial pull. This is done after the
+previous step so that we do not push updates to deleted files for performance.</li>
+<li><em>pull all updates 3</em>: The client pulls the latest updates again. Generally
+there have been no updates made by other clients and this step just pulls the
+latest server-assigned <code>metadata_version</code> and <code>content_version</code> for each file
+after the updates from the previous push.</li>
+</ul>
+<p>Problems can happen when two devices sync concurrently. In particular, problems
+can happen when one device pushes an update while another device is between the
+first and second pulls or between the second and third pulls. Consider the case
+where a user moves a file on device A, renames it on device B, then syncs the
+devices concurrently such that devices A and B both pull updates, then A pushes
+metadata updates, then B pushes metadata updates. When device B pulls, the
+version it pulls will not be affected by the move done on device A because
+device A has not pushed yet. When device A pushes, it will push a version
+affected by the move, then when device B pushes, it will push a version affected
+by the rename but not the move. When A pulls again, it will pull the version
+affected by the rename but not the move. Effectively, the move will be undone.</p>
+<p>To solve this, we implement a basic precondition system. <strong>When clients push
+metadata updates, they are required to pass the current name and parent of the
+file. If those values have changed since the client last pulled, the client is
+considered to be pushing changes to an out-of-date version of the file, and the
+server rejects the updates. Similarly, when clients push document content
+updates, they are required to pass the current <code>content_version</code> of the
+document, and the server rejects the update if this is incorrect.</strong> When the
+server rejects the update, sync fails and must be retried, which can happen
+automatically or be requested by the user. The first step of the next sync pulls
+whatever updates happened concurrently to block the previous sync and merges
+those changes in with the local changes before attempting to push again.</p>
+<p>A number of alternate preconditions are valid, with each creating a different
+experience for the user. We chose not to force clients to have the most
+up-to-date version of the <code>deleted</code> field, instead allowing updates to deleted
+files, because these operations would make no effect and there is no need to
+force a new sync. We also chose not to force clients to have the most up-to-date
+version of the file’s contents to update the metadata or to have the most
+up-to-date version of the file’s metadata to update the contents. We made these
+design choices to balance a strong level of consistency with a lightweight sync
+process in the event of concurrent syncs.</p>
+<h4 id="open-editors-during-a-sync"><a class="header" href="#open-editors-during-a-sync">Open Editors During A Sync</a></h4>
+<p>Care must be taken to avoid losing a user’s changes to a document when they are
+editing the document while a sync occurs. Consider the case where a user opens a
+document for editing on device A, then edits and syncs the same document on
+device B, then syncs device A while the document is still open for editing. The
+sync will overwrite the local version of the document with the 3-way merge of
+the document, but when the user saves the document, the 3-way merge result will
+be overwritten by the newly edited version, which does not include the changes
+made on device B. When the user syncs, the new state of the document will be the
+newly edited version, and other devices that sync will have their versions
+overwritten to this version i.e. the changes made on device B will be lost
+forever.</p>
+<p><strong>The simplest way to avoid losing changes to document contents that are pulled
+while a user has an open editor is to lock the editor, which is not ideal.</strong> The
+client should save the document, lock the editor, perform the sync, then re-open
+the document and unlock the editor. The editor will be updated with content that
+is the 3-way merge of the pulled change with any local changes, including the
+changes just made in the editor, and the user can safely resume work.</p>
+<p><strong>An alternative design is for the client to hold in-memory the version of the
+document contents that were read from disk alongside the version the user is
+editing. When the user saves, read the most up-to-date version of the document
+from disk (including potential changes pulled during a sync), 3-way merge the
+up-to-date disk version, editor version, and the inital disk version (using the
+initial disk version as the base), update the editor to contain the result of
+the merge, then save the result of the merge.</strong> While this complicates the
+implementation, the changes pulled by any syncs are incorporated both into the
+open editor and into the version of the document that is saved to disk (and
+eventually pushed) without locking the UI during a sync.</p>
+<p>If desired, a similar process can be used <strong>to update the editor after a sync:
+when the user syncs, read the most up-to-date version of the document from disk
+(including potential changes pulled during a sync), 3-way merge the up-to-date
+disk version, editor version, and the inital disk version (using the initial
+disk version as the base), then update the editor to contain the result of the
+merge.</strong></p>
+<h4 id="client-recovery"><a class="header" href="#client-recovery">Client Recovery</a></h4>
+<p>The three key sync-related things that the client stores on disk are file
+metadata, file contents, and the last synced time. If these are managed
+properly, then clients are resilient to interruptions. Ultimately, <strong>if updates
+to data on disk are atomic (e.g. by using an embedded database with transaction
+support), client recovery is not difficult.</strong> Let’s look at some of the problems
+we would encounter otherwise.</p>
+<p>During a sync, clients check in with the server to pull all updates pushed by
+other clients since this client last synced. It’s okay for a client to pull
+updates it’s already received because updates are idempotent. The server doesn’t
+store and serve every update; it only stores and serves the most recent versions
+of files. This means that clients are pulling only the latest state of files and
+it is a no-op to overwrite the latest state of a file with the latest state of
+that file. While it’s okay to receive updates twice, it’s not okay for clients
+to miss updates. Users expect to see the most up-to-date versions of their file
+trees after syncing. Beyond that, the server checks that clients have a
+reasonably up-to-date version of the metadata being changed, which prevents
+updates to out-of-date files in certain cases.</p>
+<p>If the metadata updates during a sync are not saved atomically with the update
+to the last synced time, the update to the last synced time must be saved after
+the metadata updates. If it’s saved first and then the process is interrupted
+before the metadata updates are saved, then on the next sync, the client will
+pass a last synced time greater than the <code>metadata_version</code> of any of those
+files and will not receive updates to those files (until new updates to the
+files are pushed to the server). The user will be told that their files are
+up-to-date even though they aren’t, and the server will sometimes consistently
+reject updates to the out-of-date files. If the metadata updates are synced
+first and the process is interrupted before the new last synced time is saved,
+then on the next sync, the client will pass a lasy synced time less than the
+<code>metadata_version</code> of those files and receive the lastest states of them again,
+which is okay.</p>
+<p>We also have to be concerned with synchronizing file metadata and contents. In
+our implementation we separate the storage of metadata from contents because
+many operations, like listing all files, can be performed without reading
+document contents from disk which is more expensive.</p>
+<p>If the content updates during a sync are not saved atomically with the metadata
+updates, the metadata updates must be saved after the document updates. Recall
+that when a client pulls updates from the server, it pulls metadata updates, and
+if a metadata update includes a new <code>content_version</code> then it additionally pulls
+content updates on a file-by-file basis. If the client saves metadata first,
+then is interrupted before the content updates are saved, then the client will
+think that the file content is up-to-date when it is not. The user will see an
+out-of-date version of the files contents, and if they edit it, the client will
+sync the edits, overwriting the unsaved changes. If the client saves the
+document contents first, then is interrupted before the metadata updates are
+saved, then the client will think that the file content is out-of-date when it
+is not. The user will see that there is an unsynced change even though there
+isn’t, which isn’t ideal, but it will go away after this next sync. During the
+next sync the client will pull the new metadata again, pull the same document
+content again because the metadata indicates that it has changed, and save the
+same document content as was already saved. If there has been a local or remote
+edit to the document in the meantime, the two versions of the documents will be
+3-way merged.</p>
+<p>These concerns are managable (though they complicate the implementation), but
+further concerns would need to be raised and addressed about the ordering of
+saves to <code>base</code> vs <code>local</code> versions of metadata and documents. Overall, atomic
+writes solve this problem best.</p>
+<p><em>Concern: we don’t currently have atomic writes.</em></p>
+<h4 id="server-recovery"><a class="header" href="#server-recovery">Server Recovery</a></h4>
+<p>While client recovery is well-served by atomic writes, on the server atomic
+writes are not possible. This is because document contents and metadata are
+stored on different databases for performance and cost. All the metadata is
+stored in one database which supports transactions and all the document contents
+are stored in a key-value object storage database like S3. The server needs to
+decide how to save metadata and contents to make sure it can always recover
+without adverse effects.</p>
+<p><em>Note: server interruptions only happen in the infrequent situations of
+infrastructure outages, bugs, and planned maintenance. It is acceptable for
+human intervention to be required, but it is not acceptable for cleanup &amp;
+reconciliation to be impossible.</em></p>
+<p>If the server saves the metadata for a document, then is interrupted before
+saving the content, then it will serve the old file contents. If the server
+saves the content for a document, then is interrupted before saving the
+metadata, then it will not report the change to the document when clients pull
+updates. Because of this, there is not simply an order of saves that will keep
+the server recoverable at all times; something more clever is required.</p>
+<p><strong>The server creates and deletes objects rather than mutating them because we
+need multiple versions to exist to ensure recoverability.</strong> To differentiate
+versions, and to ensure that we are reading document contents which are
+consistent with the <code>content_version</code> of its metadata, we use the <code>id</code> and
+<code>content_version</code> as the key for the contents in object storage. When clients
+request document content, they specify a <code>content_version</code>.</p>
+<p><strong>To atomically save metadata and content, the server first saves the new
+version of the content, then saves the metadata, then deletes the old version of
+the content.</strong> Each of these operations is atomic. If the server is interrupted
+after only saving the new content version, the new metadata is never saved with
+the new content version, so clients never request it and the contents are
+effectively not updated. If the server is interrupted after the new metadata is
+saved, clients receieve the new metadata with the new content version and the
+content is effectively updated, but the old version of the file is never cleaned
+up from object storage. If the update is a deletion, the first step is skipped,
+but the rest works the same way. The server saves the metadata, then deletes the
+old version of the content. If the server is interrupted after only saving the
+metadata, clients will receive the deletion and prune the file when they pull
+updates, but like with other edits, the old version of the file is never cleaned
+up from object storage. So, <strong>under this design, the system operates safely but
+will sometimes leave unnecessary objects in storage.</strong> The last piece of the
+server recovery design is to figure out how to remove these old content versions
+from object storage in the event of an interruption. Note that this process is
+not urgent; it only affects infrastructure costs to the maintainers to have
+unnecessary objects in storage.</p>
+<p><strong>If the maintainer is willing to take server downtime, object storage can be
+cleaned after a server interruption by deleting from object storage all the
+objects whose <code>id</code>, <code>content_version</code> pairs no longer exist for a non-deleted
+file in metadata storage.</strong> The objects that will be deleted are the ones that
+have been superceded by new versions or that are the contents of deleted files.</p>
+<p>If the maintainer is not willing to take server downtime, they need to be
+careful of ongoing server operations. If they follow the previous process,
+deleting from object storage all the objects whose <code>id</code>, <code>content_version</code> pairs
+no longer exist for a non-deleted file in metadata storage, they may delete an
+object which is the new version of a document currently being updated. If they
+do, the server will still save the new content version to metadata storage, and
+clients will request the new version from the server and not find it. The
+maintainer can tell which files are part of ongoing transactions because the
+version that no longer exists for a non-deleted file in metadata storage will
+have a more recent content version than another object that does exist
+non-deleted in metadata storage. Both files should be left in place, as the
+server will clean up the remaining file after finishing the ongoing update (or
+the maintainer will clean up the file in a subsequent cleaning). Therefore, if
+the maintainer is not willing to take server downtime, object storage can be
+cleaned after a server interruption by deleting from object storage all the
+objects whose <code>id</code>, <code>content_version</code> pairs no longer exist for a non-deleted
+file in metadata storage and for which there is not another object with the same
+<code>id</code> and a more recent <code>content_version</code> which does exist for a non-deleted file
+in metadata storage.</p>
+<p>However, this is tricky, as one cannot atomically query the state of metadata
+and object storage (committing the object cleanup can happen separately because
+once an object is safe to delete, it is forever safe to delete). <strong>Further
+investigation is required to understand whether there is an appropriate way to
+perform object cleanup in a safe way with zero downtime.</strong> For now, downtime is
+recommended.</p>
+<h2 id="design-routines"><a class="header" href="#design-routines">Design Routines</a></h2>
+<p>With the designs around some of our concerns worked out, we now turn to the
+specific routines involved in Sync v3 to see what each routine must do to
+address all concerns. We’ll examine the following routines:</p>
+<ul>
+<li>local metadata edits</li>
+<li>local content edits</li>
+<li>push metadata to server (<code>UpsertFileMetadata</code> endpoint)</li>
+<li>push file content to server (<code>ChangeDocumentContent</code> endpoint)</li>
+<li>pull metadata updates from server (<code>GetUpdates</code> endpoint)</li>
+<li>pull document contents from server (<code>GetDocument</code> endpoint)</li>
+<li>sync</li>
+</ul>
+<h3 id="local-metadata-edits"><a class="header" href="#local-metadata-edits">Local Metadata Edits</a></h3>
+<p>When a user creates, renames, moves, or deletes a file, the client validates the
+operation, then updates the <code>local</code> version of the file tree to reflect the
+operation.</p>
+<p>For <code>create</code>, the client validates that:</p>
+<ul>
+<li>the file is not its own parent</li>
+<li>the file’s name conforms to some rules (e.g. it cannot be empty or contain a
+slash)</li>
+<li>the file’s parent exists and is a folder</li>
+<li>there are no files of the same name in its parent folder</li>
+</ul>
+<p>For <code>rename</code>, the client validates that:</p>
+<ul>
+<li>the file is not the root folder</li>
+<li>the file’s new name conforms to some rules (e.g. it cannot be empty or contain
+a slash)</li>
+<li>there are no files of the same name in its parent folder</li>
+</ul>
+<p>For <code>move</code>, the client validates that:</p>
+<ul>
+<li>the file’s new parent is not itself</li>
+<li>the file’s parent exists and is a folder</li>
+<li>there are no files of the same name in its parent folder</li>
+<li>the file is not being moved into one of its subfolders</li>
+</ul>
+<p>For <code>delete</code>, the client validates that:</p>
+<ul>
+<li>the file is not the root folder</li>
+</ul>
+<p><em>Concerns: <code>create</code> unnecessarily checks for invalid cycles</em></p>
+<h3 id="local-content-edits"><a class="header" href="#local-content-edits">Local Content Edits</a></h3>
+<p>When a user modifies a document’s contents, the client checks that the file
+exists and is not deleted, then updates the <code>local</code> version of the file’s
+contents.</p>
+<h3 id="upsert-file-metadata"><a class="header" href="#upsert-file-metadata">Upsert File Metadata</a></h3>
+<p>The server exposes an endpoint, <code>UpsertFileMetadata</code>, which accepts a batch of
+file metadata updates. The file metadata updates are just a file metadata, as
+well as the name and parent that the client expects the server to have. The
+endpoint checks the precondition that the existing name and parent are what the
+client expects - otherwise the server responds with <code>GetUpdatesRequired</code>
+indicating that the client should pull the latest changes and try again. The
+server also checks for cycles, path conflicts, root modifications, new roots,
+and orphaned files - if any of these checks fail, the update is rejected and the
+server returns <code>GetUpdatesRequired</code>.</p>
+<p>If the checks pass, the endpoint inserts or overwrites the metadata for each
+file with the metadata supplied in the request. It sets the <code>metadata_version</code>
+to the current timestamp. It explicitly deletes all files with deleted
+ancestors. Then, it removes any newly deleted files from document storage.</p>
+<h3 id="change-document-content"><a class="header" href="#change-document-content">Change Document Content</a></h3>
+<p>The server exposes an endpoint, <code>ChangeDocumentContent</code>, which accepts the <code>id</code>
+of a document to modify, the expected <code>metadata_version</code>, and the new contents
+of the document. The server checks that the document exists and that the
+<code>metadata_version</code> matches (otherwise it responds with <code>GetUpdatesRequired</code>),
+writes the new version of the document to document storage, increments the
+<code>metadata_version</code> and <code>content_version</code> for the document, and deletes the old
+version of the document from document storage. The endpoint returns the new
+<code>content_version</code> for the document.</p>
+<h3 id="get-updates"><a class="header" href="#get-updates">Get Updates</a></h3>
+<p>The server exposes an endpoint, <code>GetUpdates</code>, which accepts a timestamp
+representing the most recent <code>metadata_version</code> of any update the client has
+received. The endpoint returns the metadata for all files with a greater
+<code>metadata_version</code> i.e. all files which have been updated since the client last
+pulled updates.</p>
+<h3 id="get-document"><a class="header" href="#get-document">Get Document</a></h3>
+<p>The server exposes an endpoint, <code>GetDocument</code>, which accepts an <code>id</code> and
+<code>content_version</code> for a document and returns that version of the document.</p>
+<h3 id="sync"><a class="header" href="#sync">Sync</a></h3>
+<p>The client has a routine, <code>sync</code>, which is responsible for pulling new updates
+from the server, resolving conflicts, and pushing local updates. It consists of
+5 steps (and additionally prunes deleted files at the end):</p>
+<ol>
+<li><em>pull all updates 1</em></li>
+<li><em>push metadata updates</em></li>
+<li><em>pull all updates 2</em></li>
+<li><em>push content updates</em></li>
+<li><em>pull all updates 3</em></li>
+</ol>
+<p>These 5 steps run 3 subroutines:</p>
+<ul>
+<li>pull</li>
+<li>push metadata</li>
+<li>push content</li>
+</ul>
+<h4 id="pull"><a class="header" href="#pull">Pull</a></h4>
+<p>The pull routine is where most of the work in <code>sync</code> happens. First, it pulls
+updates from the server. If applying those updates to <code>base</code> would cause any
+updates to apply to orphaned files, those updates are dropped.</p>
+<p>Then, each update (<code>remote</code>) is 3-way merged with the <code>base</code> and <code>local</code>
+version. The 3-way merge resolves conflicts to <code>parent</code> and <code>name</code> in favor of
+remote changes, if any, and resolves conflicts to <code>deleted</code> by preferring to
+delete the file. The merge is designed so that if there are no local changes,
+the result is <code>remote</code>, and if there are no <code>remote</code> changes (this can happen if
+another client renames a file then renames it back to the original name), the
+result is <code>local</code>. The <code>remote</code> metadata are buffered as a set of changes to
+apply to <code>base</code> because after the pull, <code>remote</code> will be a version which has
+been accounted for by both the client and server on a metadta-by-metadata basis.
+The metadata resulting from the merge are buffered as a set of changes to apply
+to <code>local</code> because they represent a version of the metadata that account for
+local changes that have not yet been synced to the server.</p>
+<p>If the <code>content_version</code> in a remote metadata update is greater than the
+<code>content_version</code> in the <code>base</code> version of that file, then the file is a
+document that has been updated on the server since the last pull. The client
+pulls the document, 3-way merges it’s contents with <code>local</code> and <code>base</code>, buffers
+the pulled version as an update to the <code>base</code> version of the document and
+buffers the merged version as an update to the <code>local</code> version of the document.
+For file types that are not mergable (inferred by their file extension), a new
+file is created with the <code>local</code> contents and the <code>local</code> and <code>base</code> contents of
+the existing file are set to <code>remote</code> version, which is left unmodified as it
+was read from the server. The new file has the same parent and a file name based
+on but different from the existing file and all other files in that folder.</p>
+<p>Before saving the buffered updates, invariant violations need to be resolved.
+Cycles are resolved first - any files moved locally that would be involved in a
+cycle after updates are saved have their parents reset to <code>base</code>. Then, path
+conflicts are resolved - any locally created or modified file with the same name
+and parent as a pulled file is renamed. Finally, all metadata and document
+updates for <code>base</code> and <code>local</code> are saved.</p>
+<p><em>Concern: the logic to determine whether to pull a document currently references
+the <code>local</code> <code>content_version</code>, which is unnecessary and may introduce unknown
+bugs.</em></p>
+<p><em>Concern: should cycle resolution not reset the parents of locally moved files
+which are also move remotely? is it sufficient to reset the parent of just one
+file per cycle?</em></p>
+<h4 id="push-metadata-updates"><a class="header" href="#push-metadata-updates">Push Metadata Updates</a></h4>
+<p>To push metadata, the client simply collects all metadata which has changed (or
+been created) since the last push and sends them to the server’s
+<code>UpsertFileMetadata</code> endpoint. If any preconditions fail, <code>sync</code> is aborted, and
+can be safely retried. The server updates the <code>metadata_version</code> but does not
+return it; this means that the updates pushed by the client will be pulled
+during the next update. Then, all files have their <code>base</code> metadata set equal to
+their <code>local</code> metadata (which are the metadata that were sent to and accepted by
+the server).</p>
+<p><em>todo: consider optimizing the <code>metadata_version</code> mechanics so that the client
+doesn’t pull every update it pushes</em></p>
+<h4 id="push-content-updates"><a class="header" href="#push-content-updates">Push Content Updates</a></h4>
+<p>To push document content, the client collects all documents which have changed
+since the last push and sends them to the server’s <code>ChangeDocumentContent</code>
+endpoint. If any preconditions fail, <code>sync</code> is aborted, and can be safely
+retried. The <code>content_version</code> of each document is used to update it’s <code>base</code>
+and <code>local</code> metadata. Then, all documents have their <code>base</code> contents set equal
+to their <code>local</code> contents (which are the contents that were sent to and accepted
+by the server).</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="billing"><a class="header" href="#billing">Billing</a></h1>
+<ul>
+<li>Pricing details</li>
+<li>Data model</li>
+<li>Stripe Integration</li>
+<li>Apple Integration</li>
+<li>Google Integration</li>
+<li>Bitcoin Integration (later)</li>
+<li>Monero Integration (later)</li>
+</ul>
+<h1 id="pricing"><a class="header" href="#pricing">Pricing</a></h1>
+<p>Pricing will be on an <code>Annual</code> basis or a <code>Monthly</code> basis.</p>
+<p>Billing will be:</p>
+<ul>
+<li><code>$2.99 / month per 30gb</code></li>
+<li><code>$30 / year per 30gb</code></li>
+</ul>
+<h1 id="data-model"><a class="header" href="#data-model">Data Model</a></h1>
+<p>Upon write operations we want to be able to check to see if a user has space available for this action or not.</p>
+<p>We’ll keep a table that will store:</p>
+<ul>
+<li><code>account</code></li>
+<li><code>tier-max</code></li>
+<li><code>valid_until</code></li>
+<li><code>type</code> – one of <code>stripe</code>, <code>apple</code> or <code>google</code></li>
+<li><code>billing failed</code> – boolean to prompt user to go through billing cycle again</li>
+</ul>
+<h1 id="stripe"><a class="header" href="#stripe">Stripe</a></h1>
+<p>Used for:</p>
+<ul>
+<li>macOS</li>
+<li>Linux</li>
+<li>Cli</li>
+<li>Windows</li>
+</ul>
+<h2 id="flow"><a class="header" href="#flow">Flow</a></h2>
+<p>User performs a sync, a new error type is returned saying they’re out of space.</p>
+<p>A dialog pops up to explain your situation, allows you to select a plan &amp; a payment method (if you have a choice).</p>
+<p>For now <a href="https://stripe.com/">Stripe</a> will be our payment processor. Their subscription overview can be found <a href="https://stripe.com/docs/billing/subscriptions/overview">here</a> will be the processing service.</p>
+<p>To setup payment for the first time you need to send <code>Plan</code> info and <code>Payment</code> info.</p>
+<p><code>lockbook_server</code> will then:</p>
+<ol>
+<li><a href="https://stripe.com/docs/api/payment_methods/create">Create a <code>PaymentMethod</code></a></li>
+<li><a href="https://stripe.com/docs/api/customers/create">Create a <code>Customer</code></a></li>
+<li><a href="https://stripe.com/docs/api/setup_intents/create">Create and confirm a <code>SetUpIntent</code></a></li>
+<li><a href="https://stripe.com/docs/api/subscriptions/create">Create a <code>Subscription</code></a></li>
+</ol>
+<p>Lockbook server will store <code>StripeUserInfo</code>, a struct containing user’s <a href="https://stripe.com/docs/api/customers/object#customer_object-id">customer_id</a>, <a href="https://stripe.com/docs/api/payment_methods/object">payment_method</a> history, and <a href="https://stripe.com/docs/api/subscriptions/object">subscription</a> history.</p>
+<p>After stripe api calls, <code>lockbook_server</code> will:</p>
+<ol>
+<li>store info</li>
+<li>cleanup stripe upon failure</li>
+<li>look for customer already exists errors</li>
+</ol>
+<p>Stripe will inform us about billing success and failures via <a href="https://stripe.com/docs/webhooks">webhooks</a>. We’ll tell them a URL to send info to. Upon failures, stripe will <a href="https://stripe.com/docs/webhooks/best-practices#retry-logic">retry</a>, <a href="https://stripe.com/docs/webhooks/best-practices#disable-logic">email us</a> and ultimately stop trying. We can also <a href="https://stripe.com/docs/api/events/list">query for missed events</a> and <a href="https://dashboard.stripe.com/events">see failures in their UI</a>.</p>
+<p>We will likely only need to listen for billing failures. In the case of a billing failure we’re going to want to indicate to the user their card was declined. We don’t want to just communicate that they’re out of space. We want to communicate specifically that their card was declined. Likely what we’ll do in this situation is keep them in that tier with that expiry information and set <code>billing_failed</code> to <code>true</code>. Next time they try to write we’ll send them to the flow for declined cards. When the new request comes in it will have to complete logic to cancel the old subscription, especially if it’s being transferred from one platform to another.</p>
+<p>When consuming webhook events we’ll need to <a href="https://stripe.com/docs/webhooks/signatures">verify that the event is coming from stripe</a> and not some random person.
+We listen for two particular events:</p>
+<ul>
+<li><code>invoice.payment_failed</code>: To cancel a subscription when a payment failure happens.</li>
+<li><code>invoice.paid</code>: To increase <code>period_end</code> of <code>StripeSubscriptionInfo</code>. Currently this is unused but is useful information to have in the future.</li>
+</ul>
+<p>Before this flow is completable we’ll have to pre-register our <a href="https://stripe.com/docs/api/prices">prices</a> with stripe.</p>
+<h2 id="billing-states"><a class="header" href="#billing-states">Billing States</a></h2>
+<p>Our current implementation is simple. A user is either subscribed or not. When a user misses a payment or chooses to cancel their subscription, their data cap is immediately reduced to 1 MB.</p>
+<h2 id="testing"><a class="header" href="#testing">Testing</a></h2>
+<p>A stripe integration can only be tested if provided a <a href="https://stripe.com/docs/keys#obtain-api-keys">secret testing API key</a>. <a href="https://stripe.com/docs/stripe-cli"><code>stripe_cli</code></a> also provides a way to emulate webhook events locally.</p>
+<h1 id="apple-integration"><a class="header" href="#apple-integration">Apple Integration</a></h1>
+<p>Used for</p>
+<ul>
+<li>iPhones</li>
+<li>iPads</li>
+</ul>
+<p>We have to use Apple’s in app payments because Apple forces all the apps on its App Store to do so. An overview of their subscriptions can be found <a href="https://developer.apple.com/videos/play/wwdc2018/705/">here</a>.</p>
+<p>A good index for docs exists <a href="https://developer.apple.com/in-app-purchase/">here</a></p>
+<h2 id="flow-1"><a class="header" href="#flow-1">Flow</a></h2>
+<p>Similar to the flow described for stripe, user goes to sync and encounters an error related to billing. A <code>sheet</code> pops up that tells them either that their card was declined or that they’re out of space.</p>
+<p>The user clicks one of the buttons for whatever plan they want, apple pay pops up, they complete the flow &amp; get access to more space.</p>
+<p>Before this flow is possible we’ll have to preconfigure our <a href="https://help.apple.com/app-store-connect/#/devb57be10e7">in-app-purchase</a> with apple. Some more details <a href="https://help.apple.com/app-store-connect/#/devae49fb316">here</a>.</p>
+<p>Similar to the Stripe flow, Apple’s servers will communicate with ours via webhooks. We’ll <a href="https://help.apple.com/app-store-connect/#/devb57be10e7">register</a> the webhook and then we’ll be able to receive events.</p>
+<p>Apple requires <a href="https://developer.apple.com/documentation/security/preventing_insecure_network_connections">ATS</a>.</p>
+<p>Unlike stripe which uses crypto for authentication, apple is just using webhooks to avoid their servers being polled. You therefore have apple themselves verify that the message is valid. This is detailed <a href="https://developer.apple.com/documentation/storekit/in-app_purchase/validating_receipts_with_the_app_store">here</a>.</p>
+<p>Details for how we’ll deal with failures will be similar to Stripe’s. It’s less likely these failures will happen, because this info is Apple ID-wide. Apple themselves will be prompting the user to update their billing info. However, if we receive that event from Apple it could indicate what they call <a href="https://developer.apple.com/app-store/subscriptions/#retaining-subscribers-using-receipt-information">voluntary churn</a> which is when a user cancels their subscription for lockbook. We’ll follow the card declined flow in this case. Further thought in the future can be given to helping them select files to delete (oldest / least often used) or creating flows to deep-archive files for suspended users.</p>
+<h2 id="testing-1"><a class="header" href="#testing-1">Testing</a></h2>
+<p>TODO</p>
+<h1 id="google-integration"><a class="header" href="#google-integration">Google integration</a></h1>
+<p>Exactly the same as apple’s experience. <a href="https://developer.android.com/google/play/billing/subscriptions">Overview</a></p>
+<p><a href="https://developer.android.com/google/play/billing/getting-ready#products">Pre-register tiers with google</a></p>
+<p><a href="https://developer.android.com/google/play/billing/integrate">Client side details</a>.</p>
+<p><a href="https://developer.android.com/google/play/billing/getting-ready#configure-rtdn">Server side details</a>. <a href="https://developer.android.com/google/play/billing/rtdn-reference#sub">Events they send</a>.</p>
+<p>The verification happens like apple’s, the token is a prompt for you to go and check with google about the status of a subscription, <a href="https://medium.com/@emilieroberts/real-time-developer-notifications-happen-when-something-changes-with-a-users-subscription-cb46dc053495">details</a>.</p>
+<h2 id="billing-states-1"><a class="header" href="#billing-states-1">Billing States</a></h2>
+<p>There are 4 states of a Google Play subscription (described by the <code>GooglePlayAccountState</code> enum in <code>libs/lb/lb-rs/libs/shared/src/api.rs</code>):</p>
+<ol>
+<li><code>Ok</code>: The user has a valid subscription that is renewing monthly.</li>
+<li><code>Canceled</code>: The user’s subscription has been canceled, but they still have premium benefits until the end of their billing cycle.</li>
+<li><code>GracePeriod</code>: The user’s subscription is in a grace period for failing to make a payment. They have premium benefits for 7 more days until they are <code>OnHold</code>.</li>
+<li><code>OnHold</code>: The user let their subscription’s grace period expire and has lost premium benefits.</li>
+</ol>
+<p>Once a subscription expires (either after being <code>OnHold</code> or <code>Canceled</code>), all remaining data about that subscription will be deleted. Also, if a user does a chargeback, their subscription is immediately revoked.</p>
+<h2 id="testing-2"><a class="header" href="#testing-2">Testing</a></h2>
+<p>An integration can be tested locally if a user becomes a <a href="https://developer.android.com/google/play/billing/test">license tester</a>. This allows fake payments to be made on a verified Google Play developer account to test debug builds. Paired with a <a href="https://developer.android.com/google/play/billing/getting-ready#configure-rtdn">PubSub subscription</a> pointing at your local server instance, you can emulate almost any user interaction involving subscriptions.</p>
+<h1 id="platform-migrations"><a class="header" href="#platform-migrations">Platform Migrations</a></h1>
+<p>Due to a smaller service fee on Stripe, there is a strong incentive to migrate users off payment platforms by Google Play and Apple. Therefore, in the future, payment migrations may be implemented.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
+        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
+        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
+        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
+        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr-ef4e11c1.min.js"></script>
+        <script src="mark-09e88c2c.min.js"></script>
+        <script src="searcher-c2a407aa.js"></script>
+
+        <script src="clipboard-1626706a.min.js"></script>
+        <script src="highlight-abc7f01d.js"></script>
+        <script src="book-a0b12cfe.js"></script>
+
+        <!-- Custom JS scripts -->
+
+        <script>
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+
+
+    </div>
+    </body>
+</html>
